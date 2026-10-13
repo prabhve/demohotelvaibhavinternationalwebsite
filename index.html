@@ -602,7 +602,6 @@
         </div>
         <div class="section-top-actions">
           <button type="button" id="btn-jump-rec-order" class="btn-gold">🎓 Order for REC Sonbhadra Campus (₹40 Delivery)</button>
-          <button type="button" id="btn-view-bill" class="btn-outline">🧾 View Verified GST Receipt</button>
           <a href="#table-booking-form" class="btn-outline">🍽️ Reserve Dining Table ↓</a>
         </div>
       </div>
@@ -682,10 +681,34 @@
 
         <!-- Step-by-Step Guide Strip for REC Students & Faculty -->
         <div class="rec-steps-strip">
-          <div class="rec-step-chip"><span>1</span> Select Dishes from Menu Above (<code>＋ / −</code>)</div>
-          <div class="rec-step-chip"><span>2</span> Fill REC Hostel / Gate / Department Details</div>
-          <div class="rec-step-chip"><span>3</span> Scan Restaurant QR &rarr; Mark <strong>Paid (Enter UTR)</strong> or <strong>Unpaid</strong></div>
-          <div class="rec-step-chip"><span>4</span> Submit &amp; <strong>Call Restaurant (+91 73111 00944)</strong> to Confirm!</div>
+          <div class="rec-step-chip">
+            <span class="step-num">1</span>
+            <div class="step-text">
+              <strong class="step-title">Select Dishes</strong>
+              <span class="step-sub">Tap ＋ / − on menu items above</span>
+            </div>
+          </div>
+          <div class="rec-step-chip">
+            <span class="step-num">2</span>
+            <div class="step-text">
+              <strong class="step-title">Campus Address</strong>
+              <span class="step-sub">Enter hostel, room no. or gate</span>
+            </div>
+          </div>
+          <div class="rec-step-chip">
+            <span class="step-num">3</span>
+            <div class="step-text">
+              <strong class="step-title">Payment Mode</strong>
+              <span class="step-sub">Scan QR (UTR) or Pay on Arrival</span>
+            </div>
+          </div>
+          <div class="rec-step-chip">
+            <span class="step-num">4</span>
+            <div class="step-text">
+              <strong class="step-title">Call to Confirm</strong>
+              <span class="step-sub">Call +91 73111 00944 to dispatch</span>
+            </div>
+          </div>
         </div>
 
         <div class="rec-order-two-col">
@@ -756,24 +779,24 @@
             <div class="rec-bill-card">
               <div class="rec-bill-title">🧾 REC Sonbhadra Campus Order Bill Summary</div>
               <div id="rec-selected-dishes-list" class="rec-dishes-mini-list">
-                1× Chilli Paneer (₹260), 1× Veg Fried Rice (₹190)
+                ⚠️ No dishes selected yet — Tap <strong>＋</strong> on any dish in the menu above to add to your order!
               </div>
               <div class="rec-bill-rows">
                 <div class="rec-bill-line">
                   <span>Selected Dishes Subtotal:</span>
-                  <strong id="rec-bill-subtotal">₹450</strong>
+                  <strong id="rec-bill-subtotal">₹0</strong>
                 </div>
                 <div class="rec-bill-line">
                   <span>GST (5% Food Tax):</span>
-                  <strong id="rec-bill-gst">₹23</strong>
+                  <strong id="rec-bill-gst">₹0</strong>
                 </div>
                 <div class="rec-bill-line rec-delivery-line">
                   <span>🛵 REC Sonbhadra Campus Delivery Charge (Fixed):</span>
-                  <strong id="rec-bill-delivery">₹40</strong>
+                  <strong id="rec-bill-delivery">₹0</strong>
                 </div>
                 <div class="rec-bill-line rec-grand-line">
-                  <span>Total Payable Amount (Incl. ₹40 Delivery):</span>
-                  <strong id="rec-bill-total">₹513</strong>
+                  <span>Total Payable Amount:</span>
+                  <strong id="rec-bill-total">₹0</strong>
                 </div>
               </div>
             </div>
@@ -905,11 +928,11 @@
         </div>
       </div>
 
-      <!-- RESERVE A TABLE / LOCAL HOME DELIVERY WHATSAPP QUOTE FORM -->
+      <!-- RESERVE A TABLE WHATSAPP QUOTE FORM -->
       <div id="table-booking-form" class="luxury-form-box" style="margin-top:1.5rem;">
         <div class="form-title-bar">
-          <h3 class="form-h3">🍽️ Reserve a Dining Table at Food Express / Robertsganj Home Delivery</h3>
-          <span style="font-size:0.76rem; color:var(--emerald); font-weight:600;">🛵 Free Home Delivery in Robertsganj Town • 📞 +91 73111 00944</span>
+          <h3 class="form-h3">🍽️ Reserve a Dining Table at Food Express</h3>
+          <span style="font-size:0.76rem; color:var(--gold-light); font-weight:600;">✨ AC Family Dining &amp; Booths • 📞 +91 73111 00944</span>
         </div>
 
         <div class="form-grid-3">
@@ -922,12 +945,10 @@
             <input type="tel" id="tb-phone" placeholder="+91 98765 43210" />
           </div>
           <div class="field-box">
-            <label for="tb-type">Dining / Order Type</label>
+            <label for="tb-type">Dining Table Type</label>
             <select id="tb-type">
               <option value="Reserve AC Family Dining Table">Reserve AC Family Dining Table</option>
               <option value="Reserve Upper Mezzanine Anniversary / VIP Table">Reserve Upper Mezzanine VIP / Anniversary Table</option>
-              <option value="REC Sonbhadra Campus Delivery (Churk • +₹40 Delivery)">🎓 REC Sonbhadra Campus Delivery (Churk • +₹40 Delivery)</option>
-              <option value="Free Home Delivery Order (Robertsganj)">🛵 Free Home Delivery Order (Robertsganj)</option>
               <option value="Highway Takeaway Parcel (Ready on Arrival)">🚗 Highway Takeaway Parcel (Ready on Arrival)</option>
               <option value="In-Room Dining (For Checked-In Hotel Guests)">🛏️ In-Room Service (Hotel Guests)</option>
             </select>
@@ -946,7 +967,7 @@
               <option value="04:30 PM (Evening Snacks & Mocktails)">04:30 PM (Evening Snacks)</option>
               <option value="08:00 PM (Prime Dinner)" selected>08:00 PM (Prime Dinner)</option>
               <option value="09:30 PM (Late Dinner)">09:30 PM (Late Dinner)</option>
-              <option value="Immediate Delivery / Takeaway">Immediate Delivery / Takeaway</option>
+              <option value="Immediate Takeaway Parcel">Immediate Takeaway Parcel</option>
             </select>
           </div>
           <div class="field-box">
@@ -959,15 +980,15 @@
             </select>
           </div>
           <div class="field-box">
-            <label for="tb-notes">Special Note / Delivery Address</label>
-            <input type="text" id="tb-notes" placeholder="e.g. Less spicy / Delivery address" />
+            <label for="tb-notes">Special Requests / Table Preference</label>
+            <input type="text" id="tb-notes" placeholder="e.g. Window booth / Less spicy / High chair" />
           </div>
         </div>
 
         <div class="quote-preview-banner">
           <div id="food-quote-preview" class="quote-text">Selected Dishes Quote...</div>
           <button type="button" id="btn-table-whatsapp" class="btn-gold full-mobile-btn">
-            🍽️ Reserve Table / Send Food Quote on WhatsApp
+            🍽️ Reserve Dining Table on WhatsApp
           </button>
         </div>
       </div>

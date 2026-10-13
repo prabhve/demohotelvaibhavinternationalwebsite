@@ -608,10 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //    QR PAYMENT, PAID [UTR/REF/TXN NO.] vs UNPAID, & CALL TO CONFIRM MODAL)
   // ========================================================================
   const REC_DELIVERY_CHARGE = 40; // Fixed ₹40 Campus Delivery Charge for REC Sonbhadra
-  const dishQuantities = new Map([
-    ['m1', 1],  // 1x Chilli Paneer
-    ['m13', 1]  // 1x Veg Fried Rice
-  ]);
+  const dishQuantities = new Map(); // Empty cart by default (0 items selected)
   let activeFoodCat = 'all';
   const menuContainer = document.getElementById('menu-cards-container');
   const menuTabs = document.querySelectorAll('[data-fcat]');
@@ -631,13 +628,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const gst = Math.round(sum * 0.05);
     const net = sum + gst;
-    const recGrandTotal = net + REC_DELIVERY_CHARGE;
+    const recGrandTotal = sum > 0 ? (net + REC_DELIVERY_CHARGE) : 0;
 
-    // Update Table Reservation / Local Delivery Preview
+    // Update Table Reservation Preview
     const el = document.getElementById('food-quote-preview');
     if (el) {
       if (items.length === 0) {
-        el.innerHTML = `No dishes pre-selected (Currently: <strong>Table Reservation Only</strong> — Use <strong>＋</strong> above to add dishes)`;
+        el.innerHTML = `No dishes pre-selected (Currently: <strong>Table Reservation Only</strong> — Tap <strong>＋</strong> on menu above if you wish to pre-order dishes)`;
       } else {
         const summaryStr = items.map(i => `${i.qty}× ${i.name}`).join(', ');
         el.innerHTML = `Selected Dishes (${items.reduce((a, b) => a + b.qty, 0)} items): <strong>₹${net.toLocaleString('en-IN')}</strong> (Subtotal ₹${sum} + 5% GST ₹${gst}) — <em>${summaryStr}</em>`;
@@ -662,11 +659,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (recSubEl) recSubEl.textContent = `₹${sum.toLocaleString('en-IN')}`;
     if (recGstEl) recGstEl.textContent = `₹${gst.toLocaleString('en-IN')}`;
-    if (recDelEl) recDelEl.textContent = `₹${REC_DELIVERY_CHARGE}`;
+    if (recDelEl) recDelEl.textContent = sum > 0 ? `₹${REC_DELIVERY_CHARGE}` : `₹0`;
     if (recTotEl) recTotEl.textContent = `₹${recGrandTotal.toLocaleString('en-IN')}`;
     if (recQrAmtEl) recQrAmtEl.textContent = `₹${recGrandTotal.toLocaleString('en-IN')}`;
     if (recUpiLink) {
-      recUpiLink.href = `upi://pay?pa=7311100944@upi&pn=Food%20Express%20Hotel%20Vaibhav&am=${recGrandTotal}&cu=INR`;
+      recUpiLink.href = recGrandTotal > 0
+        ? `upi://pay?pa=7311100944@upi&pn=Food%20Express%20Hotel%20Vaibhav&am=${recGrandTotal}&cu=INR`
+        : '#';
     }
 
     return { items, sum, gst, net, recDelivery: REC_DELIVERY_CHARGE, recGrandTotal };
@@ -915,24 +914,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const guests = document.getElementById('tb-guests')?.value || '4 Guests';
     const notes = document.getElementById('tb-notes')?.value.trim() || 'None';
     const { items, sum, gst, net } = updateFoodQuotePreview();
-    const isRecType = type.includes('REC Sonbhadra');
-    const delCharge = isRecType ? REC_DELIVERY_CHARGE : 0;
-    const finalBill = net + delCharge;
+    const finalBill = net;
 
     const dishText = items.length > 0
-      ? items.map(c => `  - ${c.qty}× ${c.name} (₹${c.lineTotal})`).join('\n') + `\n• *Subtotal:* ₹${sum} | *5% GST:* ₹${gst}${isRecType ? ` | *REC Delivery:* ₹${REC_DELIVERY_CHARGE}` : ''}\n• *Estimated Total Bill:* *₹${finalBill.toLocaleString('en-IN')}*`
-      : `  - Will order at the restaurant`;
+      ? items.map(c => `  - ${c.qty}× ${c.name} (₹${c.lineTotal})`).join('\n') + `\n• *Pre-Order Subtotal:* ₹${sum} | *5% GST:* ₹${gst}\n• *Estimated Total Bill:* *₹${finalBill.toLocaleString('en-IN')}*`
+      : `  - None pre-selected (Will order at restaurant)`;
 
     const msg = `Namaste *Food Express — Hotel Vaibhav International* (Robertsganj)!\n\n` +
-      `🍽️ *TABLE RESERVATION / FOOD ORDER QUOTE*\n` +
-      `• *Name:* ${name}\n` +
+      `🍽️ *TABLE RESERVATION REQUEST*\n` +
+      `• *Guest Name:* ${name}\n` +
       `• *Phone:* ${phone}\n` +
-      `• *Service Type:* ${type}\n` +
+      `• *Dining Table Type:* ${type}\n` +
       `• *Date & Time:* ${date} at ${time}\n` +
       `• *Party Size:* ${guests}\n` +
-      `• *Selected Dishes:*\n${dishText}\n` +
-      `• *Special Note / Delivery Address:* ${notes}\n\n` +
-      `Please confirm my reservation / order.`;
+      `• *Pre-Selected Dishes:*\n${dishText}\n` +
+      `• *Special Request / Table Preference:* ${notes}\n\n` +
+      `Please confirm my dining table reservation.`;
 
     window.open(`https://wa.me/${HOTEL_WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank');
   });
