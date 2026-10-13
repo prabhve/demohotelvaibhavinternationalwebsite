@@ -277,18 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Sequence 2 Auto-Play Toggle in Tourist Section
-  const btnAutoSeq2 = document.getElementById('btn-autoplay-seq2');
-  btnAutoSeq2?.addEventListener('click', () => {
-    seq2AutoPlaying = !seq2AutoPlaying;
-    if (seq2AutoPlaying) {
-      seq2AutoFrame = seq2Player.currentFrame;
-      btnAutoSeq2.textContent = "⏸ Pause 3D Tour Background";
-    } else {
-      btnAutoSeq2.textContent = "▶ Auto-Play 3D Tour Background";
-    }
-  });
-
   // ========================================================================
   // SCROLL DIRECTOR: HOTEL HERO IMAGE (TOP) -> SEQ 1 -> HOTEL PHOTOS -> SEQ 2
   // ========================================================================

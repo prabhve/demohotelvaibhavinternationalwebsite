@@ -2562,26 +2562,151 @@ div[id$="-box"] {
   color: var(--text-muted);
 }
 
-.wa-floating-pill {
-  position: fixed;
-  bottom: 1.2rem;
-  left: 1.3rem;
-  z-index: 980;
+/* Unique VYUVIK LABS Signature Badge */
+.vyuvik-brand-credit {
+  margin-top: 1.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vyuvik-credit-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.58rem 1.1rem;
-  border-radius: 99px;
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: #03130c;
-  font-weight: 700;
-  font-size: 0.76rem;
-  text-decoration: none;
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
-  transition: transform 0.2s ease;
+  gap: 0.65rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(10, 18, 14, 0.92) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.55), inset 0 0 16px rgba(212, 175, 55, 0.15);
+  color: #ede5d8;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  user-select: none;
 }
-.wa-floating-pill:hover {
+.vyuvik-credit-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 230, 160, 0.32), transparent);
+  transform: skewX(-25deg);
+  animation: vyuvikShimmer 3.6s infinite ease-in-out;
+}
+@keyframes vyuvikShimmer {
+  0% { left: -100%; }
+  32%, 100% { left: 200%; }
+}
+.vyuvik-credit-badge:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 6px 28px rgba(212, 175, 55, 0.4), inset 0 0 22px rgba(212, 175, 55, 0.3);
   transform: translateY(-2px);
+  color: #ffffff;
+}
+.vyuvik-sparkle {
+  color: var(--gold-light);
+  font-size: 0.82rem;
+  text-shadow: 0 0 10px rgba(247, 238, 215, 0.9);
+  animation: vyuvikTwinkle 2.2s infinite alternate ease-in-out;
+}
+@keyframes vyuvikTwinkle {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.22); }
+}
+.vyuvik-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.22rem;
+}
+.vyuvik-heart {
+  color: #ff3366;
+  display: inline-block;
+  margin: 0 0.15rem;
+  animation: vyuvikPulseHeart 1.35s infinite ease-in-out;
+  text-shadow: 0 0 12px rgba(255, 51, 102, 0.75);
+}
+@keyframes vyuvikPulseHeart {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.3); }
+  35% { transform: scale(1.05); }
+  50% { transform: scale(1.22); }
+}
+.vyuvik-highlight {
+  color: var(--gold-light);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.55);
+}
+
+/* Floating WhatsApp Concierge Action Icon (Circular FAB) */
+.wa-floating-fab,
+.wa-floating-pill {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 980;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.48), 0 0 0 2px rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+.wa-floating-fab:hover,
+.wa-floating-pill:hover {
+  transform: scale(1.12) translateY(-3px);
+  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.7), 0 0 24px rgba(37, 211, 102, 0.55);
+}
+.wa-fab-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.75);
+  animation: waPulseRing 2.4s infinite cubic-bezier(0.25, 0, 0.2, 1);
+  pointer-events: none;
+}
+@keyframes waPulseRing {
+  0% { transform: scale(0.92); opacity: 0.95; }
+  70% { transform: scale(1.38); opacity: 0; }
+  100% { transform: scale(1.42); opacity: 0; }
+}
+.wa-fab-svg {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+.wa-fab-tooltip {
+  position: absolute;
+  left: calc(100% + 12px);
+  background: rgba(8, 16, 12, 0.95);
+  color: #f7eed7;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 99px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.wa-floating-fab:hover .wa-fab-tooltip {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Mobile Sticky Bottom Concierge Dock (Hidden on Desktop) */
@@ -2764,9 +2889,10 @@ div[id$="-box"] {
     display: none !important;
   }
 
-  /* Show Sticky Bottom Concierge Dock & Hide Desktop Floating Pill */
-  .wa-floating-pill {
-    display: none;
+  /* Show Sticky Bottom Concierge Dock & Hide Desktop Floating Pill / FAB */
+  .wa-floating-pill,
+  .wa-floating-fab {
+    display: none !important;
   }
   .mobile-bottom-dock {
     display: grid;
@@ -3254,3 +3380,180 @@ div[id$="-box"] {
     min-width: 120px;
   }
 }
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINT 5: SMART WATCHES & WEARABLES (<= 320px)
+   ========================================================================== */
+@media (max-width: 320px) {
+  html {
+    font-size: 13px;
+  }
+  .navbar {
+    height: 52px;
+    padding: 0 0.4rem;
+  }
+  .nav-emblem {
+    width: 28px;
+    height: 28px;
+  }
+  .nav-emblem svg {
+    width: 14px;
+    height: 14px;
+  }
+  .nav-brand-name {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+  }
+  .nav-book-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+  }
+  .mobile-menu-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+  .section-shell {
+    padding: 0.85rem 0.45rem !important;
+    border-radius: 12px;
+  }
+  .hero-royal-title {
+    font-size: 1.18rem !important;
+  }
+  .hero-royal-sub {
+    font-size: 0.8rem !important;
+  }
+  .hero-center-stage {
+    padding: 0.85rem 0.5rem !important;
+  }
+  .slide-desc,
+  .hero-p {
+    font-size: 0.76rem !important;
+  }
+  .btn-gold,
+  .btn-outline,
+  .hero-action-btn {
+    font-size: 0.68rem !important;
+    padding: 0.45rem 0.55rem !important;
+    min-height: 40px !important;
+  }
+  .showcase-card {
+    flex: 0 0 100px !important;
+    width: 100px !important;
+    min-width: 100px !important;
+  }
+  .sc-img-wrap {
+    height: 60px !important;
+  }
+  .sc-info strong {
+    font-size: 0.62rem !important;
+  }
+  .mobile-bottom-dock {
+    height: 50px !important;
+  }
+  .dock-icon {
+    font-size: 0.95rem !important;
+  }
+  .dock-lbl {
+    font-size: 0.48rem !important;
+  }
+  .rec-modal-card {
+    padding: 0.8rem 0.5rem !important;
+    width: 96vw !important;
+  }
+  .rec-modal-title {
+    font-size: 0.95rem !important;
+  }
+  .rmc-buttons {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+  }
+  .footer-bar {
+    padding: 1.5rem 0.5rem calc(4.5rem + env(safe-area-inset-bottom, 0px)) !important;
+    font-size: 0.72rem;
+  }
+  .vyuvik-credit-badge {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.68rem;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINT 6: LARGE DESKTOP & 4K SMART TVs (>= 1600px & >= 2560px)
+   ========================================================================== */
+@media (min-width: 1600px) {
+  .section-shell {
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3.5rem 3.2rem;
+  }
+  .hero-center-stage {
+    max-width: 980px;
+  }
+  .hero-showcase-strip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .rooms-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .menu-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 2560px) {
+  /* Ultra-HD & 4K Living Room Smart TVs */
+  html {
+    font-size: 19px;
+  }
+  .section-shell {
+    max-width: 1800px;
+    padding: 4.5rem 4rem;
+  }
+  .hero-center-stage {
+    max-width: 1200px;
+    padding: 3rem 3.5rem;
+  }
+  .navbar {
+    height: 90px;
+    padding: 0 4vw;
+  }
+  .nav-brand-name {
+    font-size: 1.25rem;
+  }
+  .nav-brand-sub {
+    font-size: 0.68rem;
+  }
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .wa-floating-fab {
+    width: 72px;
+    height: 72px;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  .wa-floating-fab svg {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Universal Smart TV / Remote Focus Indicator */
+:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.6);
+}
+
+/* Universal Zero-Bleed Horizontal Safeguards Across All Devices */
+html, body {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
