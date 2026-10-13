@@ -2630,9 +2630,12 @@ div[id$="-box"] {
 .vyuvik-heart {
   color: #ff3366;
   display: inline-block;
-  margin: 0 0.15rem;
+  font-size: 1.05rem;
+  line-height: 1;
+  vertical-align: -1px;
+  margin: 0 0.18rem;
   animation: vyuvikPulseHeart 1.35s infinite ease-in-out;
-  text-shadow: 0 0 12px rgba(255, 51, 102, 0.75);
+  text-shadow: 0 0 14px rgba(255, 51, 102, 0.85);
 }
 @keyframes vyuvikPulseHeart {
   0%, 100% { transform: scale(1); }
