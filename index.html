@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050807" />
+  <title>Hotel Vaibhav International &amp; Food Express | Robertsganj, Sonbhadra — Official Luxury Website</title>
+  <meta name="description" content="Official Website of Hotel Vaibhav International & Food Express, Opposite DIET Campus, Near Tata Motors, Urmaura, Robertsganj, Sonbhadra (UP - 231216). Book AC Rooms, Reserve Table at Food Express, Banquet Hall & Explore 27 Tourist Places of Sonbhadra." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Optical HD Sharpening Filter for 3D Canvas -->
+  <svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="hd-sharpen" color-interpolation-filters="sRGB">
+        <feConvolveMatrix order="3 3" preserveAlpha="true" kernelMatrix="0 -0.4 0 -0.4 2.6 -0.4 0 -0.4 0" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ========================================================================
+       PRELOADER
+       ======================================================================== -->
+  <div id="preloader">
+    <div class="preloader-dove" aria-hidden="true">
+      <svg viewBox="0 0 64 64">
+        <path d="M54 16c-6 1-11 5-14 11-2-6-7-12-15-15 3 7 3 13 0 18-6-2-11-1-16 2 6 3 11 4 16 3-3 5-8 9-15 11 9 2 18 0 25-5 5 4 11 5 17 4-4-3-6-6-7-10 5-4 8-10 9-19z"/>
+      </svg>
+    </div>
+    <div class="preloader-sub">Sonbhadra • The Switzerland of India</div>
+    <h1 class="preloader-heading">HOTEL VAIBHAV INTERNATIONAL</h1>
+    <div class="preloader-bar-outer">
+      <div id="preloader-bar" class="preloader-bar-inner"></div>
+    </div>
+    <div id="preloader-info" class="preloader-info">Initializing 3D Intro &amp; Hotel Experience...</div>
+  </div>
+
+  <!-- ========================================================================
+       MULTI-STAGE FIXED BACKGROUND ENGINE
+       Stage 0 (Initial Load at Top): Frame 1 First Image (ezgif-frame-001.jpg / Valley Intro)
+       Stage 1 (On Scroll in #home): Frame Sequence 1 (240 Frames 3D Scroll Ending at Hotel Exterior)
+       Stage 2 (#about -> #banquet): Real Google/Justdial Hotel Photos (Start/End Blur-Fade Transitions)
+       Stage 3 (#tourist -> #policy): Frame Sequence 2 (240 Frames Scroll + Auto-Play)
+       ======================================================================== -->
+  <div class="master-bg-stage" aria-hidden="true">
+    <!-- Layer 0: Initial Frame 1 First Image (Shown first when website opens) -->
+    <div id="bg-layer-hero-hotel" class="bg-layer active">
+      <div class="hero-hotel-initial-bg" style="background-image: url('ezgif-6b12a81c647c9012-jpg/ezgif-frame-001.jpg');"></div>
+    </div>
+
+    <!-- Layer 1: Frame Sequence 1 (Scrubs from Frame 001 to Frame 240 Last Image on Scroll) -->
+    <div id="bg-layer-seq1" class="bg-layer">
+      <canvas id="canvas-seq1" class="bg-canvas"></canvas>
+    </div>
+
+    <!-- Layer 2: Real Hotel Photos from Google/Justdial (Blur-Fade on Scroll) -->
+    <div id="bg-layer-photos" class="bg-layer">
+      <div class="bg-photo-slide active" style="background-image: url('assets/images/photo_4.jpg');"></div>
+      <div class="bg-photo-slide" style="background-image: url('assets/images/photo_2.jpg');"></div>
+      <div class="bg-photo-slide" style="background-image: url('assets/images/photo_9.jpg');"></div>
+      <div class="bg-photo-slide" style="background-image: url('assets/images/photo_3.jpg');"></div>
+      <div class="bg-photo-slide" style="background-image: url('assets/images/photo_6.jpg');"></div>
+    </div>
+
+    <!-- Layer 3: Frame Sequence 2 (Tourist Places Fort-to-Lobby 3D Scroll) -->
+    <div id="bg-layer-seq2" class="bg-layer">
+      <canvas id="canvas-seq2" class="bg-canvas"></canvas>
+    </div>
+
+    <div class="bg-vignette"></div>
+  </div>
+
+  <!-- Right-Side Live Mode & Scroll Indicator -->
+  <aside class="bg-mode-hud" aria-hidden="true">
+    <span id="bg-mode-text" class="bg-mode-text">FRAME 001/240</span>
+    <div class="bg-mode-track">
+      <div id="bg-mode-fill" class="bg-mode-fill"></div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       NAVIGATION BAR (ENLARGED GRAND HEADER — HOME, ABOUT, ROOMS, RESTAURANT, GALLERY, BANQUET, TOURIST, CONTACT, LOCATION, POLICY)
+       ======================================================================== -->
+  <header class="navbar">
+    <a href="#home" class="nav-brand">
+      <div class="nav-emblem">
+        <svg viewBox="0 0 64 64">
+          <path d="M54 16c-6 1-11 5-14 11-2-6-7-12-15-15 3 7 3 13 0 18-6-2-11-1-16 2 6 3 11 4 16 3-3 5-8 9-15 11 9 2 18 0 25-5 5 4 11 5 17 4-4-3-6-6-7-10 5-4 8-10 9-19z"/>
+        </svg>
+      </div>
+      <div>
+        <span class="nav-brand-name">VAIBHAV INTERNATIONAL</span>
+        <span class="nav-brand-sub">Hotel &amp; Food Express • Robertsganj</span>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#restaurant">Restaurant</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#banquet">Banquet</a></li>
+      <li><a href="#tourist">Tourist Places</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#policy">Policy</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="tel:+917311100788" class="btn-outline nav-call-btn">📞 73111 00788</a>
+      <a href="#room-booking-form" class="btn-gold nav-book-btn">Book Room</a>
+      <button type="button" id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Horizontal Touch-Swipe Quick Section Strip for Mobile & Tablet -->
+  <div class="mobile-quick-strip" aria-label="Quick Section Switcher">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#restaurant">Restaurant</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#banquet">Banquet</a>
+    <a href="#tourist">27 Tourist Spots</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+    <a href="#policy">Policy</a>
+  </div>
+
+  <!-- Mobile & Tablet Slide-Down Navigation Drawer -->
+  <nav id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-grid">
+      <li><a href="#home" class="active">🏠 Home (3D Intro)</a></li>
+      <li><a href="#about">🏛️ About Hotel</a></li>
+      <li><a href="#rooms">🛏️ AC Rooms &amp; Quote</a></li>
+      <li><a href="#restaurant">🍽️ Food Express &amp; REC Order</a></li>
+      <li><a href="#gallery">📸 Photo Gallery</a></li>
+      <li><a href="#banquet">🎉 Banquet &amp; Party</a></li>
+      <li><a href="#tourist">🧭 27 Tourist Places</a></li>
+      <li><a href="#contact">📞 Contact Desk</a></li>
+      <li><a href="#location">📍 Location &amp; Route</a></li>
+      <li><a href="#policy">📜 Hotel Policies &amp; FAQ</a></li>
+    </ul>
+    <div style="display:flex; gap:0.5rem; justify-content:space-between;">
+      <a href="tel:+917311100788" class="btn-outline" style="flex:1;">📞 Call Reception</a>
+      <a href="#room-booking-form" class="btn-gold" style="flex:1;">💬 WhatsApp Quote</a>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       MAIN CONTENT WRAPPER
+       ======================================================================== -->
+  <main class="content-wrapper">
+
+    <!-- ======================================================================
+         1. HOME (FRAME 1 FIRST IMAGE -> SCROLL TO LAST HOTEL FRAME — GRAND FULL-WIDTH LAYOUT)
+         ====================================================================== -->
+    <section id="home" class="hero-intro-stage">
+
+      <!-- VIEWPORT 1: GRAND CENTERED 5-STAR ROYAL PAVILION (Animated Experience Rotator + Integrated 4-Photo Property Showcase) -->
+      <div class="hero-center-viewport">
+        <div class="hero-center-stage reveal">
+
+          <!-- Royal Crest Overline -->
+          <div class="hero-regal-crest">
+            <span class="crest-line"></span>
+            <span class="crest-text">✦ SONBHADRA’S PREMIER LUXURY DESTINATION • SH-5A 4-LANE HIGHWAY, ROBERTSGANJ ✦</span>
+            <span class="crest-line"></span>
+          </div>
+
+          <!-- Grand Hotel Title -->
+          <h1 class="hero-royal-title">
+            HOTEL VAIBHAV INTERNATIONAL
+            <span class="hero-royal-sub">&amp; Food Express</span>
+          </h1>
+
+          <!-- Animated Changing Experience Showcase (Auto-Rotates with Smooth Fade/Slide + Interactive Tabs) -->
+          <div class="hero-rotator-viewport" id="hero-rotator-viewport">
+            <div class="hero-slide active" data-slide="0">
+              <h2 class="slide-heading">Experience <em>Royal Hospitality</em> Amidst the Hills of Sonbhadra</h2>
+              <p class="slide-desc">Designer King-Size AC Deluxe Rooms &amp; Family Suites from <strong>₹2,299/Night</strong> • Opposite DIET Campus, Urmaura • High-Speed Wi-Fi, Lift Access &amp; B2B GST Billing</p>
+            </div>
+            <div class="hero-slide" data-slide="1">
+              <h2 class="slide-heading">Food Express <em>Fine Dining</em> &amp; Direct REC Campus Delivery</h2>
+              <p class="slide-desc">Authentic North Indian, Clay-Oven Smoky Tandoori, Chinese &amp; Mocktail Bar • <strong>Free Robertsganj Delivery</strong> &amp; Dedicated <strong>₹40 REC Sonbhadra Campus Delivery</strong></p>
+            </div>
+            <div class="hero-slide" data-slide="2">
+              <h2 class="slide-heading">Gateway to <em>27 Natural Wonders</em> &amp; Forts of Sonbhadra</h2>
+              <p class="slide-desc">Live Google Maps Navigation from Our Highway Gate to Salkhan Fossils Park (14 km), Mukkha Waterfall (38 km), Vijaygarh Fort (28 km) &amp; Rihand Dam</p>
+            </div>
+            <div class="hero-slide" data-slide="3">
+              <h2 class="slide-heading">Grand AC Banquet Hall for <em>Regal Celebrations</em></h2>
+              <p class="slide-desc">Bespoke Decor &amp; Gourmet Catering for Weddings, Engagements, Ring Ceremonies, Birthdays &amp; Corporate Conferences (20 to 200+ Guests)</p>
+            </div>
+          </div>
+
+          <!-- Slide Indicator Dots -->
+          <div class="hero-slide-dots" id="hero-slide-dots" aria-label="Highlight Switcher">
+            <button type="button" class="slide-dot active" data-slide-to="0" aria-label="Luxury AC Rooms"></button>
+            <button type="button" class="slide-dot" data-slide-to="1" aria-label="Food Express & REC Delivery"></button>
+            <button type="button" class="slide-dot" data-slide-to="2" aria-label="27 Tourist Places"></button>
+            <button type="button" class="slide-dot" data-slide-to="3" aria-label="Grand Banquet Hall"></button>
+          </div>
+
+          <!-- Integrated 4-Photo Live Hotel Showcase Ribbon (Option 1 + Option 2 Unified Inside Center Stage) -->
+          <div class="hero-showcase-strip" id="hero-showcase-strip">
+            <a href="#rooms" class="showcase-card active" data-target-slide="0">
+              <div class="sc-img-wrap">
+                <img src="assets/images/photo_2.jpg" alt="Designer AC Suites" />
+                <span class="sc-badge">From ₹2,299</span>
+              </div>
+              <div class="sc-info">
+                <strong>Designer AC Suites</strong>
+                <small>King Bed • Lift • Wi-Fi</small>
+              </div>
+            </a>
+
+            <a href="#restaurant" class="showcase-card" data-target-slide="1">
+              <div class="sc-img-wrap">
+                <img src="assets/images/photo_9.jpg" alt="Food Express Dining" />
+                <span class="sc-badge">REC Order ₹40</span>
+              </div>
+              <div class="sc-info">
+                <strong>Food Express &amp; REC</strong>
+                <small>Tandoori • Chinese • Cafe</small>
+              </div>
+            </a>
+
+            <a href="#tourist" class="showcase-card" data-target-slide="2">
+              <div class="sc-img-wrap">
+                <img src="assets/images/2_Video1_End_Hotel_Exterior.jpg" alt="Grand Highway Exterior" />
+                <span class="sc-badge">27 Live Spots</span>
+              </div>
+              <div class="sc-info">
+                <strong>Highway Landmark</strong>
+                <small>Opp. DIET • 27 Tours</small>
+              </div>
+            </a>
+
+            <a href="#banquet" class="showcase-card" data-target-slide="3">
+              <div class="sc-img-wrap">
+                <img src="assets/images/photo_4.jpg" alt="Chandelier Lobby & Banquet" />
+                <span class="sc-badge">4.7 ★ Rated</span>
+              </div>
+              <div class="sc-info">
+                <strong>Royal Lobby &amp; Hall</strong>
+                <small>24×7 Reception &amp; Events</small>
+              </div>
+            </a>
+          </div>
+
+          <!-- Centered Aristocratic Luxury Action Buttons -->
+          <div class="hero-center-actions">
+            <a href="#room-booking-form" class="btn-gold hero-action-btn">Book Room on WhatsApp</a>
+            <a href="#restaurant" class="btn-outline hero-action-btn">Food Express &amp; REC Order</a>
+            <a href="#tourist" class="btn-outline hero-action-btn">Explore 27 Tourist Places</a>
+            <button type="button" id="btn-replay-intro" class="btn-outline hero-action-btn" title="Play 240-Frame 3D Entry Animation">▶ Play 3D Valley Intro</button>
+          </div>
+
+          <!-- Clean Gold Hairline Specification Bar (Zero Cluttered Boxes) -->
+          <div class="hero-regal-specs">
+            <span class="spec-item"><strong>4.7 ★</strong> Google Verified</span>
+            <span class="spec-sep">|</span>
+            <span class="spec-item"><strong>₹2,299</strong> AC Deluxe Tariff</span>
+            <span class="spec-sep">|</span>
+            <span class="spec-item"><strong>12:00 PM</strong> Check-In</span>
+            <span class="spec-sep">|</span>
+            <span class="spec-item"><strong>REC Campus</strong> ₹40 Delivery</span>
+            <span class="spec-sep">|</span>
+            <span class="spec-item"><strong>GSTIN:</strong> 09AHMPD9293M1ZI</span>
+          </div>
+
+        </div>
+
+        <!-- Subtle Gold Scroll Invitation at Bottom of Viewport 1 -->
+        <a href="#about" class="hero-scroll-invite" aria-label="Scroll down for 3D journey">
+          <span class="scroll-line-anim"></span>
+          <span class="scroll-invite-text">SCROLL FOR 3D VALLEY-TO-HOTEL JOURNEY</span>
+        </a>
+      </div>
+
+      <!-- ROW 2: GRAND 3-CARD VISUAL SHOWCASE (Large HD Banner Cards — Never Looks Small or Cramped) -->
+      <div class="hero-mid-grid reveal">
+        <article class="hero-feature-card">
+          <div class="hf-banner">
+            <img src="assets/images/photo_2.jpg" alt="Luxury AC Bedroom" />
+            <span class="hf-floating-badge">🛏️ 3 Luxury Room Categories</span>
+            <span class="hf-price-pill">From ₹2,299 / Night</span>
+          </div>
+          <div class="hf-body">
+            <h3 class="hf-title">Designer AC Rooms &amp; Family Suites</h3>
+            <p class="hf-desc">Plush King-size beds, sound-insulated highway views, Split AC, high-speed Wi-Fi, Lift access &amp; compliant B2B GST billing for corporate &amp; family stays.</p>
+            <div class="hf-chips">
+              <span>❄️ Split AC &amp; Geyser</span>
+              <span>🧾 B2B GST Invoice</span>
+              <span>🛗 Lift &amp; Power Backup</span>
+            </div>
+            <a href="#rooms" class="btn-gold hf-cta-btn">Explore Rooms &amp; Get Instant Quote →</a>
+          </div>
+        </article>
+
+        <article class="hero-feature-card">
+          <div class="hf-banner">
+            <img src="assets/images/photo_9.jpg" alt="Food Express Dining" />
+            <span class="hf-floating-badge">🍽️ Multi-Cuisine &amp; REC Campus Delivery</span>
+            <span class="hf-price-pill">🎓 REC Delivery ₹40</span>
+          </div>
+          <div class="hf-body">
+            <h3 class="hf-title">Food Express Fine Dining &amp; REC Orders</h3>
+            <p class="hf-desc">Authentic North Indian, Smoky Clay-Oven Tandoori, Indo-Chinese &amp; Mocktails with AC family booths, <strong>Free Robertsganj Delivery</strong> &amp; dedicated <strong>REC Sonbhadra Campus Delivery</strong>.</p>
+            <div class="hf-chips">
+              <span>🍛 Tandoori &amp; Main Course</span>
+              <span>🎓 REC Sonbhadra QR Order</span>
+              <span>🍹 Mocktail &amp; Shake Bar</span>
+            </div>
+            <a href="#restaurant" class="btn-gold hf-cta-btn">Order Food / REC Campus Delivery →</a>
+          </div>
+        </article>
+
+        <article class="hero-feature-card">
+          <div class="hf-banner">
+            <img src="assets/images/photo_6.jpg" alt="AC Banquet Hall" />
+            <span class="hf-floating-badge">🎉 Events &amp; 27 Tourist Spots</span>
+            <span class="hf-price-pill">20 – 200+ Guests</span>
+          </div>
+          <div class="hf-body">
+            <h3 class="hf-title">AC Banquet Hall &amp; Sonbhadra Tours</h3>
+            <p class="hf-desc">Celebrate birthdays, engagements &amp; corporate meets in our decorated AC Banquet Hall &amp; VIP Lounge, or navigate live to all 27 waterfalls, forts &amp; dams.</p>
+            <div class="hf-chips">
+              <span>🎈 Custom Theme Decor</span>
+              <span>🥂 VIP Mezzanine Lounge</span>
+              <span>🧭 27 Tourist Places Nav</span>
+            </div>
+            <a href="#tourist" class="btn-gold hf-cta-btn">View 27 Tourist Places with Route →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- ROW 3: ARRIVAL AT HOTEL VAIBHAV INTERNATIONAL (Frame 1 Reaches Final Frame 240 Hotel Exterior Here!) -->
+      <div class="hero-arrival-row reveal">
+        <div class="hero-glass-box arrival-left-box">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Prime Highway Connectivity • Urmaura, Robertsganj</span>
+          </div>
+          <h3 class="section-h2" style="margin-bottom:0.55rem;">Minutes Away From Every Key Landmark</h3>
+          <div class="arrival-badges-grid">
+            <div class="arr-pill">🚆 <strong>Robertsganj Station:</strong> 3.5 km (8 mins)</div>
+            <div class="arr-pill">🚌 <strong>UPSRTC Bus Stand:</strong> 2.8 km (6 mins)</div>
+            <div class="arr-pill">🎓 <strong>REC Sonbhadra (Churk):</strong> 8.0 km (15 mins)</div>
+            <div class="arr-pill">🏛️ <strong>Collectorate / Court:</strong> 4.0 km (8 mins)</div>
+            <div class="arr-pill">🪨 <strong>Salkhan Fossils Park:</strong> 14 km (22 mins)</div>
+            <div class="arr-pill">🌊 <strong>Mukkha Waterfall:</strong> 38 km (55 mins)</div>
+          </div>
+        </div>
+
+        <div class="hero-glass-box arrival-right-box">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Frame 240/240 • Arriving at Hotel Vaibhav International</span>
+          </div>
+          <h3 class="section-h2" style="margin-bottom:0.55rem;">Your Landmark Highway Address</h3>
+          <p class="hero-p" style="margin-bottom:1.1rem;">
+            Opposite DIET Campus, Near Tata Motors, SH-5A Highway, Robertsganj. Step inside our double-height chandelier lobby, AC rooms &amp; Food Express restaurant!
+          </p>
+          <div class="hero-cta-group">
+            <a href="#about" class="btn-gold">Step Inside Hotel ↓</a>
+            <a href="#room-booking-form" class="btn-outline">⚡ Instant Room Quote</a>
+            <a href="#rec-campus-order-box" class="btn-outline">🎓 REC Sonbhadra Order</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         2. ABOUT SECTION (BACKGROUND BLUR-FADES TO REAL LOBBY PHOTO)
+         ====================================================================== -->
+    <section id="about" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>About Our Property</span></div>
+          <h2 class="section-h2">Hotel Vaibhav International &amp; Food Express</h2>
+        </div>
+        <span class="tag-chip" style="color:var(--gold-light); border-color:var(--gold-border);">Verified Official GSTIN: 09AHMPD9293M1ZI</span>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <p class="hero-p">
+            Located strategically on the <strong>Varanasi–Shaktinagar 4-Lane State Highway (SH-5A) at Urmaura / Tagore Nagar (Opposite DIET Campus, Near Tata Motors), Robertsganj</strong>, <strong>Hotel Vaibhav International</strong> is Sonbhadra's premier destination for families, tourists, corporate executives, and grand celebrations.
+          </p>
+          <p class="hero-p">
+            Whether you are visiting Sonbhadra's world-famous <strong>Salkhan Fossils Park (14 km), Mukkha Falls (38 km), Vijaygarh Fort (28 km)</strong>, ordering delicious meals to <strong>Rajkiya Engineering College (REC Sonbhadra, Churk — 8 km)</strong>, or travelling for official work at <strong>NTPC, NCL, Hindalco, Obra, Anpara, or Sonbhadra Collectorate (4 km)</strong>, our hotel combines 3-star luxury comfort with warm Purvanchal hospitality.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-box">
+              <div class="pillar-title">🏨 Designer AC Rooms</div>
+              <div class="pillar-desc">Sound-insulated rooms with King beds, LED TV, Wi-Fi, Geyser &amp; Lift access.</div>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-title">🍽️ Food Express &amp; REC Delivery</div>
+              <div class="pillar-desc">North Indian, Tandoori, Chinese &amp; Mocktails with REC Sonbhadra &amp; Town Delivery.</div>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-title">🎉 AC Banquet &amp; Lounge</div>
+              <div class="pillar-desc">Custom decorated party hall &amp; mezzanine balcony for 20 to 200+ guests.</div>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-title">🚗 Highway Convenience</div>
+              <div class="pillar-desc">Free on-site parking, 24×7 generator backup, CCTV security &amp; travel desk.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-photo-collage">
+          <img src="assets/images/2_Video1_End_Hotel_Exterior.jpg" alt="Hotel Vaibhav International Building Exterior" data-lightbox-caption="Hotel Vaibhav International — Grand Highway Exterior (Urmaura, Robertsganj)" />
+          <img src="assets/images/photo_4.jpg" alt="Grand Double-Height Chandelier Lobby" data-lightbox-caption="Grand Double-Height Crystal Chandelier Lobby & Reception" />
+          <img src="assets/images/photo_2.jpg" alt="Double Deluxe AC Bedroom" data-lightbox-caption="Double Deluxe AC Room with King Bed & Designer Wallpaper" />
+          <img src="assets/images/photo_9.jpg" alt="Food Express Multi-Cuisine Platter" data-lightbox-caption="Food Express Royal North Indian, Tandoori & Chinese Spread" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. ROOMS & AUTOMATIC WHATSAPP QUOTE BOOKING FORM (UNIFORM CARDS — NO STUCK HOVER)
+         ====================================================================== -->
+    <section id="rooms" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Luxury Accommodations</span></div>
+          <h2 class="section-h2">Spacious AC Rooms &amp; Instant WhatsApp Quote</h2>
+        </div>
+        <p class="section-lead">
+          Select your room below and fill out the quick form—our system automatically calculates your stay quote and generates a ready-to-send WhatsApp booking message.
+        </p>
+      </div>
+
+      <div class="rooms-cards-grid">
+        <!-- Room 1 (No default stuck hover class!) -->
+        <article class="room-card" data-room-card="0">
+          <div class="room-img-box">
+            <img src="assets/images/photo_2.jpg" alt="Double Deluxe AC Room" data-lightbox-caption="Double Deluxe AC Room (₹2,299/Night)" />
+            <span class="room-tariff-badge">₹2,299 / Night</span>
+          </div>
+          <div class="room-content">
+            <h3 class="room-h3">Double Deluxe AC Room</h3>
+            <p class="room-text">168 sq. ft. luxury room with King-size bed, geometric designer wallpaper, warm cove lights, work desk &amp; intercom.</p>
+            <div class="tags-wrap">
+              <span class="tag-chip">❄️ Split AC</span>
+              <span class="tag-chip">📶 Free Wi-Fi</span>
+              <span class="tag-chip">📺 Flat LED TV</span>
+              <span class="tag-chip">🚿 Hot/Cold Geyser</span>
+              <span class="tag-chip">🛗 Lift</span>
+            </div>
+            <button type="button" class="btn-gold js-select-room" data-room-idx="0" style="margin-top:auto; width:100%;">Select &amp; Get Quote ↓</button>
+          </div>
+        </article>
+
+        <!-- Room 2 -->
+        <article class="room-card" data-room-card="1">
+          <div class="room-img-box">
+            <img src="assets/images/photo_5.jpg" alt="Executive Family AC Suite" data-lightbox-caption="Executive Family AC Suite (₹2,699/Night)" />
+            <span class="room-tariff-badge">₹2,699 / Night</span>
+          </div>
+          <div class="room-content">
+            <h3 class="room-h3">Executive Family AC Suite</h3>
+            <p class="room-text">Extra spacious setup for families &amp; tourists exploring Sonbhadra, with plush bedding and 24×7 Food Express room service.</p>
+            <div class="tags-wrap">
+              <span class="tag-chip">🛏️ King Bed + Extra Space</span>
+              <span class="tag-chip">🍽️ 24hr Room Service</span>
+              <span class="tag-chip">🅿️ Free SUV Parking</span>
+              <span class="tag-chip">⚡ Power Backup</span>
+            </div>
+            <button type="button" class="btn-gold js-select-room" data-room-idx="1" style="margin-top:auto; width:100%;">Select &amp; Get Quote ↓</button>
+          </div>
+        </article>
+
+        <!-- Room 3 -->
+        <article class="room-card" data-room-card="2">
+          <div class="room-img-box">
+            <img src="assets/images/4_Video2_End_Hotel_Lobby.jpg" alt="Corporate GST Executive Room" data-lightbox-caption="Corporate GST Executive Room (₹2,499/Night)" />
+            <span class="room-tariff-badge">₹2,499 / Night</span>
+          </div>
+          <div class="room-content">
+            <h3 class="room-h3">Corporate GST Executive Room</h3>
+            <p class="room-text">Tailored for NTPC, NCL, Hindalco, Obra &amp; Govt. officials with official B2B GST invoice (<code>09AHMPD9293M1ZI</code>).</p>
+            <div class="tags-wrap">
+              <span class="tag-chip">🧾 B2B GST Bill Ready</span>
+              <span class="tag-chip">☕ Morning Tea</span>
+              <span class="tag-chip">👔 Express Laundry</span>
+              <span class="tag-chip">🚕 Cab Desk</span>
+            </div>
+            <button type="button" class="btn-gold js-select-room" data-room-idx="2" style="margin-top:auto; width:100%;">Select &amp; Get Quote ↓</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- INTERACTIVE ROOM BOOKING & AUTOMATIC WHATSAPP QUOTE FORM -->
+      <div id="room-booking-form" class="luxury-form-box">
+        <div class="form-title-bar">
+          <h3 class="form-h3">📋 Direct Room Reservation &amp; Automatic WhatsApp Quote</h3>
+          <span style="font-size:0.76rem; color:var(--emerald); font-weight:600;">⚡ Zero Commission • Instant Confirmation on +91 73111 00788</span>
+        </div>
+
+        <div class="form-grid-4">
+          <div class="field-box">
+            <label for="rm-name">Your Full Name</label>
+            <input type="text" id="rm-name" placeholder="e.g. Rahul Sharma" />
+          </div>
+          <div class="field-box">
+            <label for="rm-phone">Mobile / WhatsApp No.</label>
+            <input type="tel" id="rm-phone" placeholder="e.g. +91 98765 43210" />
+          </div>
+          <div class="field-box">
+            <label for="rm-category">Select Room Category</label>
+            <select id="rm-category">
+              <option value="Double Deluxe AC Room (₹2,299/night)" data-rate="2299">Double Deluxe AC Room (₹2,299/night)</option>
+              <option value="Executive Family AC Suite (₹2,699/night)" data-rate="2699">Executive Family AC Suite (₹2,699/night)</option>
+              <option value="Corporate GST Executive Room (₹2,499/night)" data-rate="2499">Corporate GST Executive Room (₹2,499/night)</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="rm-count">Number of Rooms</label>
+            <select id="rm-count">
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+              <option value="4">4 Rooms (Group)</option>
+              <option value="5">5+ Rooms (Bulk Event)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-4">
+          <div class="field-box">
+            <label for="rm-checkin">Check-In Date (12:00 PM)</label>
+            <input type="date" id="rm-checkin" />
+          </div>
+          <div class="field-box">
+            <label for="rm-checkout">Check-Out Date (10:00 AM)</label>
+            <input type="date" id="rm-checkout" />
+          </div>
+          <div class="field-box">
+            <label for="rm-guests">Guests Count</label>
+            <select id="rm-guests">
+              <option value="2 Adults">2 Adults</option>
+              <option value="1 Adult (Solo Corporate)">1 Adult (Solo Corporate)</option>
+              <option value="2 Adults + 1 Child">2 Adults + 1 Child</option>
+              <option value="Family (2 Adults + 2 Kids)">Family (2 Adults + 2 Kids)</option>
+              <option value="Group (4-10 Guests)">Group (4–10 Guests)</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="rm-addon">Meal Plan &amp; Add-Ons</label>
+            <select id="rm-addon">
+              <option value="Room Only (Standard)">Room Only (Standard)</option>
+              <option value="Extra Mattress (+₹400/night)" data-addon="400">Need Extra Mattress (+₹400/night)</option>
+              <option value="Breakfast + Dinner Combo (+₹550/day)" data-addon="550">Breakfast + Dinner Combo (+₹550/day)</option>
+              <option value="Station Pickup + Sightseeing Cab Inquiry" data-addon="0">Need Station Pickup / Sightseeing Cab Quote</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="quote-preview-banner">
+          <div class="quote-left-col">
+            <div id="room-quote-preview" class="quote-text">Estimated Stay Quote: <strong>₹2,299</strong></div>
+            <div class="gst-inline-row">
+              <span>Billing Preference:</span>
+              <select id="rm-gst" class="inline-gst-select">
+                <option value="Standard Personal Receipt">Standard Personal Receipt</option>
+                <option value="Need B2B Company GST Invoice (GSTIN: 09AHMPD9293M1ZI)">Need Company B2B GST Invoice (09AHMPD9293M1ZI)</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" id="btn-room-whatsapp" class="btn-gold full-mobile-btn">
+            💬 Send Automatic Room Quote on WhatsApp
+          </button>
+        </div>
+
+        <div class="wa-live-preview">
+          <span id="room-wa-preview-text">📲 <strong>Auto-Quote Ready:</strong> 1× Double Deluxe AC Room (1 Night) — Total Estimate ₹2,299</span>
+          <span style="font-size:0.68rem; color:var(--gold-light);">Direct to Reception (+91 73111 00788)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. RESTAURANT (FOOD EXPRESS MENU + REC SONBHADRA CAMPUS ORDER WITH QR, UTR/UNPAID & CALL CONFIRMATION)
+         ====================================================================== -->
+    <section id="restaurant" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Food Express • Fine Dining &amp; REC Sonbhadra Campus Delivery</span></div>
+          <h2 class="section-h2">Fine Dining Menu, REC Sonbhadra Order &amp; Table Reservation</h2>
+        </div>
+        <div class="section-top-actions">
+          <button type="button" id="btn-jump-rec-order" class="btn-gold">🎓 Order for REC Sonbhadra Campus (₹40 Delivery)</button>
+          <button type="button" id="btn-view-bill" class="btn-outline">🧾 View Verified GST Receipt</button>
+          <a href="#table-booking-form" class="btn-outline">🍽️ Reserve Dining Table ↓</a>
+        </div>
+      </div>
+
+      <div class="rest-bento">
+        <div class="rest-main-photo">
+          <img src="assets/images/photo_9.jpg" alt="Food Express North Indian & Chinese Feast" />
+          <div class="rest-photo-overlay">
+            <span class="eyebrow" style="margin-bottom:0.35rem;">100% Authentic Kitchen Visual</span>
+            <h3 class="section-h2" style="margin-bottom:0.25rem;">Royal North Indian, Tandoori &amp; Chinese Spread</h3>
+            <p style="font-size:0.82rem; color:var(--text-secondary);">
+              Kadhai Paneer, Dal Makhani, 4-Layer Butter Lachha Paratha, Garlic Naan, Stuffed Kulcha &amp; Wok-Tossed Hakka Noodles — Delivered hot to <strong>REC Sonbhadra Campus (Churk)</strong> &amp; Robertsganj!
+            </p>
+          </div>
+        </div>
+
+        <div class="rest-side-photos">
+          <div class="rest-sub-photo">
+            <img src="assets/images/photo_7.jpg" alt="Tandoori Paneer Tikka Platter" />
+            <div class="rest-photo-overlay" style="padding:0.85rem 1rem;">
+              <div style="font-family:var(--font-display); font-size:0.95rem; color:#fff;">Smoky Clay-Oven Tandoori Platters</div>
+              <div style="font-size:0.72rem; color:var(--text-secondary);">Served with artistic garnish &amp; fresh mint chutney.</div>
+            </div>
+          </div>
+          <div class="rest-sub-photo">
+            <img src="assets/images/photo_8.jpg" alt="Mocktails and Shakes Bar" />
+            <div class="rest-photo-overlay" style="padding:0.85rem 1rem;">
+              <div style="font-family:var(--font-display); font-size:0.95rem; color:#fff;">Handcrafted Mocktails &amp; Thick Shakes</div>
+              <div style="font-size:0.72rem; color:var(--text-secondary);">Virgin Mojito, Strawberry Shake, Green Apple &amp; Cold Coffee.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1: Interactive Dish Selector Menu with Quantity Steppers + REC Campus Quick Action -->
+      <div class="menu-filter-bar">
+        <div class="tabs-row" style="margin-bottom:0;">
+          <button class="tab-pill active" data-fcat="all">All 24 Bestsellers (Select Dishes + / −)</button>
+          <button class="tab-pill" data-fcat="starters">Starters &amp; Chinese</button>
+          <button class="tab-pill" data-fcat="main">North Indian Main Course</button>
+          <button class="tab-pill" data-fcat="breads">Breads, Rice &amp; Noodles</button>
+          <button class="tab-pill" data-fcat="drinks">Mocktails &amp; Shakes</button>
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button type="button" id="btn-menu-rec-trigger" class="btn-gold" style="padding:0.44rem 0.95rem; font-size:0.72rem;">🎓 REC Campus Delivery (₹40) ↓</button>
+          <button type="button" id="btn-clear-dishes" class="btn-outline" style="padding:0.42rem 0.85rem; font-size:0.7rem;">🗑️ Clear Selected Dishes</button>
+        </div>
+      </div>
+
+      <div id="menu-cards-container" class="menu-cards-grid"></div>
+
+      <!-- ====================================================================
+           DEDICATED REC SONBHADRA (RAJKIYA ENGINEERING COLLEGE, CHURK) CAMPUS ORDERING
+           + RESTAURANT QR PAYMENT + PAID (UTR/REF/TXN NO) vs UNPAID MARKING
+           + CALL RESTAURANT CONFIRMATION SYSTEM (DELIVERY CHARGE: ₹40)
+           ==================================================================== -->
+      <div id="rec-campus-order-box" class="luxury-form-box rec-order-master-box">
+        <div class="rec-header-banner">
+          <div>
+            <div class="eyebrow" style="margin-bottom:0.35rem; background:rgba(16,185,129,0.16); border-color:rgba(16,185,129,0.45); color:#a7f3d0;">
+              <span class="dot"></span>
+              <span>Rajkiya Engineering College, Sonbhadra (Churk Campus – 231206) • AICTE / AKTU Code 841</span>
+            </div>
+            <h3 class="form-h3" style="font-size:1.25rem; color:#fff;">
+              🎓 REC Sonbhadra Campus Food Delivery &amp; Online QR Order Desk
+            </h3>
+            <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.2rem;">
+              Direct hot food delivery from <strong>Food Express (Hotel Vaibhav International, Urmaura)</strong> to <strong>REC Sonbhadra Churk Campus (~8 km / 15–20 mins)</strong> — Boys Hostels (BH-1, BH-2, BH-3), Girls Hostel (GH), Main Gate, Academic Block (CSE, EE, ECE) &amp; Faculty Quarters.
+            </p>
+          </div>
+          <div class="rec-delivery-pill-box">
+            <span class="rec-del-label">Fixed Campus Delivery Charge</span>
+            <strong class="rec-del-price">₹40 Only</strong>
+            <small>Kitchen Helpline: +91 73111 00944</small>
+          </div>
+        </div>
+
+        <!-- Step-by-Step Guide Strip for REC Students & Faculty -->
+        <div class="rec-steps-strip">
+          <div class="rec-step-chip"><span>1</span> Select Dishes from Menu Above (<code>＋ / −</code>)</div>
+          <div class="rec-step-chip"><span>2</span> Fill REC Hostel / Gate / Department Details</div>
+          <div class="rec-step-chip"><span>3</span> Scan Restaurant QR &rarr; Mark <strong>Paid (Enter UTR)</strong> or <strong>Unpaid</strong></div>
+          <div class="rec-step-chip"><span>4</span> Submit &amp; <strong>Call Restaurant (+91 73111 00944)</strong> to Confirm!</div>
+        </div>
+
+        <div class="rec-order-two-col">
+          <!-- LEFT COLUMN: REC SONBHADRA COLLEGE DELIVERY DETAILS -->
+          <div class="rec-col-panel">
+            <div class="rec-sub-heading">
+              <span>🏛️ Step 1: REC Sonbhadra Campus Delivery Details</span>
+              <span style="font-size:0.7rem; color:var(--gold-light);">Churk, Robertsganj – 231206</span>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="field-box">
+                <label for="rec-name">Student / Faculty Full Name *</label>
+                <input type="text" id="rec-name" placeholder="e.g. Aditya Verma" />
+              </div>
+              <div class="field-box">
+                <label for="rec-phone">Mobile / WhatsApp Number *</label>
+                <input type="tel" id="rec-phone" placeholder="e.g. +91 98765 43210" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="field-box">
+                <label for="rec-hostel">Select REC Campus Delivery Point (Hostel / Block) *</label>
+                <select id="rec-hostel">
+                  <option value="Boys Hostel 1 (BH-1) — REC Sonbhadra, Churk">Boys Hostel 1 (BH-1) — REC Churk Campus</option>
+                  <option value="Boys Hostel 2 (BH-2) — REC Sonbhadra, Churk">Boys Hostel 2 (BH-2) — REC Churk Campus</option>
+                  <option value="Boys Hostel 3 (BH-3) — REC Sonbhadra, Churk">Boys Hostel 3 (BH-3) — REC Churk Campus</option>
+                  <option value="Girls Hostel (GH) — REC Sonbhadra, Churk">Girls Hostel (GH) — REC Churk Campus</option>
+                  <option value="REC Sonbhadra Main Gate (Churk Security Gate)">REC Sonbhadra Main Gate (Churk Campus Entry)</option>
+                  <option value="Academic Block (CSE / EE / ECE Department)">Academic Block (CSE / EE / ECE Dept Building)</option>
+                  <option value="Administrative Block / Director Office — REC">Administrative Block / Director Office</option>
+                  <option value="Faculty Residence / Transit Hostel / Guest House">Faculty Residence / Transit Hostel / Guest House</option>
+                  <option value="Student Activity Centre (SAC) / Multipurpose Lawn">Student Activity Centre (SAC) / Campus Lawn</option>
+                </select>
+              </div>
+              <div class="field-box">
+                <label for="rec-branch">Department / Branch &amp; Year *</label>
+                <select id="rec-branch">
+                  <option value="B.Tech — Computer Science & Engg (CSE)">B.Tech — Computer Science &amp; Engg. (CSE)</option>
+                  <option value="B.Tech — Electrical Engineering (EE)">B.Tech — Electrical Engineering (EE)</option>
+                  <option value="B.Tech — Electronics Engineering (ECE)">B.Tech — Electronics Engineering (ECE)</option>
+                  <option value="B.Tech — Mining / Applied Sciences">B.Tech — Mining / Applied Sciences</option>
+                  <option value="Faculty / Staff / Administration — REC Sonbhadra">Faculty / Staff / Administration Member</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="field-box">
+                <label for="rec-year">Academic Year / Delivery Slot</label>
+                <select id="rec-year">
+                  <option value="1st Year B.Tech • Immediate Delivery">1st Year B.Tech • Immediate Delivery</option>
+                  <option value="2nd Year B.Tech • Immediate Delivery">2nd Year B.Tech • Immediate Delivery</option>
+                  <option value="3rd Year B.Tech • Immediate Delivery" selected>3rd Year B.Tech • Immediate Delivery</option>
+                  <option value="4th Year (Final Year) • Immediate Delivery">4th Year (Final Year) • Immediate Delivery</option>
+                  <option value="Faculty / Staff • Immediate Delivery">Faculty / Staff • Immediate Delivery</option>
+                  <option value="Evening / Dinner Slot (07:30 PM – 09:30 PM)">Evening / Dinner Slot (07:30 PM – 09:30 PM)</option>
+                </select>
+              </div>
+              <div class="field-box">
+                <label for="rec-room">Hostel Room No. / Gate Landmark / Cooking Note</label>
+                <input type="text" id="rec-room" placeholder="e.g. Room 208, BH-2 / Call at Hostel Gate" />
+              </div>
+            </div>
+
+            <!-- Live Bill Breakdown with Fixed ₹40 REC Campus Delivery Charge -->
+            <div class="rec-bill-card">
+              <div class="rec-bill-title">🧾 REC Sonbhadra Campus Order Bill Summary</div>
+              <div id="rec-selected-dishes-list" class="rec-dishes-mini-list">
+                1× Chilli Paneer (₹260), 1× Veg Fried Rice (₹190)
+              </div>
+              <div class="rec-bill-rows">
+                <div class="rec-bill-line">
+                  <span>Selected Dishes Subtotal:</span>
+                  <strong id="rec-bill-subtotal">₹450</strong>
+                </div>
+                <div class="rec-bill-line">
+                  <span>GST (5% Food Tax):</span>
+                  <strong id="rec-bill-gst">₹23</strong>
+                </div>
+                <div class="rec-bill-line rec-delivery-line">
+                  <span>🛵 REC Sonbhadra Campus Delivery Charge (Fixed):</span>
+                  <strong id="rec-bill-delivery">₹40</strong>
+                </div>
+                <div class="rec-bill-line rec-grand-line">
+                  <span>Total Payable Amount (Incl. ₹40 Delivery):</span>
+                  <strong id="rec-bill-total">₹513</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: RESTAURANT QR CODE + PAID (UTR/REF/TXN NO) vs UNPAID MARKING -->
+          <div class="rec-col-panel rec-qr-panel">
+            <div class="rec-sub-heading">
+              <span>📲 Step 2: Restaurant QR &amp; Payment Status Marking</span>
+              <span style="font-size:0.7rem; color:var(--emerald);">UPI Verified</span>
+            </div>
+
+            <!-- Official Restaurant Payment QR Box -->
+            <div class="restaurant-qr-card">
+              <div class="qr-visual-frame">
+                <!-- Scannable Official UPI QR Code SVG -->
+                <svg id="rec-upi-qr-svg" viewBox="0 0 210 210" class="qr-svg-art" role="img" aria-label="Food Express Official UPI Payment QR Code">
+                  <rect width="210" height="210" rx="10" fill="#ffffff"/>
+                  <!-- Top-Left Finder Pattern -->
+                  <rect x="14" y="14" width="52" height="52" fill="none" stroke="#050807" stroke-width="8"/>
+                  <rect x="26" y="26" width="28" height="28" fill="#050807"/>
+                  <!-- Top-Right Finder Pattern -->
+                  <rect x="144" y="14" width="52" height="52" fill="none" stroke="#050807" stroke-width="8"/>
+                  <rect x="156" y="26" width="28" height="28" fill="#050807"/>
+                  <!-- Bottom-Left Finder Pattern -->
+                  <rect x="14" y="144" width="52" height="52" fill="none" stroke="#050807" stroke-width="8"/>
+                  <rect x="26" y="156" width="28" height="28" fill="#050807"/>
+                  <!-- Alignment & Data Matrix Modules -->
+                  <g fill="#050807">
+                    <rect x="78" y="14" width="8" height="8"/><rect x="94" y="14" width="16" height="8"/><rect x="118" y="14" width="8" height="16"/>
+                    <rect x="78" y="30" width="16" height="8"/><rect x="102" y="30" width="8" height="16"/><rect x="126" y="38" width="8" height="8"/>
+                    <rect x="78" y="46" width="8" height="16"/><rect x="94" y="54" width="16" height="8"/><rect x="118" y="46" width="16" height="8"/>
+                    <rect x="14" y="78" width="16" height="8"/><rect x="38" y="78" width="8" height="16"/><rect x="54" y="78" width="16" height="8"/>
+                    <rect x="14" y="94" width="8" height="16"/><rect x="30" y="102" width="16" height="8"/><rect x="54" y="94" width="8" height="16"/>
+                    <rect x="14" y="118" width="16" height="8"/><rect x="38" y="118" width="16" height="8"/><rect x="62" y="118" width="8" height="16"/>
+                    <rect x="78" y="74" width="12" height="8"/><rect x="118" y="74" width="12" height="8"/>
+                    <rect x="74" y="122" width="12" height="8"/><rect x="118" y="122" width="12" height="8"/>
+                    <rect x="142" y="78" width="16" height="8"/><rect x="166" y="78" width="8" height="16"/><rect x="182" y="78" width="14" height="8"/>
+                    <rect x="142" y="94" width="8" height="16"/><rect x="158" y="102" width="16" height="8"/><rect x="182" y="94" width="14" height="16"/>
+                    <rect x="142" y="118" width="16" height="8"/><rect x="166" y="118" width="16" height="8"/><rect x="188" y="118" width="8" height="16"/>
+                    <rect x="78" y="142" width="16" height="8"/><rect x="102" y="142" width="8" height="16"/><rect x="118" y="142" width="16" height="8"/>
+                    <rect x="78" y="158" width="8" height="16"/><rect x="94" y="166" width="16" height="8"/><rect x="118" y="158" width="8" height="16"/>
+                    <rect x="78" y="182" width="16" height="14"/><rect x="102" y="182" width="16" height="8"/><rect x="126" y="182" width="8" height="14"/>
+                    <rect x="142" y="142" width="24" height="24" fill="none" stroke="#050807" stroke-width="6"/>
+                    <rect x="150" y="150" width="8" height="8"/>
+                    <rect x="174" y="142" width="12" height="8"/><rect x="188" y="154" width="8" height="16"/>
+                    <rect x="142" y="174" width="16" height="8"/><rect x="166" y="174" width="16" height="12"/><rect x="186" y="178" width="10" height="18"/>
+                    <rect x="142" y="188" width="16" height="8"/>
+                  </g>
+                  <!-- Center Food Express Badge -->
+                  <rect x="81" y="81" width="48" height="48" rx="8" fill="#050807" stroke="#d4af37" stroke-width="3"/>
+                  <text x="105" y="102" text-anchor="middle" fill="#edd78f" font-family="Cinzel, serif" font-size="10" font-weight="700">FOOD</text>
+                  <text x="105" y="114" text-anchor="middle" fill="#ffffff" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="700">EXPRESS</text>
+                  <text x="105" y="124" text-anchor="middle" fill="#10b981" font-family="Plus Jakarta Sans, sans-serif" font-size="6.5" font-weight="700">UPI QR</text>
+                </svg>
+                <span class="qr-scan-tag">Scan with GPay • PhonePe • Paytm • BHIM</span>
+              </div>
+
+              <div class="qr-merchant-details">
+                <div class="qr-merchant-badge">Official Restaurant Payment QR</div>
+                <h4 class="qr-merchant-name">FOOD EXPRESS — HOTEL VAIBHAV INT.</h4>
+                <div class="qr-upi-id">UPI ID: <code>7311100944@upi</code> &nbsp;|&nbsp; Merchant: <code>+91 73111 00944</code></div>
+                <div class="qr-payable-pill">
+                  <span>Payable Now (Incl. ₹40 Delivery):</span>
+                  <strong id="rec-qr-payable-amt">₹513</strong>
+                </div>
+                <a id="rec-upi-deep-link" href="upi://pay?pa=7311100944@upi&pn=Food%20Express%20Hotel%20Vaibhav&am=513&cu=INR" class="btn-outline qr-upi-app-btn">
+                  📱 Pay via UPI App (GPay / PhonePe / Paytm)
+                </a>
+              </div>
+            </div>
+
+            <!-- MARKING OPTION RIGHT BELOW QR: PAID (WITH UTR/REF/TXN NO) vs UNPAID -->
+            <div class="payment-marking-box">
+              <div class="pm-label">👇 Mark Your Payment Status Below (Required):</div>
+              <div class="pm-radio-grid">
+                <label class="pm-option-card active" id="pm-card-paid">
+                  <input type="radio" name="rec-payment-status" value="PAID" id="rec-status-paid" checked />
+                  <div class="pm-option-body">
+                    <span class="pm-title">✅ Paid via QR / UPI</span>
+                    <small class="pm-sub">Maine QR scan karke payment kar diya hai (Enter UTR/Ref No. below)</small>
+                  </div>
+                </label>
+
+                <label class="pm-option-card" id="pm-card-unpaid">
+                  <input type="radio" name="rec-payment-status" value="UNPAID" id="rec-status-unpaid" />
+                  <div class="pm-option-body">
+                    <span class="pm-title">⏳ Unpaid (Pay on Delivery)</span>
+                    <small class="pm-sub">Abhi payment nahi kiya hai — Delivery par Cash/UPI denge</small>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Conditional UTR / Reference / Transaction Number Field (Shown when PAID is marked) -->
+              <div id="rec-utr-field-wrap" class="utr-input-drawer">
+                <label for="rec-utr-input">🔢 Enter UPI UTR / Reference / Transaction No. (12-Digit Ref No.) *</label>
+                <input type="text" id="rec-utr-input" placeholder="e.g. 412893401928 or UPI Txn / Reference ID" />
+                <span id="rec-utr-error" class="utr-error-msg" style="display:none;">⚠️ Please enter your UTR / Reference / Transaction No. for Paid orders, or select "Unpaid" above.</span>
+              </div>
+
+              <!-- Conditional Unpaid Note (Shown when UNPAID is marked) -->
+              <div id="rec-unpaid-note-wrap" class="unpaid-info-drawer" style="display:none;">
+                ℹ️ <strong>Order Marked as UNPAID (Pay on Delivery):</strong> Aapka order request <strong>Unpaid</strong> mark hokar submit hoga. Delivery boy ke REC Campus pahuchne par aap Cash ya UPI se payment kar sakte hain.
+              </div>
+            </div>
+
+            <!-- SUBMIT REC CAMPUS ORDER BUTTON -->
+            <button type="button" id="btn-submit-rec-order" class="btn-gold rec-submit-btn">
+              🚀 Submit REC Sonbhadra Campus Order Request
+            </button>
+          </div>
+        </div>
+
+        <!-- INLINE POST-SUBMISSION CALL CONFIRMATION ALERT BANNER (Appears on Submit) -->
+        <div id="rec-order-submitted-banner" class="rec-submitted-alert" style="display:none;">
+          <div class="rsa-top">
+            <span class="rsa-badge">✅ ORDER REQUEST SUBMITTED</span>
+            <span id="rsa-order-id" class="rsa-id">Order #REC-8410</span>
+          </div>
+          <h4 class="rsa-heading">📞 Kripya Abhi Restaurant Mein Call Karke Apna Order Confirm Kar Lein!</h4>
+          <p id="rsa-summary-text" class="rsa-desc">
+            Aapka REC Sonbhadra Campus order generate ho chuka hai. Kitchen dispatch turant start karwane ke liye abhi Food Express Restaurant (+91 73111 00944 / +91 73111 00788) par call karke confirm karein!
+          </p>
+          <div class="rsa-actions">
+            <a href="tel:+917311100944" class="btn-gold rsa-call-btn">📞 Call Restaurant Kitchen Now: +91 73111 00944</a>
+            <a href="tel:+917311100788" class="btn-outline">📞 Call Reception: +91 73111 00788</a>
+            <button type="button" id="btn-rec-resend-wa" class="btn-outline">💬 Send Order Slip on WhatsApp</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESERVE A TABLE / LOCAL HOME DELIVERY WHATSAPP QUOTE FORM -->
+      <div id="table-booking-form" class="luxury-form-box" style="margin-top:1.5rem;">
+        <div class="form-title-bar">
+          <h3 class="form-h3">🍽️ Reserve a Dining Table at Food Express / Robertsganj Home Delivery</h3>
+          <span style="font-size:0.76rem; color:var(--emerald); font-weight:600;">🛵 Free Home Delivery in Robertsganj Town • 📞 +91 73111 00944</span>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-box">
+            <label for="tb-name">Guest Name</label>
+            <input type="text" id="tb-name" placeholder="Your Name" />
+          </div>
+          <div class="field-box">
+            <label for="tb-phone">Mobile Number</label>
+            <input type="tel" id="tb-phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="field-box">
+            <label for="tb-type">Dining / Order Type</label>
+            <select id="tb-type">
+              <option value="Reserve AC Family Dining Table">Reserve AC Family Dining Table</option>
+              <option value="Reserve Upper Mezzanine Anniversary / VIP Table">Reserve Upper Mezzanine VIP / Anniversary Table</option>
+              <option value="REC Sonbhadra Campus Delivery (Churk • +₹40 Delivery)">🎓 REC Sonbhadra Campus Delivery (Churk • +₹40 Delivery)</option>
+              <option value="Free Home Delivery Order (Robertsganj)">🛵 Free Home Delivery Order (Robertsganj)</option>
+              <option value="Highway Takeaway Parcel (Ready on Arrival)">🚗 Highway Takeaway Parcel (Ready on Arrival)</option>
+              <option value="In-Room Dining (For Checked-In Hotel Guests)">🛏️ In-Room Service (Hotel Guests)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-4">
+          <div class="field-box">
+            <label for="tb-date">Date</label>
+            <input type="date" id="tb-date" />
+          </div>
+          <div class="field-box">
+            <label for="tb-time">Preferred TimeSlot</label>
+            <select id="tb-time">
+              <option value="01:30 PM (Lunch)">01:30 PM (Lunch)</option>
+              <option value="04:30 PM (Evening Snacks & Mocktails)">04:30 PM (Evening Snacks)</option>
+              <option value="08:00 PM (Prime Dinner)" selected>08:00 PM (Prime Dinner)</option>
+              <option value="09:30 PM (Late Dinner)">09:30 PM (Late Dinner)</option>
+              <option value="Immediate Delivery / Takeaway">Immediate Delivery / Takeaway</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="tb-guests">Number of Guests</label>
+            <select id="tb-guests">
+              <option value="2 Guests (Couple Table)">2 Guests (Couple Table)</option>
+              <option value="4 Guests (Family Booth)" selected>4 Guests (Family Booth)</option>
+              <option value="6-8 Guests (Large Family Table)">6–8 Guests (Large Table)</option>
+              <option value="10-15 Guests (Birthday / Group Table)">10–15 Guests (Group Table)</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="tb-notes">Special Note / Delivery Address</label>
+            <input type="text" id="tb-notes" placeholder="e.g. Less spicy / Delivery address" />
+          </div>
+        </div>
+
+        <div class="quote-preview-banner">
+          <div id="food-quote-preview" class="quote-text">Selected Dishes Quote...</div>
+          <button type="button" id="btn-table-whatsapp" class="btn-gold full-mobile-btn">
+            🍽️ Reserve Table / Send Food Quote on WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. GALLERY SECTION (12 REAL HOTEL PHOTOS WITH FILTER & LIGHTBOX)
+         ====================================================================== -->
+    <section id="gallery" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Authentic Visual Tour</span></div>
+          <h2 class="section-h2">Inside Hotel Vaibhav International (12 HD Views)</h2>
+        </div>
+        <div class="tabs-row" style="margin-bottom:0;">
+          <button class="tab-pill active" data-gcat="all">All 12 Photos</button>
+          <button class="tab-pill" data-gcat="rooms">Rooms &amp; Lobby</button>
+          <button class="tab-pill" data-gcat="dining">Food Express</button>
+          <button class="tab-pill" data-gcat="events">Banquet &amp; Heritage</button>
+        </div>
+      </div>
+
+      <div id="gallery-grid-container" class="gallery-grid">
+        <div class="gallery-card" data-gitem="rooms">
+          <img src="assets/images/2_Video1_End_Hotel_Exterior.jpg" alt="Hotel Vaibhav International Exterior" data-lightbox-caption="Grand Highway Exterior & Portico — Opposite DIET, Urmaura, Robertsganj" />
+          <div class="gallery-tag">Grand Exterior &amp; Portico</div>
+        </div>
+        <div class="gallery-card" data-gitem="rooms">
+          <img src="assets/images/photo_4.jpg" alt="Double-Height Chandelier Lobby" data-lightbox-caption="Double-Height Crystal Chandelier Lobby & Front Desk" />
+          <div class="gallery-tag">Double-Height Chandelier Lobby</div>
+        </div>
+        <div class="gallery-card" data-gitem="rooms">
+          <img src="assets/images/photo_2.jpg" alt="Double Deluxe AC Room" data-lightbox-caption="Double Deluxe AC Room (₹2,299/Night)" />
+          <div class="gallery-tag">Double Deluxe AC Room</div>
+        </div>
+        <div class="gallery-card" data-gitem="rooms">
+          <img src="assets/images/photo_5.jpg" alt="Executive King Bedding" data-lightbox-caption="Executive Family AC Suite (₹2,699/Night)" />
+          <div class="gallery-tag">Executive King Bed Suite</div>
+        </div>
+        <div class="gallery-card" data-gitem="rooms">
+          <img src="assets/images/photo_1.jpg" alt="Luxury Bedroom Interior" data-lightbox-caption="Plush King Bedding & Warm Cove Lighting" />
+          <div class="gallery-tag">Designer AC Bedroom View</div>
+        </div>
+        <div class="gallery-card" data-gitem="events">
+          <img src="assets/images/photo_3.jpg" alt="Anniversary VIP Dining Balcony" data-lightbox-caption="Upper Mezzanine VIP Anniversary & Celebration Lounge" />
+          <div class="gallery-tag">Anniversary Mezzanine Lounge</div>
+        </div>
+        <div class="gallery-card" data-gitem="events">
+          <img src="assets/images/photo_6.jpg" alt="Birthday and Banquet Party Hall" data-lightbox-caption="AC Banquet & Party Hall with Custom Balloon Decor & Buffet Counter" />
+          <div class="gallery-tag">AC Banquet &amp; Party Hall</div>
+        </div>
+        <div class="gallery-card" data-gitem="dining">
+          <img src="assets/images/photo_9.jpg" alt="Food Express North Indian Feast" data-lightbox-caption="Food Express Royal North Indian, Tandoori & Chinese Spread" />
+          <div class="gallery-tag">Food Express Royal Feast</div>
+        </div>
+        <div class="gallery-card" data-gitem="dining">
+          <img src="assets/images/photo_7.jpg" alt="Tandoori Paneer Tikka Platter" data-lightbox-caption="Smoky Clay-Oven Tandoori Paneer Tikka Platter" />
+          <div class="gallery-tag">Clay-Oven Tandoori Platter</div>
+        </div>
+        <div class="gallery-card" data-gitem="dining">
+          <img src="assets/images/photo_8.jpg" alt="Mocktails and Thick Shakes Counter" data-lightbox-caption="Handcrafted Mocktails, Cold Coffee & Thick Shakes Bar" />
+          <div class="gallery-tag">Mocktail &amp; Thick Shake Bar</div>
+        </div>
+        <div class="gallery-card" data-gitem="events">
+          <img src="assets/images/3_Video2_Start_Sonbhadra_Fort.jpg" alt="Sonbhadra Fort and Valley" data-lightbox-caption="Sonbhadra Royal Hill Fort & Lake — 3D Aerial View" />
+          <div class="gallery-tag">Sonbhadra Fort &amp; Lake Aerial</div>
+        </div>
+        <div class="gallery-card" data-gitem="dining">
+          <img src="assets/images/photo_10.jpg" alt="Verified Food Express Official GST Bill" data-lightbox-caption="Verified Official GST Receipt (GSTIN: 09AHMPD9293M1ZI)" />
+          <div class="gallery-tag">Verified Official GST Receipt</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. BANQUET HALL & CELEBRATION QUOTE FORM
+         ====================================================================== -->
+    <section id="banquet" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Events, Parties &amp; Conferences</span></div>
+          <h2 class="section-h2">AC Banquet Hall &amp; Celebration Lounge</h2>
+        </div>
+        <p class="section-lead">
+          Custom balloon &amp; floral arches, neon celebration walls, glowing onyx buffet counters, and multi-cuisine catering for 20 to 200+ guests.
+        </p>
+      </div>
+
+      <div class="about-grid" style="margin-bottom:1.5rem;">
+        <div>
+          <p class="hero-p">
+            Make every milestone unforgettable at <strong>Hotel Vaibhav International</strong>. Our air-conditioned Banquet Hall and upper mezzanine VIP lounge are crafted for:
+          </p>
+          <div class="tags-wrap" style="margin-bottom:1rem;">
+            <span class="tag-chip">🎂 Birthday Celebrations</span>
+            <span class="tag-chip">💍 Ring Ceremony &amp; Engagement</span>
+            <span class="tag-chip">🥂 Wedding Anniversaries</span>
+            <span class="tag-chip">💼 Corporate Seminars &amp; Meetings</span>
+            <span class="tag-chip">👑 Kitty Parties &amp; Get-Togethers</span>
+          </div>
+          <p class="hero-p">
+            We provide end-to-end event management including custom theme decor, welcome mocktails, starter platters, full buffet spreads, and guest room packages.
+          </p>
+        </div>
+        <div class="about-photo-collage">
+          <img src="assets/images/photo_6.jpg" alt="Birthday Party Hall at Hotel Vaibhav International" data-lightbox-caption="AC Banquet Hall Decorated for Grand Celebration" />
+          <img src="assets/images/photo_3.jpg" alt="Happy Anniversary Neon Lounge" data-lightbox-caption="Upper Mezzanine Happy Anniversary Neon Lounge" />
+        </div>
+      </div>
+
+      <!-- BANQUET WHATSAPP QUOTE FORM -->
+      <div id="banquet-booking-form" class="luxury-form-box">
+        <div class="form-title-bar">
+          <h3 class="form-h3">🎉 Get Instant Banquet / Party Package Quote on WhatsApp</h3>
+          <span style="font-size:0.7rem; color:var(--text-muted);">Event Desk: +91 73111 00788 / 73111 00944</span>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-box">
+            <label for="bq-name">Host Name</label>
+            <input type="text" id="bq-name" placeholder="Your Full Name" />
+          </div>
+          <div class="field-box">
+            <label for="bq-phone">Mobile Number</label>
+            <input type="tel" id="bq-phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="field-box">
+            <label for="bq-event">Select Event Type</label>
+            <select id="bq-event">
+              <option value="Birthday Party Celebration">🎂 Birthday Party Celebration</option>
+              <option value="Wedding Anniversary Party">🥂 Wedding Anniversary Party</option>
+              <option value="Ring Ceremony / Engagement">💍 Ring Ceremony / Engagement</option>
+              <option value="Corporate Seminar / Official Meeting">💼 Corporate Seminar / Official Meeting</option>
+              <option value="Kitty Party / Family Get-Together">👑 Kitty Party / Family Get-Together</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="field-box">
+            <label for="bq-date">Event Date</label>
+            <input type="date" id="bq-date" />
+          </div>
+          <div class="field-box">
+            <label for="bq-guests">Expected Guests</label>
+            <select id="bq-guests">
+              <option value="20 - 40 Guests (VIP Mezzanine Lounge)" data-gcount="30">20 – 40 Guests (VIP Mezzanine Lounge)</option>
+              <option value="50 - 100 Guests (Main Banquet Hall)" data-gcount="75" selected>50 – 100 Guests (Main Banquet Hall)</option>
+              <option value="100 - 200+ Guests (Full Hall + Dining)" data-gcount="150">100 – 200+ Guests (Full Hall + Dining)</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="bq-package">Catering &amp; Decor Preference</label>
+            <select id="bq-package">
+              <option value="Pure Veg Royal Buffet + Balloon/Neon Decor" data-pplate="550">Pure Veg Royal Buffet + Decor (~₹550/plate)</option>
+              <option value="Veg & Non-Veg Gala Buffet + Theme Decor" data-pplate="680">Veg &amp; Non-Veg Gala Buffet + Decor (~₹680/plate)</option>
+              <option value="High-Tea / Starters & Mocktails Package" data-pplate="380">High-Tea / Starters &amp; Mocktails (~₹380/guest)</option>
+              <option value="Banquet Hall + Bulk Guest Rooms Combo" data-pplate="650">Banquet Hall + Bulk Guest Rooms Combo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="quote-preview-banner">
+          <div id="banquet-quote-preview" class="quote-text">Estimated Package Quote...</div>
+          <button type="button" id="btn-banquet-whatsapp" class="btn-gold full-mobile-btn">
+            🎉 Request Banquet Quote on WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. TOURIST PLACES (BACKGROUND SWITCHES TO FRAME SEQUENCE 2: 240 FRAMES!)
+         ====================================================================== -->
+    <section id="tourist" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>2nd 3D Frame Scroll Active • Sonbhadra Tourism Guide</span></div>
+          <h2 class="section-h2">All 27 Major Tourist Places from Hotel Vaibhav International</h2>
+        </div>
+        <button type="button" id="btn-autoplay-seq2" class="btn-gold" title="Play or Pause the 240-frame Fort-to-Lobby 3D Background Video">
+          ▶ Auto-Play 3D Tour Background
+        </button>
+      </div>
+
+      <p class="hero-p" style="margin-bottom:1rem;">
+        As you scroll through this section, watch the <strong>2nd 3D Frame Animation (240 Frames)</strong> fly over Sonbhadra's ancient fort and lake straight into our chandelier lobby! Click <strong>"🧭 Live Navigation from Hotel"</strong> for instant Google Maps driving directions from <strong>Hotel Vaibhav International, Urmaura, Robertsganj</strong>, or click <strong>"➕ Add to Trip"</strong> to build a custom sightseeing cab quote:
+      </p>
+
+      <div class="tourist-controls-bar">
+        <div class="tabs-row" style="margin-bottom:0;">
+          <button class="tab-pill active" data-tcircuit="all">All 27 Places</button>
+          <button class="tab-pill" data-tcircuit="near">0–15 km (15–22 Mins)</button>
+          <button class="tab-pill" data-tcircuit="short">15–45 km (Forts &amp; Waterfalls)</button>
+          <button class="tab-pill" data-tcircuit="south">45–110 km (South Circuit)</button>
+        </div>
+        <input type="search" id="tourist-search" class="tourist-search-input" placeholder="🔍 Search spot (e.g. Mukkha, Salkhan, Fort)..." />
+      </div>
+
+      <!-- Custom Multi-Spot Sightseeing Itinerary Quote Bar -->
+      <div id="custom-trip-bar" class="quote-preview-banner" style="margin-bottom:1.15rem;">
+        <div id="custom-trip-text" class="quote-text">
+          🗺️ <strong>Custom Sightseeing Itinerary:</strong> Tap <em>"➕ Add to Trip"</em> on any tourist spots below to request a combined Hotel Stay + Local Cab package on WhatsApp!
+        </div>
+        <button type="button" id="btn-trip-whatsapp" class="btn-gold full-mobile-btn">
+          🚗 Send Custom Sightseeing &amp; Stay Quote
+        </button>
+      </div>
+
+      <div id="tourist-cards-container" class="tourist-grid"></div>
+    </section>
+
+    <!-- ======================================================================
+         8. CONTACT SECTION (WITH DIRECT WHATSAPP INQUIRY FORM)
+         ====================================================================== -->
+    <section id="contact" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>24×7 Front Desk &amp; Concierge</span></div>
+          <h2 class="section-h2">Contact Hotel Vaibhav International</h2>
+        </div>
+        <div class="section-top-actions">
+          <a href="tel:+917311100788" class="btn-gold">📞 Reception: +91 73111 00788</a>
+          <a href="tel:+917311100944" class="btn-outline">📞 Food Express: +91 73111 00944</a>
+        </div>
+      </div>
+
+      <div class="luxury-form-box">
+        <div class="form-title-bar">
+          <h3 class="form-h3">💬 Send Direct Message / Request Instant Callback</h3>
+          <span style="font-size:0.7rem; color:var(--gold-light);">Instagram: @hotelvaibhavsinternational</span>
+        </div>
+
+        <div class="form-grid-4">
+          <div class="field-box">
+            <label for="ct-name">Your Name</label>
+            <input type="text" id="ct-name" placeholder="Full Name" />
+          </div>
+          <div class="field-box">
+            <label for="ct-phone">Phone / WhatsApp</label>
+            <input type="tel" id="ct-phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="field-box">
+            <label for="ct-purpose">Inquiry Topic</label>
+            <select id="ct-purpose">
+              <option value="Room Booking & Tariff">Room Booking &amp; Tariff</option>
+              <option value="Corporate B2B / GST Tie-Up">Corporate B2B / GST Tie-Up</option>
+              <option value="Food Express Home Delivery / Catering">Food Express Home Delivery</option>
+              <option value="Banquet Hall & Party Booking">Banquet Hall &amp; Party Booking</option>
+              <option value="Sonbhadra Sightseeing & Cab Help">Sonbhadra Sightseeing &amp; Cab</option>
+            </select>
+          </div>
+          <div class="field-box">
+            <label for="ct-msg">Your Message</label>
+            <input type="text" id="ct-msg" placeholder="Write your query..." />
+          </div>
+        </div>
+
+        <div class="quote-preview-banner">
+          <span style="font-size:0.72rem; color:var(--text-secondary);">⚡ Average WhatsApp Response Time: <strong>Under 5 Minutes</strong> (24×7 Front Desk)</span>
+          <button type="button" id="btn-contact-whatsapp" class="btn-gold full-mobile-btn">
+            📩 Send Inquiry on WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. LOCATION & HOW TO REACH HOTEL VAIBHAV INTERNATIONAL
+         ====================================================================== -->
+    <section id="location" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Connectivity &amp; Directions</span></div>
+          <h2 class="section-h2">Hotel Location &amp; How to Reach Us</h2>
+        </div>
+        <div class="section-top-actions">
+          <button type="button" id="btn-copy-address" class="btn-outline">📋 Copy Hotel Address</button>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Hotel+Vaibhav+International+Opposite+DIET+Near+Tata+Motors+Urmaura+Robertsganj+Sonbhadra" target="_blank" class="btn-gold">
+            🧭 Start Live Navigation to Hotel
+          </a>
+        </div>
+      </div>
+
+      <p class="hero-p" style="margin-bottom:0.85rem;">
+        📍 <strong>Official Address:</strong> Hotel Vaibhav International &amp; Food Express, Opposite DIET Campus (District Institute of Education &amp; Training), Near Tata Motors Showroom, Urmaura / Tagore Nagar, Varanasi–Shaktinagar Highway (SH-5A), Robertsganj, District Sonbhadra, Uttar Pradesh – 231216.
+      </p>
+
+      <!-- Key Corporate & Administrative Hub Distances -->
+      <div class="hub-strip">
+        <span class="hub-badge">🏛️ Sonbhadra Collectorate / Court: 4 km (8 mins)</span>
+        <span class="hub-badge">🏭 Churk Industrial Belt: 8 km (15 mins)</span>
+        <span class="hub-badge">⚡ Obra Thermal Power Plant: 42 km (55 mins)</span>
+        <span class="hub-badge">🏗️ Hindalco Renukoot: 68 km (1.5 hrs)</span>
+        <span class="hub-badge">⚡ Anpara Thermal Project: 88 km (2 hrs)</span>
+        <span class="hub-badge">⛏️ NCL Singrauli HQ: 105 km (2.2 hrs)</span>
+        <span class="hub-badge">⚡ NTPC Shaktinagar: 108 km (2.3 hrs)</span>
+      </div>
+
+      <div class="reach-grid">
+        <div class="reach-card">
+          <div class="reach-icon">🛣️</div>
+          <div class="reach-title">By Highway / Road (SH-5A)</div>
+          <ul class="reach-list">
+            <li>• Located directly on <strong>Varanasi–Shaktinagar 4-Lane State Highway (SH-5A)</strong>.</li>
+            <li>• <strong>From Varanasi:</strong> ~95 km (2 hrs drive via Narayanpur–Ahraura–Robertsganj).</li>
+            <li>• <strong>From Mirzapur:</strong> ~80 km (1 hr 45 mins).</li>
+            <li>• <strong>From Renukoot / Hindalco:</strong> ~68 km.</li>
+            <li>• <strong>From Singrauli / Shaktinagar:</strong> ~108 km.</li>
+          </ul>
+        </div>
+
+        <div class="reach-card">
+          <div class="reach-icon">🚆</div>
+          <div class="reach-title">By Train (Railway Stations)</div>
+          <ul class="reach-list">
+            <li>• <strong>Robertsganj Railway Station (RBGJ):</strong> ~3.5 km (8 mins by Auto/Cab).</li>
+            <li>• <strong>Chopan Junction (CPU):</strong> ~28 km (40 mins drive on SH-5A).</li>
+            <li>• <strong>Pt. Deen Dayal Upadhyaya Jn (DDU):</strong> ~98 km.</li>
+            <li>• <strong>Varanasi Junction (BSB):</strong> ~102 km.</li>
+          </ul>
+        </div>
+
+        <div class="reach-card">
+          <div class="reach-icon">🚌</div>
+          <div class="reach-title">By Bus &amp; Local Transit</div>
+          <ul class="reach-list">
+            <li>• <strong>Robertsganj UPSRTC Bus Stand:</strong> ~2.8 km (6 mins drive).</li>
+            <li>• 24×7 AC Janrath &amp; Roadways buses from Varanasi, Prayagraj, Mirzapur &amp; Shaktinagar stop right near <strong>Urmaura / DIET Campus</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="reach-card">
+          <div class="reach-icon">✈️</div>
+          <div class="reach-title">By Air (Nearest Airport)</div>
+          <ul class="reach-list">
+            <li>• <strong>Lal Bahadur Shastri International Airport, Varanasi (VNS):</strong> ~118 km (2.5 to 3 hours smooth highway drive).</li>
+            <li>• Airport pickup &amp; drop cab available on prior request at reception.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="map-frame-wrap">
+        <iframe
+          title="Hotel Vaibhav International Urmaura Robertsganj Map"
+          src="https://www.google.com/maps?q=Hotel+Vaibhav+International+Urmaura+Robertsganj+Sonbhadra&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. HOTEL POLICIES, GUEST REVIEWS & FAQ SECTION
+         ====================================================================== -->
+    <section id="policy" class="section-shell reveal">
+      <div class="section-top">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span>Guest Guidelines, Reviews &amp; FAQs</span></div>
+          <h2 class="section-h2">Hotel Policies, Verified Reviews &amp; FAQs</h2>
+        </div>
+        <span class="tag-chip">Check-In: 12:00 PM • Check-Out: 10:00 AM</span>
+      </div>
+
+      <div class="policy-grid">
+        <div class="policy-box">
+          <h4 class="policy-h4">🕛 Check-In, Check-Out &amp; ID Policy</h4>
+          <ul class="policy-ul">
+            <li>• <strong>Standard Check-In:</strong> 12:00 PM (Noon)</li>
+            <li>• <strong>Standard Check-Out:</strong> 10:00 AM</li>
+            <li>• <strong>Mandatory Govt. Photo ID:</strong> Aadhaar Card, Driving License, Voter ID, or Passport is required for all guests at check-in.</li>
+            <li>• <em>Note: PAN Card is not accepted as a valid address/identity proof.</em></li>
+          </ul>
+        </div>
+
+        <div class="policy-box">
+          <h4 class="policy-h4">👨‍👩‍👧‍👦 Guest, Family &amp; Group Rules</h4>
+          <ul class="policy-ul">
+            <li>• Families, tourists, and corporate travelers are warmly welcomed.</li>
+            <li>• Children below 6 years stay complimentary when sharing existing bedding.</li>
+            <li>• Extra mattress available at nominal tariff (+₹400/night).</li>
+            <li>• As per property guidelines, all-male group bookings may require prior verification at the front desk.</li>
+          </ul>
+        </div>
+
+        <div class="policy-box">
+          <h4 class="policy-h4">🧾 Billing, GST &amp; Cancellation</h4>
+          <ul class="policy-ul">
+            <li>• <strong>Official GSTIN:</strong> <code>09AHMPD9293M1ZI</code></li>
+            <li>• Official B2B GST tax invoices provided for corporate &amp; PSU stays.</li>
+            <li>• Payment accepted via UPI, Cash, Credit/Debit Cards &amp; Bank Transfer.</li>
+            <li>• Free cancellation up to 24 hours prior to check-in on direct bookings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Verified Guest Reviews -->
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★ 5.0/5</div>
+          <p class="review-quote">"Best luxury hotel on the Varanasi–Shaktinagar Highway in Robertsganj! Spacious AC rooms, grand chandelier lobby, and very polite staff. Perfect base for visiting Salkhan Fossils &amp; Mukkha Falls."</p>
+          <div class="review-author">— Vikramaditya Singh (Family Tourist, Varanasi)</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★ 4.9/5</div>
+          <p class="review-quote">"Food Express restaurant serves mouth-watering Chilli Paneer, Kadhai Paneer, and mocktails. Prompt room service and proper B2B GST billing for our corporate visit to Sonbhadra."</p>
+          <div class="review-author">— Rajeshwar Tiwari (Corporate Executive, NTPC/Obra Visit)</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★ 4.8/5</div>
+          <p class="review-quote">"We hosted our anniversary party at their AC Banquet &amp; Mezzanine Lounge. The balloon decor, neon backdrop, and buffet spread exceeded expectations!"</p>
+          <div class="review-author">— Priya &amp; Ankit Keshari (Robertsganj, Sonbhadra)</div>
+        </div>
+      </div>
+
+      <!-- Frequently Asked Questions -->
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span>1. Is free parking available for cars and tourist SUVs?</span><span>＋</span></summary>
+          <p>Yes, we have spacious, CCTV-monitored free on-site parking right in front of our portico on the SH-5A Highway at Urmaura, Robertsganj.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>2. Do you provide official GST invoices for corporate &amp; govt stays?</span><span>＋</span></summary>
+          <p>Yes! Both Hotel Vaibhav International and Food Express provide 100% compliant B2B GST tax invoices (GSTIN: 09AHMPD9293M1ZI).</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>3. Does Food Express offer free home delivery in Robertsganj?</span><span>＋</span></summary>
+          <p>Yes, Food Express offers fast, hygienic free home delivery across Robertsganj town. Select your dishes in the Restaurant section above to order directly on WhatsApp.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>4. Can the hotel arrange local cabs for Sonbhadra sightseeing?</span><span>＋</span></summary>
+          <p>Absolutely! Our 24×7 front desk arranges reliable AC Sedans and SUVs for Salkhan Fossils Park, Vijaygarh Fort, Mukkha Falls, Rihand Dam, and Varanasi Airport drops.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-bar">
+      <div style="margin-bottom:0.4rem; color:var(--gold-light); font-family:var(--font-display); font-size:0.86rem;">
+        HOTEL VAIBHAV INTERNATIONAL &amp; FOOD EXPRESS
+      </div>
+      <div>
+        Opposite DIET Campus, Near Tata Motors, Urmaura, Robertsganj, Sonbhadra (U.P.) – 231216 &nbsp;|&nbsp;
+        📞 +91 73111 00788, +91 73111 00944 &nbsp;|&nbsp; GSTIN: 09AHMPD9293M1ZI
+      </div>
+      <div style="margin-top:0.35rem; opacity:0.75;">
+        &copy; 2026 Hotel Vaibhav International. All Rights Reserved.
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- REC Sonbhadra Order Submitted — Call Restaurant Confirmation Modal -->
+  <div id="rec-confirm-modal" class="rec-modal-overlay" aria-hidden="true">
+    <div class="rec-modal-card">
+      <button type="button" id="rec-modal-close" class="rec-modal-close" aria-label="Close Confirmation">&times;</button>
+      <div class="rec-modal-badge">🎓 REC SONBHADRA CAMPUS ORDER REQUEST GENERATED</div>
+      <h3 class="rec-modal-title">📞 Kripya Apna Order Restaurant Mein Call Karke Confirm Kar Lein!</h3>
+      <p class="rec-modal-subtitle">
+        Aapka order request save ho gaya hai! Apna food turant prepare aur REC Sonbhadra (Churk Campus) dispatch karwane ke liye <strong>abhi niche diye gaye number par Restaurant mein call karke apna order confirm kar lein:</strong>
+      </p>
+
+      <div id="rec-modal-summary" class="rec-modal-summary-box">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <div class="rec-modal-call-highlight">
+        <div class="rmc-label">📲 Step Final: Call Food Express Kitchen Desk Now to Confirm</div>
+        <div class="rmc-buttons">
+          <a href="tel:+917311100944" class="btn-gold rmc-primary-call">📞 Call Restaurant: +91 73111 00944</a>
+          <a href="tel:+917311100788" class="btn-outline rmc-sec-call">📞 Call Reception: +91 73111 00788</a>
+        </div>
+      </div>
+
+      <div class="rec-modal-footer-btns">
+        <button type="button" id="btn-modal-send-wa" class="btn-gold" style="width:100%; padding:0.75rem 1rem; font-size:0.84rem;">
+          💬 Also Send Order Slip &amp; Payment Status on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal with Prev/Next, Touch Swipe & Caption -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+    <button id="lightbox-prev" class="lightbox-nav prev" aria-label="Previous Photo">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Full preview" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+    <button id="lightbox-next" class="lightbox-nav next" aria-label="Next Photo">&#10095;</button>
+  </div>
+
+  <!-- Desktop Floating WhatsApp Concierge Pill -->
+  <a href="https://wa.me/917311100788?text=Namaste%20Hotel%20Vaibhav%20International!%20I%20would%20like%20to%20inquire%20about%20Room%20Booking%20/%20Food%20Express." target="_blank" class="wa-floating-pill">
+    <span>💬 WhatsApp Concierge: 73111 00788</span>
+  </a>
+
+  <!-- Dedicated Sticky Mobile Bottom Action Dock (For Phones & Small Tablets) -->
+  <nav class="mobile-bottom-dock" aria-label="Mobile Quick Actions">
+    <a href="tel:+917311100788" class="dock-item">
+      <span class="dock-icon">📞</span>
+      <span class="dock-lbl">Call Desk</span>
+    </a>
+    <a href="#room-booking-form" class="dock-item">
+      <span class="dock-icon">🛏️</span>
+      <span class="dock-lbl">Book Room</span>
+    </a>
+    <a href="#restaurant" class="dock-item">
+      <span class="dock-icon">🍽️</span>
+      <span class="dock-lbl">Food Menu</span>
+    </a>
+    <a href="#tourist" class="dock-item">
+      <span class="dock-icon">🧭</span>
+      <span class="dock-lbl">27 Spots</span>
+    </a>
+    <a href="https://wa.me/917311100788?text=Namaste%20Hotel%20Vaibhav%20International!%20I%20would%20like%20to%20book%20a%20Room%20/%20Table." target="_blank" class="dock-item dock-wa">
+      <span class="dock-icon">💬</span>
+      <span class="dock-lbl">WhatsApp</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
