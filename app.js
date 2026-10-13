@@ -1142,11 +1142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     triggerEl.addEventListener('click', () => openLightboxAt(idx));
   });
 
-  document.getElementById('btn-view-bill')?.addEventListener('click', () => {
-    const billIdx = clickableImgs.findIndex(i => i.src.includes('photo_10.jpg'));
-    if (billIdx >= 0) openLightboxAt(billIdx);
-  });
-
   document.getElementById('lightbox-prev')?.addEventListener('click', (e) => {
     e.stopPropagation();
     openLightboxAt(currentLbIndex - 1);
