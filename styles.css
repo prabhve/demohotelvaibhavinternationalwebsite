@@ -444,8 +444,7 @@ img, video, iframe {
     gap: 0.35rem;
   }
   .nav-call-btn {
-    padding: 0.38rem 0.55rem;
-    font-size: 0.66rem;
+    display: none; /* Hide phone button on laptop to give links full width */
   }
   .nav-book-btn {
     padding: 0.42rem 0.75rem;
@@ -1414,6 +1413,9 @@ div[id$="-box"] {
 .field-box select,
 .field-box textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   background: var(--bg-input);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
@@ -1588,7 +1590,7 @@ div[id$="-box"] {
 
 .menu-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 255px), 1fr));
   gap: 0.65rem;
   margin-bottom: 1.5rem;
 }
@@ -2279,7 +2281,9 @@ div[id$="-box"] {
   color: #fff;
   font-family: var(--font-sans);
   font-size: 0.78rem;
-  min-width: 260px;
+  min-width: min(260px, 100%);
+  max-width: 100%;
+  box-sizing: border-box;
   outline: none;
 }
 .tourist-search-input:focus {
@@ -2288,7 +2292,7 @@ div[id$="-box"] {
 
 .tourist-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 0.95rem;
 }
 .tourist-card {
@@ -2828,9 +2832,9 @@ div[id$="-box"] {
 .lightbox-nav:hover { background: var(--gold); color: #050807; }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINT 1: TABLETS & COMPACT LAPTOPS (<= 1180px)
+   RESPONSIVE BREAKPOINT 1: TABLETS & COMPACT LAPTOPS (<= 1260px)
    ========================================================================== */
-@media (max-width: 1180px) {
+@media (max-width: 1260px) {
   .nav-menu {
     display: none;
   }
@@ -2839,6 +2843,11 @@ div[id$="-box"] {
   }
   .mobile-quick-strip {
     display: flex;
+  }
+  .qty-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
   }
   section[id],
   div[id$="-form"],
@@ -3323,7 +3332,13 @@ div[id$="-box"] {
     font-size: 0.82rem;
   }
   .restaurant-qr-card {
+    grid-template-columns: 1fr;
     text-align: center;
+    justify-items: center;
+  }
+  .rmc-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
   .qr-visual-frame {
     margin: 0 auto;
@@ -3356,6 +3371,53 @@ div[id$="-box"] {
   .lightbox-nav.next { right: 28%; }
   .lightbox-caption {
     margin-bottom: 3.5rem;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINT 3: COMPACT MOBILE PHONES (<= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .hero-center-actions,
+  .hero-cta-group {
+    grid-template-columns: 1fr;
+  }
+  .spec-sep {
+    display: none;
+  }
+  .hero-regal-specs {
+    gap: 0.35rem 0.75rem;
+    font-size: 0.68rem;
+  }
+  .map-frame-wrap {
+    height: 220px;
+  }
+  .nav-brand-sub {
+    font-size: 0.44rem;
+  }
+  .room-img-box {
+    height: 165px;
+  }
+}
+
+/* Mobile Devices in Landscape Orientation */
+@media (max-height: 520px) and (orientation: landscape) {
+  .navbar {
+    height: 48px !important;
+  }
+  .mobile-nav-drawer {
+    top: 48px !important;
+    max-height: calc(100vh - 52px) !important;
+  }
+  .rec-modal-card {
+    max-height: 85vh !important;
+    padding: 1rem !important;
+  }
+  .mobile-bottom-dock {
+    height: 44px !important;
+  }
+  .hero-intro-stage {
+    padding-top: 54px !important;
   }
 }
 
@@ -3549,11 +3611,16 @@ div[id$="-box"] {
 }
 
 /* Universal Zero-Bleed Horizontal Safeguards Across All Devices */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 html, body {
+  width: 100%;
   max-width: 100vw;
   overflow-x: clip;
 }
 img, video, canvas, svg {
   max-width: 100%;
 }
+
 
