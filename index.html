@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
 
@@ -1437,6 +1438,12 @@
           <span class="vyuvik-sparkle">✦</span>
         </div>
       </div>
+      <!-- Staff & Owner Admin Portal Entry Link -->
+      <div class="footer-admin-link-wrap">
+        <button type="button" id="btn-open-admin" class="footer-admin-btn">
+          🔐 Staff &amp; Owner Admin Portal
+        </button>
+      </div>
     </footer>
 
   </main>
@@ -1513,6 +1520,475 @@
     </a>
   </nav>
 
+  <!-- ========================================================================
+       HOTEL VAIBHAV INTERNATIONAL & FOOD EXPRESS — ADMIN & MANAGEMENT PORTAL
+       Passcode Security, Full-Screen Left Sidebar Console, Live Analytics,
+       WhatsApp Leads CRM, Dynamic Rooms/Menu/REC/Settings CMS
+       ======================================================================== -->
+
+  <!-- 1. Passcode Authentication Modal -->
+  <div id="admin-login-modal" class="admin-login-overlay" aria-hidden="true">
+    <div class="admin-login-card">
+      <button type="button" id="admin-login-close" class="admin-login-close" aria-label="Close Admin Login">&times;</button>
+      <div class="admin-login-icon">🔐</div>
+      <h3 class="admin-login-title">Owner &amp; Staff Admin Portal</h3>
+      <p class="admin-login-sub">Enter the confidential access passcode to manage bookings, WhatsApp leads, food menu rates &amp; website configurations.</p>
+      
+      <div class="admin-passcode-box">
+        <input type="password" id="admin-passcode-input" class="admin-passcode-input" placeholder="ENTER PASSCODE" autocomplete="off" />
+        <button type="button" id="admin-passcode-toggle" class="admin-passcode-toggle" aria-label="Toggle Passcode Visibility">👁️</button>
+      </div>
+      
+      <div class="admin-passcode-hint">
+        Confidential Owner Passcode: <code>VAIBHAV2026</code> (or <code>1234</code>)
+      </div>
+
+      <div id="admin-error-msg" class="admin-error-msg">⚠️ Incorrect passcode. Please check and try again.</div>
+
+      <button type="button" id="admin-btn-unlock" class="admin-btn-unlock">
+        Unlock Admin Console ➔
+      </button>
+    </div>
+  </div>
+
+  <!-- 2. Full-Screen Admin Console with Persistent Left Sidebar -->
+  <div id="admin-portal" class="admin-portal" aria-hidden="true">
+    <!-- Top Admin Bar -->
+    <header class="admin-top-bar">
+      <div class="admin-brand-left">
+        <button type="button" id="admin-sidebar-toggle" class="admin-sidebar-toggle-btn" aria-label="Toggle Navigation Menu">☰</button>
+        <div class="admin-logo-circle">👑</div>
+        <div class="admin-brand-text">
+          <h2>Hotel Vaibhav International</h2>
+          <span>Central Management &amp; Analytics Console</span>
+        </div>
+      </div>
+      <div class="admin-top-actions">
+        <div class="admin-live-badge">
+          <span class="admin-live-dot"></span>
+          <span>Live Site Connected</span>
+        </div>
+        <button type="button" id="btn-admin-close" class="admin-btn-view-site" title="Return to Website">
+          <span>🌐 View Website</span>
+        </button>
+        <button type="button" id="btn-admin-logout" class="admin-btn-logout" title="Lock &amp; Logout">
+          <span>🔒 Logout</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Admin Body (Left Sidebar + Content Panels) -->
+    <div class="admin-body">
+      <!-- Left Sidebar -->
+      <aside id="admin-sidebar" class="admin-sidebar">
+        <div class="admin-profile-card">
+          <div class="admin-avatar">👑</div>
+          <div class="admin-profile-info">
+            <strong>Management Desk</strong>
+            <span>Robertsganj, Sonbhadra</span>
+          </div>
+        </div>
+
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item active" data-tab="analytics">
+            <button type="button">
+              <span class="nav-left"><span class="icon">📊</span> <span>Dashboard &amp; KPI</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="leads">
+            <button type="button">
+              <span class="nav-left"><span class="icon">💬</span> <span>WhatsApp Leads CRM</span></span>
+              <span id="badge-leads-count" class="admin-badge-count">3</span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="rooms">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🛏️</span> <span>Rooms &amp; Tariffs</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="menu">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🍽️</span> <span>Food Express Menu</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="rec">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🎓</span> <span>REC Sonbhadra Desk</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="banquet">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🎉</span> <span>Banquet &amp; Events</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="tourist">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🧭</span> <span>27 Tourist Spots</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="settings">
+            <button type="button">
+              <span class="nav-left"><span class="icon">⚙️</span> <span>Hotel Info &amp; Security</span></span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="backup">
+            <button type="button">
+              <span class="nav-left"><span class="icon">💾</span> <span>Backup &amp; CSV Export</span></span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="admin-sidebar-footer">
+          <span>Version 2.4 Luxury Console</span><br/>
+          <span style="color:var(--gold-light);">Designed By VYUVIK LABS</span>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="admin-content">
+
+        <!-- TAB 1: ANALYTICS & DASHBOARD -->
+        <section id="panel-analytics" class="admin-tab-panel active">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Live Activity &amp; Booking Analytics</h3>
+              <p>Real-time metrics, pipeline value and direct customer inquiry tracking.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" class="admin-btn-secondary" onclick="window.VaibhavAdmin?.openPortal()">🔄 Refresh</button>
+            </div>
+          </div>
+
+          <!-- KPI Cards Grid -->
+          <div class="admin-kpi-grid">
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-lbl">Total Customer Leads</div>
+              <div class="admin-kpi-val" id="kpi-total-leads">0</div>
+              <div class="admin-kpi-sub">Across All Channels</div>
+            </div>
+            <div class="admin-kpi-card gold">
+              <div class="admin-kpi-lbl">Inquiry Pipeline Value</div>
+              <div class="admin-kpi-val" id="kpi-pipeline-val">₹0</div>
+              <div class="admin-kpi-sub">Estimated Inquiries</div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-lbl">Room Reservations</div>
+              <div class="admin-kpi-val" id="kpi-room-leads">0</div>
+              <div class="admin-kpi-sub">Deluxe &amp; Family Suites</div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-lbl">Food Express &amp; REC</div>
+              <div class="admin-kpi-val" id="kpi-rec-leads">0</div>
+              <div class="admin-kpi-sub">Campus Delivery &amp; Tables</div>
+            </div>
+            <div class="admin-kpi-card">
+              <div class="admin-kpi-lbl">Banquet &amp; Events</div>
+              <div class="admin-kpi-val" id="kpi-bq-leads">0</div>
+              <div class="admin-kpi-sub">Parties &amp; Conferences</div>
+            </div>
+          </div>
+
+          <!-- Recent Leads Stream -->
+          <div class="admin-card-box">
+            <div class="admin-card-header">
+              <h4 class="admin-card-title">⚡ Live Customer Stream (Recent 5 Inquiries)</h4>
+            </div>
+            <div id="analytics-recent-stream">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: WHATSAPP LEADS & CRM -->
+        <section id="panel-leads" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>WhatsApp Leads CRM &amp; Form Tracker</h3>
+              <p>All inquiries submitted through website calculators &amp; WhatsApp forms are automatically captured here.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-export-leads-csv" class="admin-btn-secondary">📥 Export CSV</button>
+              <button type="button" id="btn-clear-leads" class="admin-btn-danger">🗑️ Clear All</button>
+            </div>
+          </div>
+
+          <!-- Filter & Search Toolbar -->
+          <div class="admin-toolbar">
+            <div class="admin-search-wrap">
+              <input type="text" id="admin-leads-search" class="admin-search-input" placeholder="🔍 Search by Guest Name, Phone or Details..." />
+            </div>
+            <div class="admin-filters-wrap">
+              <button type="button" class="admin-filter-pill active" data-lfilter="all">All Inquiries</button>
+              <button type="button" class="admin-filter-pill" data-lfilter="room">Rooms</button>
+              <button type="button" class="admin-filter-pill" data-lfilter="rec">REC Campus</button>
+              <button type="button" class="admin-filter-pill" data-lfilter="table">Dining Table</button>
+              <button type="button" class="admin-filter-pill" data-lfilter="banquet">Banquet Hall</button>
+              <button type="button" class="admin-filter-pill" data-lfilter="tourist">Sightseeing</button>
+            </div>
+          </div>
+
+          <!-- Leads Data Table -->
+          <div class="admin-table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Guest Name &amp; Phone</th>
+                  <th>Service Type</th>
+                  <th>Inquiry Details</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Quick Action</th>
+                </tr>
+              </thead>
+              <tbody id="leads-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TAB 3: ROOMS & TARIFFS CMS -->
+        <section id="panel-rooms" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Rooms &amp; Tariffs CMS</h3>
+              <p>Update room names, nightly rates, bed configurations and amenities. Changes reflect instantly on the live booking calculator.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-rooms" class="admin-btn-primary">💾 Save &amp; Apply Changes</button>
+            </div>
+          </div>
+          <div id="rooms-manager-container">
+            <!-- Populated dynamically -->
+          </div>
+        </section>
+
+        <!-- TAB 4: FOOD EXPRESS MENU CMS -->
+        <section id="panel-menu" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Food Express Restaurant Menu CMS</h3>
+              <p>Edit dish rates, mark items in-stock / out-of-stock, or add special items to the digital restaurant menu.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-add-dish-prompt" class="admin-btn-primary">➕ Add New Dish</button>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="admin-filters-wrap" style="margin-bottom:1rem;">
+            <button type="button" class="admin-filter-pill active" data-mfilter="all">All Dishes</button>
+            <button type="button" class="admin-filter-pill" data-mfilter="starters">Starters</button>
+            <button type="button" class="admin-filter-pill" data-mfilter="main">Main Course</button>
+            <button type="button" class="admin-filter-pill" data-mfilter="breads">Breads &amp; Rice</button>
+            <button type="button" class="admin-filter-pill" data-mfilter="drinks">Beverages</button>
+          </div>
+
+          <div class="admin-table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Dish Name &amp; Tag</th>
+                  <th>Category</th>
+                  <th>Price (₹)</th>
+                  <th>In-Stock</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="menu-manager-table-body">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TAB 5: REC SONBHADRA DELIVERY DESK -->
+        <section id="panel-rec" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>REC Sonbhadra (Churk Campus) Delivery CMS</h3>
+              <p>Configure student delivery charge, UPI Payment ID, timings and registered hostel drop points.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-rec" class="admin-btn-primary">💾 Save REC Settings</button>
+            </div>
+          </div>
+
+          <div class="admin-card-box">
+            <div class="admin-form-grid-3">
+              <div class="admin-field">
+                <label>Campus Delivery Charge (₹)</label>
+                <input type="number" id="rec-admin-charge" value="40" />
+                <span class="admin-field-hint">Added automatically to REC student food carts.</span>
+              </div>
+              <div class="admin-field">
+                <label>Restaurant Merchant UPI ID</label>
+                <input type="text" id="rec-admin-upi" value="7311100944@upi" />
+                <span class="admin-field-hint">Displayed under the live QR Code for student payments.</span>
+              </div>
+              <div class="admin-field">
+                <label>Delivery Confirmation Phone</label>
+                <input type="text" id="rec-admin-phone" value="+91 73111 00944" />
+                <span class="admin-field-hint">Call destination on the post-order confirmation pop-up.</span>
+              </div>
+            </div>
+
+            <div class="admin-form-grid-2">
+              <div class="admin-field">
+                <label>Campus Delivery Hours</label>
+                <input type="text" id="rec-admin-timing" value="11:00 AM – 10:30 PM" />
+              </div>
+              <div class="admin-field">
+                <label>Registered Hostel &amp; Academic Drop Points (One per line)</label>
+                <textarea id="rec-admin-hostels" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: BANQUET & EVENTS CMS -->
+        <section id="panel-banquet" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Banquet Hall &amp; Celebrations CMS</h3>
+              <p>Configure base hall rent, buffet per-plate pricing, and stage/neon decoration packages.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-banquet" class="admin-btn-primary">💾 Save Banquet Rates</button>
+            </div>
+          </div>
+
+          <div class="admin-card-box">
+            <div class="admin-form-grid-3">
+              <div class="admin-field">
+                <label>AC Hall Base Rent (₹)</label>
+                <input type="number" id="bq-admin-rent" value="12000" />
+              </div>
+              <div class="admin-field">
+                <label>Veg Buffet Rate (₹/plate)</label>
+                <input type="number" id="bq-admin-veg" value="550" />
+              </div>
+              <div class="admin-field">
+                <label>High-Tea &amp; Snacks (₹/plate)</label>
+                <input type="number" id="bq-admin-tea" value="380" />
+              </div>
+            </div>
+            <div class="admin-form-grid-3">
+              <div class="admin-field">
+                <label>Royal Buffet Rate (₹/plate)</label>
+                <input type="number" id="bq-admin-royal" value="650" />
+              </div>
+              <div class="admin-field">
+                <label>Stage &amp; Neon Decor Base (₹)</label>
+                <input type="number" id="bq-admin-decor" value="8000" />
+              </div>
+              <div class="admin-field">
+                <label>Guest Capacity Tagline</label>
+                <input type="text" id="bq-admin-cap" value="20 – 200+ Guests" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 7: 27 TOURIST SPOTS CMS -->
+        <section id="panel-tourist" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>27 Sonbhadra Tourist Spots CMS</h3>
+              <p>Update highway distance, estimated driving time, and road directions for all 27 tourist places.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-tourist" class="admin-btn-primary">💾 Save Tourist Updates</button>
+            </div>
+          </div>
+          <div id="tourist-admin-list">
+            <!-- Populated dynamically -->
+          </div>
+        </section>
+
+        <!-- TAB 8: HOTEL INFO & SECURITY SETTINGS -->
+        <section id="panel-settings" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Hotel Contact Information &amp; Admin Security</h3>
+              <p>Manage reception numbers, primary WhatsApp booking destination, GSTIN and update your secret admin passcode.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-settings" class="admin-btn-primary">💾 Save Hotel Settings</button>
+            </div>
+          </div>
+
+          <div class="admin-card-box">
+            <div class="admin-form-grid-3">
+              <div class="admin-field">
+                <label>Reception Phone (Primary)</label>
+                <input type="text" id="cfg-admin-rec-phone" value="+91 73111 00788" />
+              </div>
+              <div class="admin-field">
+                <label>Restaurant Kitchen Desk Phone</label>
+                <input type="text" id="cfg-admin-rest-phone" value="+91 73111 00944" />
+              </div>
+              <div class="admin-field">
+                <label>Official WhatsApp Number (No spaces)</label>
+                <input type="text" id="cfg-admin-wa-phone" value="917311100788" />
+              </div>
+            </div>
+
+            <div class="admin-form-grid-2">
+              <div class="admin-field">
+                <label>Hotel Official Address</label>
+                <input type="text" id="cfg-admin-address" value="Opposite DIET Campus, Near Tata Motors, Urmaura, Robertsganj, Sonbhadra (U.P.) – 231216" />
+              </div>
+              <div class="admin-field">
+                <label>GSTIN Number</label>
+                <input type="text" id="cfg-admin-gstin" value="09AHMPD9293M1ZI" />
+              </div>
+            </div>
+
+            <div class="admin-form-grid-2">
+              <div class="admin-field">
+                <label>Homepage Top Announcement / Alert Banner</label>
+                <input type="text" id="cfg-admin-announcement" placeholder="e.g. Special festive 10% discount on direct WhatsApp booking" />
+              </div>
+              <div class="admin-field">
+                <label>🔐 Change Admin Passcode (Min 4 chars)</label>
+                <input type="text" id="cfg-admin-passcode" value="VAIBHAV2026" />
+                <span class="admin-field-hint">Keep this passcode confidential to prevent unauthorized access.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 9: BACKUP & DATA EXPORT -->
+        <section id="panel-backup" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Data Backup, CSV Export &amp; Factory Reset</h3>
+              <p>Export all customer leads to Excel/CSV spreadsheets or download complete site configuration backup JSON.</p>
+            </div>
+          </div>
+
+          <div class="admin-card-box">
+            <h4 class="admin-card-title">📥 Data Export Actions</h4>
+            <p style="font-size:0.8rem; color:#94a3b8; margin-bottom:1.2rem;">Download your customer inquiries database for accounting, marketing broadcasts, or internal CRM imports.</p>
+            <div style="display:flex; gap:0.85rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+              <button type="button" id="btn-backup-export-csv" class="admin-btn-primary">📊 Download Leads Spreadsheet (.CSV)</button>
+              <button type="button" id="btn-backup-export-json" class="admin-btn-secondary">💾 Backup Full Site Config (.JSON)</button>
+            </div>
+
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin:1.5rem 0;" />
+
+            <h4 class="admin-card-title" style="color:#f87171;">⚠️ Factory Reset Options</h4>
+            <p style="font-size:0.8rem; color:#94a3b8; margin-bottom:1rem;">Reset all room rates, menu tariffs and configurations back to default factory settings.</p>
+            <button type="button" id="btn-backup-reset-defaults" class="admin-btn-danger">🔄 Reset All to Factory Defaults</button>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
   <script src="app.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>

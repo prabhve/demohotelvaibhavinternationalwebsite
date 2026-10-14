@@ -574,6 +574,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const gst = document.getElementById('rm-gst')?.value || 'Standard Personal Receipt';
     const { total, nights, rooms } = calculateRoomQuote();
 
+    window.VaibhavAdmin?.recordLead({
+      type: "Room Booking",
+      name: name,
+      phone: phone,
+      details: `${cat} (${rooms} Room × ${nights} Night) • In: ${ci} • Out: ${co} • ${guests} • ${addon} • ${gst}`,
+      amount: total,
+      source: "Room Booking Engine"
+    });
+
     const msg = `Namaste *Hotel Vaibhav International* (Robertsganj, Sonbhadra)!\n\n` +
       `🏨 *NEW ROOM RESERVATION & QUOTE REQUEST*\n` +
       `• *Guest Name:* ${name}\n` +
@@ -844,6 +853,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = buildRecOrderData();
     lastRecOrderWhatsAppMsg = data.waMsg;
 
+    window.VaibhavAdmin?.recordLead({
+      type: "REC Campus Food Order",
+      name: data.name,
+      phone: data.phone,
+      details: `${data.hostel} (${data.roomNote}) • ${data.items.map(i => `${i.qty}× ${i.name}`).join(', ')} • ${data.isPaid ? 'PAID UTR: ' + data.utrVal : 'UNPAID (Cash/UPI at Campus)'}`,
+      amount: data.recGrandTotal,
+      source: "REC Sonbhadra Delivery Desk"
+    });
+
     const statusBadgeHtml = data.isPaid
       ? `<span style="color:#6ee7b7; font-weight:700;">✅ PAID ONLINE (UTR / Ref No: ${data.utrVal})</span>`
       : `<span style="color:#fde68a; font-weight:700;">⏳ UNPAID (Pay ₹${data.recGrandTotal} on Delivery at REC Campus)</span>`;
@@ -904,6 +922,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const { items, sum, gst, net } = updateFoodQuotePreview();
     const finalBill = net;
 
+    window.VaibhavAdmin?.recordLead({
+      type: "Dining Table Reservation",
+      name: name,
+      phone: phone,
+      details: `${type} • ${date} at ${time} • ${guests} • ${items.length > 0 ? items.map(c => `${c.qty}× ${c.name}`).join(', ') : 'No pre-selected food'} • Notes: ${notes}`,
+      amount: finalBill,
+      source: "Food Express Table Booking"
+    });
+
     const dishText = items.length > 0
       ? items.map(c => `  - ${c.qty}× ${c.name} (₹${c.lineTotal})`).join('\n') + `\n• *Pre-Order Subtotal:* ₹${sum} | *5% GST:* ₹${gst}\n• *Estimated Total Bill:* *₹${finalBill.toLocaleString('en-IN')}*`
       : `  - None pre-selected (Will order at restaurant)`;
@@ -956,6 +983,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const guests = document.getElementById('bq-guests')?.value || '50 - 100 Guests';
     const packageType = document.getElementById('bq-package')?.value || 'Pure Veg Royal Buffet + Balloon/Neon Decor';
     const { estTotal } = calculateBanquetQuote();
+
+    window.VaibhavAdmin?.recordLead({
+      type: "Banquet Hall Quote",
+      name: name,
+      phone: phone,
+      details: `${eventType} • ${date} • ${guests} • ${packageType}`,
+      amount: estTotal,
+      source: "Banquet Hall Calculator"
+    });
 
     const msg = `Namaste *Hotel Vaibhav International* Event Desk!\n\n` +
       `🎉 *BANQUET HALL & PARTY QUOTE INQUIRY*\n` +
@@ -1067,6 +1103,15 @@ document.addEventListener('DOMContentLoaded', () => {
       ? chosen.map((c, i) => `  ${i + 1}. *${c.name}* (${c.distance} / ${c.time} — ${c.route})`).join('\n')
       : `  - Top Sonbhadra Attractions (Salkhan Fossils Park, Vijaygarh Fort & Mukkha Falls)`;
 
+    window.VaibhavAdmin?.recordLead({
+      type: "Tourist Sightseeing Package",
+      name: "Sightseeing Guest",
+      phone: "Via WhatsApp",
+      details: chosen.length > 0 ? chosen.map(c => c.name).join(', ') : 'Top 3 Sonbhadra Attractions',
+      amount: 0,
+      source: "27 Tourist Spots Navigator"
+    });
+
     const msg = `Namaste *Hotel Vaibhav International* (Robertsganj, Sonbhadra)!\n\n` +
       `🧭 *HOTEL STAY + SONBHADRA SIGHTSEEING CAB QUOTE*\n` +
       `• *Planned Tourist Places from Hotel:*\n${spotsList}\n\n` +
@@ -1083,6 +1128,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const phone = document.getElementById('ct-phone')?.value.trim() || 'Not provided';
     const purpose = document.getElementById('ct-purpose')?.value || 'Room Booking Inquiry';
     const message = document.getElementById('ct-msg')?.value.trim() || 'Please call me back with details.';
+
+    window.VaibhavAdmin?.recordLead({
+      type: "Front Desk Inquiry",
+      name: name,
+      phone: phone,
+      details: `${purpose} • ${message}`,
+      amount: 0,
+      source: "Contact Us Form"
+    });
 
     const msg = `Namaste *Hotel Vaibhav International* (Robertsganj, Sonbhadra)!\n\n` +
       `📩 *WEBSITE INQUIRY*\n` +
