@@ -1592,12 +1592,12 @@
         <ul class="admin-nav-list">
           <li class="admin-nav-item active" data-tab="analytics">
             <button type="button">
-              <span class="nav-left"><span class="icon">📊</span> <span>Dashboard &amp; KPI</span></span>
+              <span class="nav-left"><span class="icon">📊</span> <span>Overview &amp; Dashboard</span></span>
             </button>
           </li>
           <li class="admin-nav-item" data-tab="leads">
             <button type="button">
-              <span class="nav-left"><span class="icon">💬</span> <span>WhatsApp Leads CRM</span></span>
+              <span class="nav-left"><span class="icon">💬</span> <span>WhatsApp CRM</span></span>
               <span id="badge-leads-count" class="admin-badge-count">3</span>
             </button>
           </li>
@@ -1616,6 +1616,11 @@
               <span class="nav-left"><span class="icon">🎓</span> <span>REC Sonbhadra Desk</span></span>
             </button>
           </li>
+          <li class="admin-nav-item" data-tab="gallery">
+            <button type="button">
+              <span class="nav-left"><span class="icon">🖼️</span> <span>Photo Gallery CMS</span></span>
+            </button>
+          </li>
           <li class="admin-nav-item" data-tab="banquet">
             <button type="button">
               <span class="nav-left"><span class="icon">🎉</span> <span>Banquet &amp; Events</span></span>
@@ -1626,6 +1631,11 @@
               <span class="nav-left"><span class="icon">🧭</span> <span>27 Tourist Spots</span></span>
             </button>
           </li>
+          <li class="admin-nav-item" data-tab="reviews">
+            <button type="button">
+              <span class="nav-left"><span class="icon">⭐</span> <span>Reviews &amp; FAQs</span></span>
+            </button>
+          </li>
           <li class="admin-nav-item" data-tab="settings">
             <button type="button">
               <span class="nav-left"><span class="icon">⚙️</span> <span>Hotel Info &amp; Security</span></span>
@@ -1633,13 +1643,13 @@
           </li>
           <li class="admin-nav-item" data-tab="backup">
             <button type="button">
-              <span class="nav-left"><span class="icon">💾</span> <span>Backup &amp; CSV Export</span></span>
+              <span class="nav-left"><span class="icon">💾</span> <span>Backup &amp; Export</span></span>
             </button>
           </li>
         </ul>
 
         <div class="admin-sidebar-footer">
-          <span>Version 2.4 Luxury Console</span><br/>
+          <span>Version 3.0 Ultra Luxury Console</span><br/>
           <span style="color:var(--gold-light);">Designed By VYUVIK LABS</span>
         </div>
       </aside>
@@ -1651,18 +1661,25 @@
         <section id="panel-analytics" class="admin-tab-panel active">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
-              <h3>Live Activity &amp; Booking Analytics</h3>
-              <p>Real-time metrics, pipeline value and direct customer inquiry tracking.</p>
+              <h3>👋 Namaste, Hotel Vaibhav International Management!</h3>
+              <p>Welcome to your central console. Track live customer inquiries, manage rooms, restaurant menu &amp; hotel website in one place.</p>
             </div>
             <div class="admin-panel-actions">
+              <button type="button" class="admin-btn-primary" id="btn-add-walkin-lead">➕ Add Walk-In Guest</button>
               <button type="button" class="admin-btn-secondary" onclick="window.VaibhavAdmin?.openPortal()">🔄 Refresh</button>
             </div>
+          </div>
+
+          <!-- Helpful Tip Banner -->
+          <div class="admin-help-tip">
+            <span class="tip-icon">💡</span>
+            <div><strong>Quick Tip:</strong> Any prices, room details, or dishes changed in this portal update your live website instantly without needing a developer or reload!</div>
           </div>
 
           <!-- KPI Cards Grid -->
           <div class="admin-kpi-grid">
             <div class="admin-kpi-card">
-              <div class="admin-kpi-lbl">Total Customer Leads</div>
+              <div class="admin-kpi-lbl">Total Customer Inquiries</div>
               <div class="admin-kpi-val" id="kpi-total-leads">0</div>
               <div class="admin-kpi-sub">Across All Channels</div>
             </div>
@@ -1689,9 +1706,10 @@
           </div>
 
           <!-- Recent Leads Stream -->
-          <div class="admin-card-box">
-            <div class="admin-card-header">
-              <h4 class="admin-card-title">⚡ Live Customer Stream (Recent 5 Inquiries)</h4>
+          <div class="admin-edit-card">
+            <div class="admin-edit-card-header">
+              <h4 style="margin:0; font-size:1rem; color:#fff;">⚡ Live Customer Stream (Recent 5 Inquiries)</h4>
+              <span style="font-size:0.75rem; color:var(--gold-light);">Real-Time WhatsApp Tracker</span>
             </div>
             <div id="analytics-recent-stream">
               <!-- Rendered dynamically -->
@@ -1699,17 +1717,22 @@
           </div>
         </section>
 
-        <!-- TAB 2: WHATSAPP LEADS & CRM -->
+        <!-- TAB 2: WHATSAPP LEADS CRM -->
         <section id="panel-leads" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
-              <h3>WhatsApp Leads CRM &amp; Form Tracker</h3>
+              <h3>WhatsApp Leads CRM &amp; Inquiry Tracker</h3>
               <p>All inquiries submitted through website calculators &amp; WhatsApp forms are automatically captured here.</p>
             </div>
             <div class="admin-panel-actions">
               <button type="button" id="btn-export-leads-csv" class="admin-btn-secondary">📥 Export CSV</button>
               <button type="button" id="btn-clear-leads" class="admin-btn-danger">🗑️ Clear All</button>
             </div>
+          </div>
+
+          <div class="admin-help-tip">
+            <span class="tip-icon">📲</span>
+            <div>Click <strong>"💬 Chat"</strong> next to any inquiry to open WhatsApp and instantly message the guest with a personalized response.</div>
           </div>
 
           <!-- Filter & Search Toolbar -->
@@ -1751,13 +1774,19 @@
         <section id="panel-rooms" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
-              <h3>Rooms &amp; Tariffs CMS</h3>
-              <p>Update room names, nightly rates, bed configurations and amenities. Changes reflect instantly on the live booking calculator.</p>
+              <h3>Rooms &amp; Tariffs CMS (Live Room Editor)</h3>
+              <p>Update room names, nightly rates, bed configurations, amenities &amp; room photos. Changes reflect instantly on the live booking calculator.</p>
             </div>
             <div class="admin-panel-actions">
-              <button type="button" id="btn-save-rooms" class="admin-btn-primary">💾 Save &amp; Apply Changes</button>
+              <button type="button" id="btn-save-rooms" class="admin-btn-primary">💾 Save Room Tariffs</button>
             </div>
           </div>
+
+          <div class="admin-help-tip">
+            <span class="tip-icon">🛏️</span>
+            <div><strong>Visual Photo Preview:</strong> You can see the actual room thumbnail photo and update the rate in ₹. When guests book on your website, your updated rates will be used automatically.</div>
+          </div>
+
           <div id="rooms-manager-container">
             <!-- Populated dynamically -->
           </div>
@@ -1768,37 +1797,35 @@
           <div class="admin-panel-head">
             <div class="admin-panel-title">
               <h3>Food Express Restaurant Menu CMS</h3>
-              <p>Edit dish rates, mark items in-stock / out-of-stock, or add special items to the digital restaurant menu.</p>
+              <p>Change prices with one keystroke, toggle items in-stock or sold-out, or add new chef special dishes.</p>
             </div>
             <div class="admin-panel-actions">
               <button type="button" id="btn-add-dish-prompt" class="admin-btn-primary">➕ Add New Dish</button>
             </div>
           </div>
 
-          <!-- Category Filter Pills -->
-          <div class="admin-filters-wrap" style="margin-bottom:1rem;">
-            <button type="button" class="admin-filter-pill active" data-mfilter="all">All Dishes</button>
-            <button type="button" class="admin-filter-pill" data-mfilter="starters">Starters</button>
-            <button type="button" class="admin-filter-pill" data-mfilter="main">Main Course</button>
-            <button type="button" class="admin-filter-pill" data-mfilter="breads">Breads &amp; Rice</button>
-            <button type="button" class="admin-filter-pill" data-mfilter="drinks">Beverages</button>
+          <div class="admin-help-tip">
+            <span class="tip-icon">🍽️</span>
+            <div><strong>One-Click Price &amp; Stock Update:</strong> Type any new price in the box or flick the green switch to mark dishes as <em>"Sold Out"</em>. The live website menu reflects it immediately!</div>
           </div>
 
-          <div class="admin-table-container">
-            <table class="admin-table">
-              <thead>
-                <tr>
-                  <th>Dish Name &amp; Tag</th>
-                  <th>Category</th>
-                  <th>Price (₹)</th>
-                  <th>In-Stock</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="menu-manager-table-body">
-                <!-- Populated dynamically -->
-              </tbody>
-            </table>
+          <!-- Search & Category Filters -->
+          <div class="admin-toolbar">
+            <div class="admin-search-wrap">
+              <input type="text" id="admin-menu-search" class="admin-search-input" placeholder="🔍 Search dishes (e.g. Paneer, Chicken, Biryani, Mojito)..." />
+            </div>
+            <div class="admin-filters-wrap">
+              <button type="button" class="admin-filter-pill active" data-mfilter="all">All Dishes (24)</button>
+              <button type="button" class="admin-filter-pill" data-mfilter="starters">Starters</button>
+              <button type="button" class="admin-filter-pill" data-mfilter="main">Main Course</button>
+              <button type="button" class="admin-filter-pill" data-mfilter="breads">Breads &amp; Rice</button>
+              <button type="button" class="admin-filter-pill" data-mfilter="drinks">Beverages</button>
+            </div>
+          </div>
+
+          <!-- Dishes Grid -->
+          <div id="menu-manager-grid" class="admin-dishes-grid">
+            <!-- Populated dynamically -->
           </div>
         </section>
 
@@ -1814,11 +1841,19 @@
             </div>
           </div>
 
-          <div class="admin-card-box">
+          <div class="admin-help-tip">
+            <span class="tip-icon">🎓</span>
+            <div><strong>Campus Food Monopoly:</strong> Students ordering from Churk Campus get the ₹40 delivery fee added automatically and pay via the UPI QR ID configured below.</div>
+          </div>
+
+          <div class="admin-edit-card">
             <div class="admin-form-grid-3">
-              <div class="admin-field">
+              <div class="admin-field highlight-field">
                 <label>Campus Delivery Charge (₹)</label>
-                <input type="number" id="rec-admin-charge" value="40" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="rec-admin-charge" value="40" />
+                </div>
                 <span class="admin-field-hint">Added automatically to REC student food carts.</span>
               </div>
               <div class="admin-field">
@@ -1833,7 +1868,7 @@
               </div>
             </div>
 
-            <div class="admin-form-grid-2">
+            <div class="admin-form-grid-2" style="margin-top:1rem;">
               <div class="admin-field">
                 <label>Campus Delivery Hours</label>
                 <input type="text" id="rec-admin-timing" value="11:00 AM – 10:30 PM" />
@@ -1846,7 +1881,30 @@
           </div>
         </section>
 
-        <!-- TAB 6: BANQUET & EVENTS CMS -->
+        <!-- TAB 6: PHOTO GALLERY CMS -->
+        <section id="panel-gallery" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Photo Gallery &amp; Visual Showcase CMS</h3>
+              <p>Manage all photos displayed in the authentic visual tour on the website. Add new photos, change captions, or replace images.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-add-photo-prompt" class="admin-btn-secondary">➕ Add Photo</button>
+              <button type="button" id="btn-save-gallery" class="admin-btn-primary">💾 Save Gallery Changes</button>
+            </div>
+          </div>
+
+          <div class="admin-help-tip">
+            <span class="tip-icon">🖼️</span>
+            <div><strong>Live Thumbnail Previews:</strong> Below are all the photos shown on your homepage. You can update any title, category or image path and save instantly.</div>
+          </div>
+
+          <div id="gallery-manager-grid" class="admin-gallery-grid">
+            <!-- Populated dynamically -->
+          </div>
+        </section>
+
+        <!-- TAB 7: BANQUET & EVENTS CMS -->
         <section id="panel-banquet" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
@@ -1858,29 +1916,44 @@
             </div>
           </div>
 
-          <div class="admin-card-box">
+          <div class="admin-edit-card">
             <div class="admin-form-grid-3">
-              <div class="admin-field">
+              <div class="admin-field highlight-field">
                 <label>AC Hall Base Rent (₹)</label>
-                <input type="number" id="bq-admin-rent" value="12000" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="bq-admin-rent" value="12000" />
+                </div>
               </div>
               <div class="admin-field">
                 <label>Veg Buffet Rate (₹/plate)</label>
-                <input type="number" id="bq-admin-veg" value="550" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="bq-admin-veg" value="550" />
+                </div>
               </div>
               <div class="admin-field">
                 <label>High-Tea &amp; Snacks (₹/plate)</label>
-                <input type="number" id="bq-admin-tea" value="380" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="bq-admin-tea" value="380" />
+                </div>
               </div>
             </div>
-            <div class="admin-form-grid-3">
+            <div class="admin-form-grid-3" style="margin-top:1rem;">
               <div class="admin-field">
                 <label>Royal Buffet Rate (₹/plate)</label>
-                <input type="number" id="bq-admin-royal" value="650" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="bq-admin-royal" value="650" />
+                </div>
               </div>
               <div class="admin-field">
                 <label>Stage &amp; Neon Decor Base (₹)</label>
-                <input type="number" id="bq-admin-decor" value="8000" />
+                <div class="input-currency-wrap">
+                  <span>₹</span>
+                  <input type="number" id="bq-admin-decor" value="8000" />
+                </div>
               </div>
               <div class="admin-field">
                 <label>Guest Capacity Tagline</label>
@@ -1890,7 +1963,7 @@
           </div>
         </section>
 
-        <!-- TAB 7: 27 TOURIST SPOTS CMS -->
+        <!-- TAB 8: 27 TOURIST SPOTS CMS -->
         <section id="panel-tourist" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
@@ -1901,12 +1974,44 @@
               <button type="button" id="btn-save-tourist" class="admin-btn-primary">💾 Save Tourist Updates</button>
             </div>
           </div>
+
+          <div class="admin-toolbar">
+            <div class="admin-search-wrap">
+              <input type="text" id="admin-tourist-search" class="admin-search-input" placeholder="🔍 Search tourist spot by name (e.g. Mukkha, Vijaygarh, Salkhan)..." />
+            </div>
+          </div>
+
           <div id="tourist-admin-list">
             <!-- Populated dynamically -->
           </div>
         </section>
 
-        <!-- TAB 8: HOTEL INFO & SECURITY SETTINGS -->
+        <!-- TAB 9: REVIEWS & FAQS CMS -->
+        <section id="panel-reviews" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>Verified Guest Reviews &amp; FAQs CMS</h3>
+              <p>Manage customer testimonials with 5-star ratings and frequently asked questions displayed on the website.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-add-review-prompt" class="admin-btn-secondary">➕ Add Review</button>
+              <button type="button" id="btn-add-faq-prompt" class="admin-btn-secondary">➕ Add FAQ</button>
+              <button type="button" id="btn-save-reviews-faq" class="admin-btn-primary">💾 Save Reviews &amp; FAQs</button>
+            </div>
+          </div>
+
+          <h4 style="color:#fff; font-size:1rem; margin-bottom:0.75rem;">🌟 Verified Customer Reviews</h4>
+          <div id="admin-reviews-container">
+            <!-- Populated dynamically -->
+          </div>
+
+          <h4 style="color:#fff; font-size:1rem; margin:1.5rem 0 0.75rem 0;">❓ Frequently Asked Questions (FAQs)</h4>
+          <div id="admin-faqs-container">
+            <!-- Populated dynamically -->
+          </div>
+        </section>
+
+        <!-- TAB 10: HOTEL INFO & SECURITY SETTINGS -->
         <section id="panel-settings" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
@@ -1918,9 +2023,9 @@
             </div>
           </div>
 
-          <div class="admin-card-box">
+          <div class="admin-edit-card">
             <div class="admin-form-grid-3">
-              <div class="admin-field">
+              <div class="admin-field highlight-field">
                 <label>Reception Phone (Primary)</label>
                 <input type="text" id="cfg-admin-rec-phone" value="+91 73111 00788" />
               </div>
@@ -1928,13 +2033,13 @@
                 <label>Restaurant Kitchen Desk Phone</label>
                 <input type="text" id="cfg-admin-rest-phone" value="+91 73111 00944" />
               </div>
-              <div class="admin-field">
+              <div class="admin-field highlight-field">
                 <label>Official WhatsApp Number (No spaces)</label>
                 <input type="text" id="cfg-admin-wa-phone" value="917311100788" />
               </div>
             </div>
 
-            <div class="admin-form-grid-2">
+            <div class="admin-form-grid-2" style="margin-top:1rem;">
               <div class="admin-field">
                 <label>Hotel Official Address</label>
                 <input type="text" id="cfg-admin-address" value="Opposite DIET Campus, Near Tata Motors, Urmaura, Robertsganj, Sonbhadra (U.P.) – 231216" />
@@ -1945,12 +2050,12 @@
               </div>
             </div>
 
-            <div class="admin-form-grid-2">
+            <div class="admin-form-grid-2" style="margin-top:1rem;">
               <div class="admin-field">
                 <label>Homepage Top Announcement / Alert Banner</label>
                 <input type="text" id="cfg-admin-announcement" placeholder="e.g. Special festive 10% discount on direct WhatsApp booking" />
               </div>
-              <div class="admin-field">
+              <div class="admin-field highlight-field">
                 <label>🔐 Change Admin Passcode (Min 4 chars)</label>
                 <input type="text" id="cfg-admin-passcode" value="VAIBHAV2026" />
                 <span class="admin-field-hint">Keep this passcode confidential to prevent unauthorized access.</span>
@@ -1959,7 +2064,7 @@
           </div>
         </section>
 
-        <!-- TAB 9: BACKUP & DATA EXPORT -->
+        <!-- TAB 11: BACKUP & DATA EXPORT -->
         <section id="panel-backup" class="admin-tab-panel">
           <div class="admin-panel-head">
             <div class="admin-panel-title">
@@ -1968,7 +2073,7 @@
             </div>
           </div>
 
-          <div class="admin-card-box">
+          <div class="admin-edit-card">
             <h4 class="admin-card-title">📥 Data Export Actions</h4>
             <p style="font-size:0.8rem; color:#94a3b8; margin-bottom:1.2rem;">Download your customer inquiries database for accounting, marketing broadcasts, or internal CRM imports.</p>
             <div style="display:flex; gap:0.85rem; flex-wrap:wrap; margin-bottom:1.5rem;">
