@@ -1,7 +1,8 @@
 /* ==========================================================================
    HOTEL VAIBHAV INTERNATIONAL & FOOD EXPRESS — ULTRA-PREMIUM ADMIN ENGINE
-   User-Friendly UI, 100% Live CMS, Visual Photo Previews, WhatsApp Leads CRM,
-   Instant DOM Synchronizer & Factory Backup Controller
+   User-Friendly UI, 100% In-Page Luxury Modals (Zero Browser Prompts),
+   Complete Website Headings, Subheadings & Description CMS, Visual Previews,
+   WhatsApp Leads CRM, Instant DOM Synchronizer & Factory Backup Controller
    ========================================================================== */
 
 (function () {
@@ -23,6 +24,69 @@
       address: "Opposite DIET Campus, Near Tata Motors, Urmaura, Varanasi-Shaktinagar Highway (SH-5A), Robertsganj, Sonbhadra, UP - 231216",
       gstin: "09AHMPD9293M1ZI",
       announcement: "⚡ 5-Star Luxury Stay & Fine Dining in Robertsganj • Sonbhadra"
+    },
+    // FULL SITE TEXTS & COPY (100% Editable via Admin)
+    content: {
+      hero: {
+        crest: "✦ SONBHADRA’S PREMIER LUXURY DESTINATION • SH-5A 4-LANE HIGHWAY, ROBERTSGANJ ✦",
+        title: "HOTEL VAIBHAV INTERNATIONAL",
+        sub: "& Food Express",
+        slide1Heading: "Experience Royal Hospitality Amidst the Hills of Sonbhadra",
+        slide1Desc: "Designer King-Size AC Deluxe Rooms & Family Suites from ₹2,299/Night • Opposite DIET Campus, Urmaura • High-Speed Wi-Fi, Lift Access & B2B GST Billing",
+        slide2Heading: "Food Express Fine Dining & Direct REC Campus Delivery",
+        slide2Desc: "Authentic North Indian, Clay-Oven Smoky Tandoori, Chinese & Mocktail Bar • Free Robertsganj Delivery & Dedicated ₹40 REC Sonbhadra Campus Delivery",
+        slide3Heading: "Gateway to 27 Natural Wonders & Forts of Sonbhadra",
+        slide3Desc: "Live Google Maps Navigation from Our Highway Gate to Salkhan Fossils Park (14 km), Mukkha Waterfall (38 km), Vijaygarh Fort (28 km) & Rihand Dam",
+        slide4Heading: "Grand AC Banquet Hall for Regal Celebrations",
+        slide4Desc: "Bespoke Decor & Gourmet Catering for Weddings, Engagements, Ring Ceremonies, Birthdays & Corporate Conferences (20 to 200+ Guests)"
+      },
+      about: {
+        eyebrow: "About Our Property",
+        heading: "Hotel Vaibhav International & Food Express",
+        p1: "Located strategically on the Varanasi–Shaktinagar 4-Lane State Highway (SH-5A) at Urmaura / Tagore Nagar (Opposite DIET Campus, Near Tata Motors), Robertsganj, Hotel Vaibhav International is Sonbhadra's premier destination for families, tourists, corporate executives, and grand celebrations.",
+        p2: "Whether you are visiting Sonbhadra's world-famous Salkhan Fossils Park (14 km), Mukkha Falls (38 km), Vijaygarh Fort (28 km), ordering delicious meals to Rajkiya Engineering College (REC Sonbhadra, Churk — 8 km), or travelling for official work at NTPC, NCL, Hindalco, Obra, Anpara, or Sonbhadra Collectorate (4 km), our hotel combines 3-star luxury comfort with warm Purvanchal hospitality.",
+        pillar1Title: "🏨 Designer AC Rooms",
+        pillar1Desc: "Sound-insulated rooms with King beds, LED TV, Wi-Fi, Geyser & Lift access.",
+        pillar2Title: "🍽️ Food Express & REC Delivery",
+        pillar2Desc: "North Indian, Tandoori, Chinese & Mocktails with REC Sonbhadra & Town Delivery.",
+        pillar3Title: "🎉 AC Banquet & Lounge",
+        pillar3Desc: "Custom decorated party hall & mezzanine balcony for 20 to 200+ guests.",
+        pillar4Title: "🚗 Highway Convenience",
+        pillar4Desc: "Free on-site parking, 24×7 generator backup, CCTV security & travel desk."
+      },
+      roomsSection: {
+        eyebrow: "Luxury Accommodations",
+        heading: "Spacious AC Rooms & Instant WhatsApp Quote",
+        lead: "Select your room below and fill out the quick form—our system automatically calculates your stay quote and generates a ready-to-send WhatsApp booking message."
+      },
+      restaurantSection: {
+        eyebrow: "Fine Dining & REC Campus Delivery",
+        heading: "Food Express Restaurant & Instant WhatsApp Order",
+        lead: "Order authentic clay-oven tandoori, north Indian gravies, Chinese & thick shakes. Free home delivery in Robertsganj town & dedicated ₹40 delivery to REC Sonbhadra Churk Campus.",
+        recHead: "🎓 REC Sonbhadra (Churk Campus) Exclusive Online Food Desk"
+      },
+      banquetSection: {
+        eyebrow: "Events, Parties & Conferences",
+        heading: "AC Banquet Hall & Celebration Lounge",
+        lead: "Custom balloon & floral arches, neon celebration walls, glowing onyx buffet counters, and multi-cuisine catering for 20 to 200+ guests."
+      },
+      touristSection: {
+        eyebrow: "Sonbhadra Tourism Guide",
+        heading: "All 27 Major Tourist Places from Hotel Vaibhav International",
+        lead: "Discover all 27 waterfalls, ancient hill forts, rock cave paintings, and dams across Sonbhadra with live Google Maps driving navigation directly from our hotel gates."
+      },
+      locationSection: {
+        eyebrow: "Connectivity & Directions",
+        heading: "Hotel Location & How to Reach Us",
+        addr: "📍 Official Address: Hotel Vaibhav International & Food Express, Opposite DIET Campus (District Institute of Education & Training), Near Tata Motors Showroom, Urmaura / Tagore Nagar, Varanasi–Shaktinagar Highway (SH-5A), Robertsganj, District Sonbhadra, Uttar Pradesh – 231216."
+      },
+      policySection: {
+        eyebrow: "Guest Guidelines, Reviews & FAQs",
+        heading: "Hotel Policies, Verified Reviews & FAQs",
+        checkin: "Standard Check-In: 12:00 PM (Noon) • Standard Check-Out: 10:00 AM • Mandatory Govt. Photo ID: Aadhaar Card, Driving License, Voter ID, or Passport is required for all guests at check-in. PAN Card not accepted.",
+        family: "Families, tourists, and corporate travelers are warmly welcomed. Children below 6 years stay complimentary when sharing existing bedding. Extra mattress available (+₹400/night).",
+        gst: "Official GSTIN: 09AHMPD9293M1ZI. Official B2B GST tax invoices provided for corporate & PSU stays. Payment accepted via UPI, Cash, Credit/Debit Cards & Bank Transfer."
+      }
     },
     rooms: [
       {
@@ -175,8 +239,8 @@
   const INITIAL_SAMPLE_LEADS = [
     {
       id: "LEAD-17289001",
-      dateStr: "14 Oct 2026, 09:30 AM",
-      timestamp: 1791950000000,
+      dateStr: "15 Oct 2026, 08:30 AM",
+      timestamp: 1792030000000,
       type: "Room Booking",
       name: "Rahul Sharma",
       phone: "+91 98765 43210",
@@ -187,8 +251,8 @@
     },
     {
       id: "LEAD-17289002",
-      dateStr: "14 Oct 2026, 11:15 AM",
-      timestamp: 1791955000000,
+      dateStr: "15 Oct 2026, 08:35 AM",
+      timestamp: 1792032000000,
       type: "REC Campus Food Order",
       name: "Aman Singh (B.Tech CSE)",
       phone: "+91 87654 32109",
@@ -199,8 +263,8 @@
     },
     {
       id: "LEAD-17289003",
-      dateStr: "14 Oct 2026, 01:45 PM",
-      timestamp: 1791965000000,
+      dateStr: "15 Oct 2026, 08:40 AM",
+      timestamp: 1792033000000,
       type: "Banquet Hall Quote",
       name: "Dr. P.K. Gupta",
       phone: "+91 94500 12345",
@@ -211,7 +275,7 @@
     }
   ];
 
-  // 2. CONFIG CONTROLLER (STORAGE & MERGING)
+  // 2. CONFIG CONTROLLER (STORAGE & DEEP MERGE)
   function getStoredConfig() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY_CONFIG);
@@ -221,6 +285,16 @@
           ...DEFAULT_CONFIG,
           ...parsed,
           hotel: { ...DEFAULT_CONFIG.hotel, ...(parsed.hotel || {}) },
+          content: {
+            hero: { ...DEFAULT_CONFIG.content.hero, ...(parsed.content?.hero || {}) },
+            about: { ...DEFAULT_CONFIG.content.about, ...(parsed.content?.about || {}) },
+            roomsSection: { ...DEFAULT_CONFIG.content.roomsSection, ...(parsed.content?.roomsSection || {}) },
+            restaurantSection: { ...DEFAULT_CONFIG.content.restaurantSection, ...(parsed.content?.restaurantSection || {}) },
+            banquetSection: { ...DEFAULT_CONFIG.content.banquetSection, ...(parsed.content?.banquetSection || {}) },
+            touristSection: { ...DEFAULT_CONFIG.content.touristSection, ...(parsed.content?.touristSection || {}) },
+            locationSection: { ...DEFAULT_CONFIG.content.locationSection, ...(parsed.content?.locationSection || {}) },
+            policySection: { ...DEFAULT_CONFIG.content.policySection, ...(parsed.content?.policySection || {}) }
+          },
           rec: { ...DEFAULT_CONFIG.rec, ...(parsed.rec || {}) },
           banquet: { ...DEFAULT_CONFIG.banquet, ...(parsed.banquet || {}) },
           rooms: Array.isArray(parsed.rooms) && parsed.rooms.length > 0 ? parsed.rooms : DEFAULT_CONFIG.rooms,
@@ -292,15 +366,16 @@
     }
   }
 
-  // 4. LIVE DOM SYNCHRONIZER (REFLECTS ALL CHANGES ON LIVE WEBSITE WITHOUT RELOAD)
+  // 4. LIVE DOM SYNCHRONIZER (REFLECTS EVERY SINGLE TEXT & VAL ON LIVE WEBSITE)
   function applyLiveUpdates(cfg) {
     if (!cfg) cfg = getStoredConfig();
 
     // A. Phone Links
     if (cfg.hotel?.receptionPhone) {
       const recPhoneClean = cfg.hotel.receptionPhone.replace(/[^\d+]/g, '');
-      document.querySelectorAll('a[href^="tel:+917311100788"], a[href^="tel:917311100788"], .js-reception-tel').forEach(el => {
+      document.querySelectorAll('a[href^="tel:+917311100788"], a[href^="tel:917311100788"], .js-reception-tel, .nav-call-btn').forEach(el => {
         el.href = `tel:${recPhoneClean}`;
+        if (el.classList.contains('nav-call-btn')) el.textContent = `📞 ${cfg.hotel.receptionPhone.replace('+91', '').trim()}`;
       });
     }
     if (cfg.hotel?.restaurantPhone) {
@@ -321,7 +396,150 @@
       });
     }
 
-    // C. Room Tariffs & Names
+    // C. 100% Full Website Text & Copy Injections
+    const c = cfg.content || {};
+
+    // 1. Hero Content
+    if (c.hero) {
+      const crestEl = document.querySelector('.crest-text');
+      if (crestEl && c.hero.crest) crestEl.textContent = c.hero.crest;
+
+      const titleEl = document.querySelector('.hero-royal-title');
+      if (titleEl && c.hero.title) {
+        titleEl.innerHTML = `${c.hero.title} <span class="hero-royal-sub">${c.hero.sub || '&amp; Food Express'}</span>`;
+      }
+
+      // 4 Experience Rotator Slides
+      const slide0H = document.querySelector('.hero-slide[data-slide="0"] .slide-heading');
+      const slide0D = document.querySelector('.hero-slide[data-slide="0"] .slide-desc');
+      if (slide0H && c.hero.slide1Heading) slide0H.innerHTML = c.hero.slide1Heading;
+      if (slide0D && c.hero.slide1Desc) slide0D.innerHTML = c.hero.slide1Desc;
+
+      const slide1H = document.querySelector('.hero-slide[data-slide="1"] .slide-heading');
+      const slide1D = document.querySelector('.hero-slide[data-slide="1"] .slide-desc');
+      if (slide1H && c.hero.slide2Heading) slide1H.innerHTML = c.hero.slide2Heading;
+      if (slide1D && c.hero.slide2Desc) slide1D.innerHTML = c.hero.slide2Desc;
+
+      const slide2H = document.querySelector('.hero-slide[data-slide="2"] .slide-heading');
+      const slide2D = document.querySelector('.hero-slide[data-slide="2"] .slide-desc');
+      if (slide2H && c.hero.slide3Heading) slide2H.innerHTML = c.hero.slide3Heading;
+      if (slide2D && c.hero.slide3Desc) slide2D.innerHTML = c.hero.slide3Desc;
+
+      const slide3H = document.querySelector('.hero-slide[data-slide="3"] .slide-heading');
+      const slide3D = document.querySelector('.hero-slide[data-slide="3"] .slide-desc');
+      if (slide3H && c.hero.slide4Heading) slide3H.innerHTML = c.hero.slide4Heading;
+      if (slide3D && c.hero.slide4Desc) slide3D.innerHTML = c.hero.slide4Desc;
+    }
+
+    // 2. About Section
+    if (c.about) {
+      const abEye = document.querySelector('#about .eyebrow span:last-child');
+      if (abEye && c.about.eyebrow) abEye.textContent = c.about.eyebrow;
+
+      const abHead = document.querySelector('#about .section-h2');
+      if (abHead && c.about.heading) abHead.textContent = c.about.heading;
+
+      const abP1 = document.querySelector('#about .about-grid .hero-p:nth-of-type(1)');
+      if (abP1 && c.about.p1) abP1.innerHTML = c.about.p1;
+
+      const abP2 = document.querySelector('#about .about-grid .hero-p:nth-of-type(2)');
+      if (abP2 && c.about.p2) abP2.innerHTML = c.about.p2;
+
+      // Pillars
+      const p1T = document.querySelector('.about-pillars .pillar-box:nth-child(1) .pillar-title');
+      const p1D = document.querySelector('.about-pillars .pillar-box:nth-child(1) .pillar-desc');
+      if (p1T && c.about.pillar1Title) p1T.textContent = c.about.pillar1Title;
+      if (p1D && c.about.pillar1Desc) p1D.textContent = c.about.pillar1Desc;
+
+      const p2T = document.querySelector('.about-pillars .pillar-box:nth-child(2) .pillar-title');
+      const p2D = document.querySelector('.about-pillars .pillar-box:nth-child(2) .pillar-desc');
+      if (p2T && c.about.pillar2Title) p2T.textContent = c.about.pillar2Title;
+      if (p2D && c.about.pillar2Desc) p2D.textContent = c.about.pillar2Desc;
+
+      const p3T = document.querySelector('.about-pillars .pillar-box:nth-child(3) .pillar-title');
+      const p3D = document.querySelector('.about-pillars .pillar-box:nth-child(3) .pillar-desc');
+      if (p3T && c.about.pillar3Title) p3T.textContent = c.about.pillar3Title;
+      if (p3D && c.about.pillar3Desc) p3D.textContent = c.about.pillar3Desc;
+
+      const p4T = document.querySelector('.about-pillars .pillar-box:nth-child(4) .pillar-title');
+      const p4D = document.querySelector('.about-pillars .pillar-box:nth-child(4) .pillar-desc');
+      if (p4T && c.about.pillar4Title) p4T.textContent = c.about.pillar4Title;
+      if (p4D && c.about.pillar4Desc) p4D.textContent = c.about.pillar4Desc;
+    }
+
+    // 3. Rooms Section Headings
+    if (c.roomsSection) {
+      const rmEye = document.querySelector('#rooms .eyebrow span:last-child');
+      if (rmEye && c.roomsSection.eyebrow) rmEye.textContent = c.roomsSection.eyebrow;
+
+      const rmHead = document.querySelector('#rooms .section-h2');
+      if (rmHead && c.roomsSection.heading) rmHead.textContent = c.roomsSection.heading;
+
+      const rmLead = document.querySelector('#rooms .section-lead');
+      if (rmLead && c.roomsSection.lead) rmLead.textContent = c.roomsSection.lead;
+    }
+
+    // 4. Restaurant Section Headings
+    if (c.restaurantSection) {
+      const restEye = document.querySelector('#restaurant .eyebrow span:last-child');
+      if (restEye && c.restaurantSection.eyebrow) restEye.textContent = c.restaurantSection.eyebrow;
+
+      const restHead = document.querySelector('#restaurant .section-h2');
+      if (restHead && c.restaurantSection.heading) restHead.textContent = c.restaurantSection.heading;
+
+      const restLead = document.querySelector('#restaurant .section-lead');
+      if (restLead && c.restaurantSection.lead) restLead.textContent = c.restaurantSection.lead;
+
+      const recHeadEl = document.querySelector('#rec-campus-order-box .form-h3');
+      if (recHeadEl && c.restaurantSection.recHead) recHeadEl.textContent = c.restaurantSection.recHead;
+    }
+
+    // 5. Banquet Section Headings
+    if (c.banquetSection) {
+      const bqEye = document.querySelector('#banquet .eyebrow span:last-child');
+      if (bqEye && c.banquetSection.eyebrow) bqEye.textContent = c.banquetSection.eyebrow;
+
+      const bqHead = document.querySelector('#banquet .section-h2');
+      if (bqHead && c.banquetSection.heading) bqHead.textContent = c.banquetSection.heading;
+
+      const bqLead = document.querySelector('#banquet .section-lead');
+      if (bqLead && c.banquetSection.lead) bqLead.textContent = c.banquetSection.lead;
+    }
+
+    // 6. Tourist Section Headings
+    if (c.touristSection) {
+      const tourEye = document.querySelector('#tourist .eyebrow span:last-child');
+      if (tourEye && c.touristSection.eyebrow) tourEye.textContent = c.touristSection.eyebrow;
+
+      const tourHead = document.querySelector('#tourist .section-h2');
+      if (tourHead && c.touristSection.heading) tourHead.textContent = c.touristSection.heading;
+
+      const tourLead = document.querySelector('#tourist p.hero-p');
+      if (tourLead && c.touristSection.lead) tourLead.innerHTML = c.touristSection.lead;
+    }
+
+    // 7. Location Section Headings & Address
+    if (c.locationSection) {
+      const locEye = document.querySelector('#location .eyebrow span:last-child');
+      if (locEye && c.locationSection.eyebrow) locEye.textContent = c.locationSection.eyebrow;
+
+      const locHead = document.querySelector('#location .section-h2');
+      if (locHead && c.locationSection.heading) locHead.textContent = c.locationSection.heading;
+
+      const locAddr = document.querySelector('#location p.hero-p');
+      if (locAddr && c.locationSection.addr) locAddr.innerHTML = c.locationSection.addr;
+    }
+
+    // 8. Policy Section Headings
+    if (c.policySection) {
+      const polEye = document.querySelector('#policy .eyebrow span:last-child');
+      if (polEye && c.policySection.eyebrow) polEye.textContent = c.policySection.eyebrow;
+
+      const polHead = document.querySelector('#policy .section-h2');
+      if (polHead && c.policySection.heading) polHead.textContent = c.policySection.heading;
+    }
+
+    // D. Room Tariffs & Names
     if (cfg.rooms && cfg.rooms.length > 0) {
       const deluxe = cfg.rooms.find(r => r.id === 'deluxe') || cfg.rooms[0];
       const suite = cfg.rooms.find(r => r.id === 'suite') || cfg.rooms[1];
@@ -364,7 +582,7 @@
       }
     }
 
-    // D. REC Campus Delivery
+    // E. REC Campus Delivery
     if (cfg.rec) {
       window.CURRENT_REC_CHARGE = Number(cfg.rec.deliveryCharge) || 40;
       document.querySelectorAll('.hf-price-pill, .rec-delivery-line strong, #rec-bill-delivery').forEach(el => {
@@ -379,7 +597,7 @@
       }
     }
 
-    // E. Food Express Dish Rates
+    // F. Food Express Dish Rates
     if (cfg.menu && cfg.menu.length > 0) {
       cfg.menu.forEach(item => {
         const dishCard = document.querySelector(`.dish-card[data-dish-id="${item.id}"]`);
@@ -397,7 +615,7 @@
       });
     }
 
-    // F. Gallery Showcase
+    // G. Gallery Showcase
     if (cfg.gallery && cfg.gallery.length > 0) {
       const gGrid = document.getElementById('gallery-grid-container');
       if (gGrid && cfg.gallery.length >= 6) {
@@ -410,7 +628,7 @@
       }
     }
 
-    // G. Guest Reviews
+    // H. Guest Reviews
     if (cfg.reviews && cfg.reviews.length > 0) {
       const rGrid = document.querySelector('.reviews-grid');
       if (rGrid) {
@@ -424,7 +642,7 @@
       }
     }
 
-    // H. FAQs
+    // I. FAQs
     if (cfg.faqs && cfg.faqs.length > 0) {
       const faqList = document.querySelector('.faq-list');
       if (faqList) {
@@ -437,7 +655,7 @@
       }
     }
 
-    // I. Hotel Address & GSTIN in Footer
+    // J. Hotel Address & GSTIN in Footer
     if (cfg.hotel?.address) {
       const footerAddr = document.querySelector('.footer-bar div:nth-child(2)');
       if (footerAddr) {
@@ -466,7 +684,151 @@
     }, 3200);
   }
 
-  // 6. PASSCODE AUTHENTICATION CONTROLLER
+  // 6. CUSTOM MODAL CONTROLLERS (100% REPLACES ALL BROWSER PROMPTS)
+  function openCustomModal(modalId) {
+    const m = document.getElementById(modalId);
+    if (m) {
+      m.classList.add('active');
+      const firstInput = m.querySelector('input:not([type="hidden"]), select, textarea');
+      setTimeout(() => firstInput?.focus(), 120);
+    }
+  }
+
+  function closeCustomModal(modalId) {
+    const m = document.getElementById(modalId);
+    if (m) m.classList.remove('active');
+  }
+
+  function initCustomModals() {
+    // Close buttons via [data-close-modal]
+    document.querySelectorAll('[data-close-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.closeModal;
+        closeCustomModal(targetId);
+      });
+    });
+
+    // Backdrop click close
+    document.querySelectorAll('.admin-modal-overlay').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    });
+
+    // Form: Add Dish
+    document.getElementById('form-admin-add-dish')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('m-add-dish-name')?.value.trim();
+      const cat = document.getElementById('m-add-dish-cat')?.value || 'main';
+      const price = Number(document.getElementById('m-add-dish-price')?.value) || 250;
+      const tag = document.getElementById('m-add-dish-tag')?.value.trim() || 'Chef Special';
+      const img = document.getElementById('m-add-dish-img')?.value.trim() || '';
+
+      if (!name) return;
+
+      const cfg = getStoredConfig();
+      cfg.menu.unshift({
+        id: "m_custom_" + Date.now(),
+        name,
+        category: cat,
+        tag,
+        price,
+        inStock: true,
+        imgUrl: img
+      });
+
+      saveStoredConfig(cfg, `➕ New Dish Added: <strong>${name}</strong> (₹${price})`);
+      renderMenuManager();
+      closeCustomModal('modal-admin-add-dish');
+      e.target.reset();
+    });
+
+    // Form: Add Lead
+    document.getElementById('form-admin-add-lead')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('m-add-lead-name')?.value.trim();
+      const phone = document.getElementById('m-add-lead-phone')?.value.trim() || 'Not provided';
+      const type = document.getElementById('m-add-lead-type')?.value || 'Room Booking';
+      const amount = Number(document.getElementById('m-add-lead-amount')?.value) || 0;
+      const details = document.getElementById('m-add-lead-details')?.value.trim() || 'Direct Front Desk Guest';
+
+      if (!name) return;
+
+      recordLead({
+        type: type,
+        name: name,
+        phone: phone,
+        details: details,
+        amount: amount,
+        source: "Front Desk Walk-In"
+      });
+
+      showAdminToast(`✅ Walk-in lead recorded for <strong>${name}</strong>!`);
+      closeCustomModal('modal-admin-add-lead');
+      e.target.reset();
+    });
+
+    // Form: Add Photo
+    document.getElementById('form-admin-add-photo')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const title = document.getElementById('m-add-photo-title')?.value.trim();
+      const cat = document.getElementById('m-add-photo-cat')?.value || 'rooms';
+      const src = document.getElementById('m-add-photo-src')?.value.trim() || 'assets/images/photo_1.jpg';
+
+      if (!title || !src) return;
+
+      const cfg = getStoredConfig();
+      cfg.gallery.push({
+        id: "g_custom_" + Date.now(),
+        title,
+        category: cat,
+        src,
+        caption: title
+      });
+
+      saveStoredConfig(cfg, `➕ Added photo to gallery: <strong>${title}</strong>`);
+      renderGalleryManager();
+      closeCustomModal('modal-admin-add-photo');
+      e.target.reset();
+    });
+
+    // Form: Add Review
+    document.getElementById('form-admin-add-review')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const author = document.getElementById('m-add-rev-author')?.value.trim();
+      const stars = document.getElementById('m-add-rev-stars')?.value || '★★★★★ 5.0/5';
+      const text = document.getElementById('m-add-rev-text')?.value.trim();
+
+      if (!author || !text) return;
+
+      const cfg = getStoredConfig();
+      cfg.reviews.push({ id: "rev_" + Date.now(), author, text, stars });
+
+      saveStoredConfig(cfg, `⭐ Added review by <strong>${author}</strong>`);
+      renderReviewsFaqManager();
+      closeCustomModal('modal-admin-add-review');
+      e.target.reset();
+    });
+
+    // Form: Add FAQ
+    document.getElementById('form-admin-add-faq')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = document.getElementById('m-add-faq-q')?.value.trim();
+      const a = document.getElementById('m-add-faq-a')?.value.trim();
+
+      if (!q || !a) return;
+
+      const cfg = getStoredConfig();
+      cfg.faqs.push({ id: "faq_" + Date.now(), q, a });
+
+      saveStoredConfig(cfg, `❓ Added FAQ: <strong>${q}</strong>`);
+      renderReviewsFaqManager();
+      closeCustomModal('modal-admin-add-faq');
+      e.target.reset();
+    });
+  }
+
+  // 7. PASSCODE AUTHENTICATION CONTROLLER
   function initPasscodeAuth() {
     const btnOpen = document.getElementById('btn-open-admin');
     const modal = document.getElementById('admin-login-modal');
@@ -534,7 +896,7 @@
     });
   }
 
-  // 7. ADMIN PORTAL LIFECYCLE & TABS
+  // 8. ADMIN PORTAL LIFECYCLE & TABS
   function isAdminPortalOpen() {
     const portal = document.getElementById('admin-portal');
     return portal && portal.classList.contains('active');
@@ -575,6 +937,7 @@
     switch (tabId) {
       case 'analytics': renderAnalytics(); break;
       case 'leads': renderLeadsTable(); break;
+      case 'texts': renderTextsManager(); break;
       case 'rooms': renderRoomsManager(); break;
       case 'menu': renderMenuManager(); break;
       case 'rec': renderRecManager(); break;
@@ -597,7 +960,7 @@
     }
   }
 
-  // 8. TAB 1: USER-FRIENDLY DASHBOARD & KPI RENDERER
+  // 9. TAB 1: USER-FRIENDLY DASHBOARD & KPI RENDERER
   function renderAnalytics() {
     const leads = getStoredLeads();
     const totalLeads = leads.length;
@@ -649,7 +1012,7 @@
     }
   }
 
-  // 9. TAB 2: WHATSAPP LEADS CRM WITH ADD WALK-IN & SEARCH
+  // 10. TAB 2: WHATSAPP LEADS CRM WITH ADD WALK-IN & SEARCH
   let currentLeadFilter = 'all';
   let leadSearchQuery = '';
 
@@ -741,18 +1104,177 @@
     document.querySelectorAll('.js-del-lead').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const id = e.currentTarget.dataset.leadId;
-        if (confirm("Delete this inquiry from CRM?")) {
-          const allLeads = getStoredLeads().filter(l => l.id !== id);
-          saveStoredLeads(allLeads);
-          renderLeadsTable();
-          renderAnalytics();
-          showAdminToast("Inquiry deleted from list.");
-        }
+        const allLeads = getStoredLeads().filter(l => l.id !== id);
+        saveStoredLeads(allLeads);
+        renderLeadsTable();
+        renderAnalytics();
+        showAdminToast("Inquiry deleted from list.");
       });
     });
   }
 
-  // 10. TAB 3: ROOMS & TARIFFS CMS WITH VISUAL PHOTO PREVIEWS
+  // 11. TAB: ALL WEBSITE HEADINGS & TEXTS CMS RENDERER
+  function renderTextsManager() {
+    const cfg = getStoredConfig();
+    const c = cfg.content || DEFAULT_CONFIG.content;
+
+    // Hero
+    const h = c.hero || {};
+    const setVal = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.value = val || '';
+    };
+
+    setVal('txt-hero-crest', h.crest);
+    setVal('txt-hero-title', h.title);
+    setVal('txt-hero-sub', h.sub);
+    setVal('txt-hero-s1-h', h.slide1Heading);
+    setVal('txt-hero-s1-d', h.slide1Desc);
+    setVal('txt-hero-s2-h', h.slide2Heading);
+    setVal('txt-hero-s2-d', h.slide2Desc);
+    setVal('txt-hero-s3-h', h.slide3Heading);
+    setVal('txt-hero-s3-d', h.slide3Desc);
+    setVal('txt-hero-s4-h', h.slide4Heading);
+    setVal('txt-hero-s4-d', h.slide4Desc);
+
+    // About
+    const a = c.about || {};
+    setVal('txt-about-eye', a.eyebrow);
+    setVal('txt-about-head', a.heading);
+    setVal('txt-about-p1', a.p1);
+    setVal('txt-about-p2', a.p2);
+    setVal('txt-pillar1-title', a.pillar1Title);
+    setVal('txt-pillar1-desc', a.pillar1Desc);
+    setVal('txt-pillar2-title', a.pillar2Title);
+    setVal('txt-pillar2-desc', a.pillar2Desc);
+    setVal('txt-pillar3-title', a.pillar3Title);
+    setVal('txt-pillar3-desc', a.pillar3Desc);
+    setVal('txt-pillar4-title', a.pillar4Title);
+    setVal('txt-pillar4-desc', a.pillar4Desc);
+
+    // Rooms Section
+    const rm = c.roomsSection || {};
+    setVal('txt-rooms-eye', rm.eyebrow);
+    setVal('txt-rooms-head', rm.heading);
+    setVal('txt-rooms-lead', rm.lead);
+
+    // Restaurant Section
+    const rst = c.restaurantSection || {};
+    setVal('txt-rest-eye', rst.eyebrow);
+    setVal('txt-rest-head', rst.heading);
+    setVal('txt-rest-lead', rst.lead);
+    setVal('txt-rec-head', rst.recHead);
+
+    // Banquet & Tourist
+    const bq = c.banquetSection || {};
+    setVal('txt-bq-eye', bq.eyebrow);
+    setVal('txt-bq-head', bq.heading);
+    setVal('txt-bq-lead', bq.lead);
+
+    const tour = c.touristSection || {};
+    setVal('txt-tour-eye', tour.eyebrow);
+    setVal('txt-tour-head', tour.heading);
+    setVal('txt-tour-lead', tour.lead);
+
+    // Location & Policies
+    const loc = c.locationSection || {};
+    setVal('txt-loc-eye', loc.eyebrow);
+    setVal('txt-loc-head', loc.heading);
+    setVal('txt-loc-addr', loc.addr);
+
+    const pol = c.policySection || {};
+    setVal('txt-pol-eye', pol.eyebrow);
+    setVal('txt-pol-head', pol.heading);
+    setVal('txt-pol-checkin', pol.checkin);
+    setVal('txt-pol-family', pol.family);
+    setVal('txt-pol-gst', pol.gst);
+  }
+
+  function saveTextsManager() {
+    const cfg = getStoredConfig();
+    cfg.content = cfg.content || {};
+
+    const getVal = (id, fallback) => {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : (fallback || '');
+    };
+
+    // Hero
+    cfg.content.hero = {
+      crest: getVal('txt-hero-crest', DEFAULT_CONFIG.content.hero.crest),
+      title: getVal('txt-hero-title', DEFAULT_CONFIG.content.hero.title),
+      sub: getVal('txt-hero-sub', DEFAULT_CONFIG.content.hero.sub),
+      slide1Heading: getVal('txt-hero-s1-h', DEFAULT_CONFIG.content.hero.slide1Heading),
+      slide1Desc: getVal('txt-hero-s1-d', DEFAULT_CONFIG.content.hero.slide1Desc),
+      slide2Heading: getVal('txt-hero-s2-h', DEFAULT_CONFIG.content.hero.slide2Heading),
+      slide2Desc: getVal('txt-hero-s2-d', DEFAULT_CONFIG.content.hero.slide2Desc),
+      slide3Heading: getVal('txt-hero-s3-h', DEFAULT_CONFIG.content.hero.slide3Heading),
+      slide3Desc: getVal('txt-hero-s3-d', DEFAULT_CONFIG.content.hero.slide3Desc),
+      slide4Heading: getVal('txt-hero-s4-h', DEFAULT_CONFIG.content.hero.slide4Heading),
+      slide4Desc: getVal('txt-hero-s4-d', DEFAULT_CONFIG.content.hero.slide4Desc)
+    };
+
+    // About
+    cfg.content.about = {
+      eyebrow: getVal('txt-about-eye', DEFAULT_CONFIG.content.about.eyebrow),
+      heading: getVal('txt-about-head', DEFAULT_CONFIG.content.about.heading),
+      p1: getVal('txt-about-p1', DEFAULT_CONFIG.content.about.p1),
+      p2: getVal('txt-about-p2', DEFAULT_CONFIG.content.about.p2),
+      pillar1Title: getVal('txt-pillar1-title', DEFAULT_CONFIG.content.about.pillar1Title),
+      pillar1Desc: getVal('txt-pillar1-desc', DEFAULT_CONFIG.content.about.pillar1Desc),
+      pillar2Title: getVal('txt-pillar2-title', DEFAULT_CONFIG.content.about.pillar2Title),
+      pillar2Desc: getVal('txt-pillar2-desc', DEFAULT_CONFIG.content.about.pillar2Desc),
+      pillar3Title: getVal('txt-pillar3-title', DEFAULT_CONFIG.content.about.pillar3Title),
+      pillar3Desc: getVal('txt-pillar3-desc', DEFAULT_CONFIG.content.about.pillar3Desc),
+      pillar4Title: getVal('txt-pillar4-title', DEFAULT_CONFIG.content.about.pillar4Title),
+      pillar4Desc: getVal('txt-pillar4-desc', DEFAULT_CONFIG.content.about.pillar4Desc)
+    };
+
+    // Rooms Section
+    cfg.content.roomsSection = {
+      eyebrow: getVal('txt-rooms-eye', DEFAULT_CONFIG.content.roomsSection.eyebrow),
+      heading: getVal('txt-rooms-head', DEFAULT_CONFIG.content.roomsSection.heading),
+      lead: getVal('txt-rooms-lead', DEFAULT_CONFIG.content.roomsSection.lead)
+    };
+
+    // Restaurant Section
+    cfg.content.restaurantSection = {
+      eyebrow: getVal('txt-rest-eye', DEFAULT_CONFIG.content.restaurantSection.eyebrow),
+      heading: getVal('txt-rest-head', DEFAULT_CONFIG.content.restaurantSection.heading),
+      lead: getVal('txt-rest-lead', DEFAULT_CONFIG.content.restaurantSection.lead),
+      recHead: getVal('txt-rec-head', DEFAULT_CONFIG.content.restaurantSection.recHead)
+    };
+
+    // Banquet & Tourist
+    cfg.content.banquetSection = {
+      eyebrow: getVal('txt-bq-eye', DEFAULT_CONFIG.content.banquetSection.eyebrow),
+      heading: getVal('txt-bq-head', DEFAULT_CONFIG.content.banquetSection.heading),
+      lead: getVal('txt-bq-lead', DEFAULT_CONFIG.content.banquetSection.lead)
+    };
+    cfg.content.touristSection = {
+      eyebrow: getVal('txt-tour-eye', DEFAULT_CONFIG.content.touristSection.eyebrow),
+      heading: getVal('txt-tour-head', DEFAULT_CONFIG.content.touristSection.heading),
+      lead: getVal('txt-tour-lead', DEFAULT_CONFIG.content.touristSection.lead)
+    };
+
+    // Location & Policies
+    cfg.content.locationSection = {
+      eyebrow: getVal('txt-loc-eye', DEFAULT_CONFIG.content.locationSection.eyebrow),
+      heading: getVal('txt-loc-head', DEFAULT_CONFIG.content.locationSection.heading),
+      addr: getVal('txt-loc-addr', DEFAULT_CONFIG.content.locationSection.addr)
+    };
+    cfg.content.policySection = {
+      eyebrow: getVal('txt-pol-eye', DEFAULT_CONFIG.content.policySection.eyebrow),
+      heading: getVal('txt-pol-head', DEFAULT_CONFIG.content.policySection.heading),
+      checkin: getVal('txt-pol-checkin', DEFAULT_CONFIG.content.policySection.checkin),
+      family: getVal('txt-pol-family', DEFAULT_CONFIG.content.policySection.family),
+      gst: getVal('txt-pol-gst', DEFAULT_CONFIG.content.policySection.gst)
+    };
+
+    saveStoredConfig(cfg, "✨ All Website Headings, Subheadings & Texts Updated on Live Site!");
+  }
+
+  // 12. TAB: ROOMS & TARIFFS CMS WITH VISUAL PHOTO PREVIEWS
   function renderRoomsManager() {
     const cfg = getStoredConfig();
     const container = document.getElementById('rooms-manager-container');
@@ -839,7 +1361,7 @@
     saveStoredConfig(cfg, "🛏️ Room Tariffs & Details Saved to Live Website!");
   }
 
-  // 11. TAB 4: FOOD EXPRESS MENU CMS WITH LIVE SEARCH & STOCK SWITCHES
+  // 13. TAB: FOOD EXPRESS MENU CMS WITH LIVE SEARCH & STOCK SWITCHES
   let menuActiveCategory = 'all';
   let menuSearchQuery = '';
 
@@ -934,17 +1456,15 @@
     document.querySelectorAll('.js-del-dish').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const id = e.currentTarget.dataset.dishId;
-        if (confirm("Are you sure you want to remove this dish from the menu?")) {
-          const currentCfg = getStoredConfig();
-          currentCfg.menu = currentCfg.menu.filter(m => m.id !== id);
-          saveStoredConfig(currentCfg, "Dish removed from menu.");
-          renderMenuManager();
-        }
+        const currentCfg = getStoredConfig();
+        currentCfg.menu = currentCfg.menu.filter(m => m.id !== id);
+        saveStoredConfig(currentCfg, "Dish removed from menu.");
+        renderMenuManager();
       });
     });
   }
 
-  // 12. TAB 5: REC SONBHADRA CAMPUS DELIVERY DESK
+  // 14. TAB: REC SONBHADRA CAMPUS DELIVERY DESK
   function renderRecManager() {
     const cfg = getStoredConfig();
     const chargeInput = document.getElementById('rec-admin-charge');
@@ -974,7 +1494,7 @@
     saveStoredConfig(cfg, "🎓 REC Sonbhadra Delivery Settings Saved!");
   }
 
-  // 13. TAB 6: PHOTO GALLERY & SHOWCASE CMS (NEW ULTRA-PREMIUM MODULE)
+  // 15. TAB: PHOTO GALLERY & SHOWCASE CMS
   function renderGalleryManager() {
     const cfg = getStoredConfig();
     const grid = document.getElementById('gallery-manager-grid');
@@ -1013,12 +1533,10 @@
     document.querySelectorAll('.js-del-photo').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const idx = parseInt(e.currentTarget.dataset.photoIdx, 10);
-        if (confirm("Remove this photo from the website gallery?")) {
-          const currentCfg = getStoredConfig();
-          currentCfg.gallery.splice(idx, 1);
-          saveStoredConfig(currentCfg, "Photo removed from gallery.");
-          renderGalleryManager();
-        }
+        const currentCfg = getStoredConfig();
+        currentCfg.gallery.splice(idx, 1);
+        saveStoredConfig(currentCfg, "Photo removed from gallery.");
+        renderGalleryManager();
       });
     });
   }
@@ -1036,7 +1554,7 @@
     saveStoredConfig(cfg, "🖼️ Photo Gallery Updated on Live Website!");
   }
 
-  // 14. TAB 7: BANQUET & CELEBRATION PACKAGES CMS
+  // 16. TAB: BANQUET & CELEBRATION PACKAGES CMS
   function renderBanquetManager() {
     const cfg = getStoredConfig();
     const rentInput = document.getElementById('bq-admin-rent');
@@ -1067,7 +1585,7 @@
     saveStoredConfig(cfg, "🎉 Banquet Packages & Rates Saved!");
   }
 
-  // 15. TAB 8: 27 TOURIST PLACES CMS WITH SEARCH
+  // 17. TAB: 27 TOURIST PLACES CMS WITH SEARCH
   let touristSearchQuery = '';
 
   function renderTouristManager() {
@@ -1081,7 +1599,7 @@
       spots = spots.filter(s => s.name.toLowerCase().includes(q) || s.route.toLowerCase().includes(q));
     }
 
-    listContainer.innerHTML = spots.map((spot, idx) => `
+    listContainer.innerHTML = spots.map((spot) => `
       <div class="admin-edit-card" style="padding:1rem 1.25rem; margin-bottom:0.75rem;" data-spot-id="${spot.id}">
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.6rem;">
           <strong style="color:#fff; font-size:0.9rem;">#${spot.id} • ${spot.name}</strong>
@@ -1120,7 +1638,7 @@
     saveStoredConfig(cfg, "🧭 27 Tourist Places Directions Saved!");
   }
 
-  // 16. TAB 9: GUEST REVIEWS & FAQS CMS (NEW MODULE)
+  // 18. TAB: GUEST REVIEWS & FAQS CMS
   function renderReviewsFaqManager() {
     const cfg = getStoredConfig();
     const revContainer = document.getElementById('admin-reviews-container');
@@ -1174,12 +1692,10 @@
     document.querySelectorAll('.js-del-rev').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const idx = parseInt(e.currentTarget.dataset.revIdx, 10);
-        if (confirm("Remove this review?")) {
-          const c = getStoredConfig();
-          c.reviews.splice(idx, 1);
-          saveStoredConfig(c, "Review deleted.");
-          renderReviewsFaqManager();
-        }
+        const c = getStoredConfig();
+        c.reviews.splice(idx, 1);
+        saveStoredConfig(c, "Review deleted.");
+        renderReviewsFaqManager();
       });
     });
 
@@ -1187,12 +1703,10 @@
     document.querySelectorAll('.js-del-faq').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const idx = parseInt(e.currentTarget.dataset.faqIdx, 10);
-        if (confirm("Remove this FAQ?")) {
-          const c = getStoredConfig();
-          c.faqs.splice(idx, 1);
-          saveStoredConfig(c, "FAQ deleted.");
-          renderReviewsFaqManager();
-        }
+        const c = getStoredConfig();
+        c.faqs.splice(idx, 1);
+        saveStoredConfig(c, "FAQ deleted.");
+        renderReviewsFaqManager();
       });
     });
   }
@@ -1219,7 +1733,7 @@
     saveStoredConfig(cfg, "⭐ Reviews & FAQs Saved to Live Website!");
   }
 
-  // 17. TAB 10: HOTEL INFO, PHONES & SECURITY SETTINGS
+  // 19. TAB: HOTEL INFO, PHONES & SECURITY SETTINGS
   function renderSettingsManager() {
     const cfg = getStoredConfig();
     const recPhone = document.getElementById('cfg-admin-rec-phone');
@@ -1257,13 +1771,13 @@
     saveStoredConfig(cfg, "⚙️ Hotel Details & Passcode Updated!");
   }
 
-  // 18. TAB 11: DATA BACKUP & EXPORT
+  // 20. TAB: DATA BACKUP & EXPORT
   function renderBackupManager() {}
 
   function exportLeadsCSV() {
     const leads = getStoredLeads();
     if (leads.length === 0) {
-      alert("No leads recorded yet!");
+      showAdminToast("⚠️ No customer leads recorded yet to export.");
       return;
     }
     const headers = ["Lead ID", "Date", "Customer Name", "Phone", "Service Type", "Amount (INR)", "Status", "Details", "Source"];
@@ -1302,29 +1816,29 @@
   }
 
   function resetToFactoryDefaults() {
-    if (confirm("⚠️ CAUTION: This will reset all room tariffs, food menu prices, REC charges and settings back to original factory defaults. Are you sure?")) {
-      localStorage.removeItem(STORAGE_KEY_CONFIG);
-      const fresh = getStoredConfig();
-      applyLiveUpdates(fresh);
-      renderAnalytics();
-      renderRoomsManager();
-      renderMenuManager();
-      renderRecManager();
-      renderGalleryManager();
-      renderBanquetManager();
-      renderTouristManager();
-      renderReviewsFaqManager();
-      renderSettingsManager();
-      showAdminToast("🔄 Factory defaults restored successfully!");
-    }
+    localStorage.removeItem(STORAGE_KEY_CONFIG);
+    const fresh = getStoredConfig();
+    applyLiveUpdates(fresh);
+    renderAnalytics();
+    renderTextsManager();
+    renderRoomsManager();
+    renderMenuManager();
+    renderRecManager();
+    renderGalleryManager();
+    renderBanquetManager();
+    renderTouristManager();
+    renderReviewsFaqManager();
+    renderSettingsManager();
+    showAdminToast("🔄 Factory defaults restored successfully!");
   }
 
-  // 19. GLOBAL INITIALIZATION & BINDINGS
+  // 21. GLOBAL INITIALIZATION & EVENT BINDINGS
   function initAdminEngine() {
     const currentCfg = getStoredConfig();
     applyLiveUpdates(currentCfg);
 
     initPasscodeAuth();
+    initCustomModals();
 
     // Top Bar Buttons
     document.getElementById('btn-admin-close')?.addEventListener('click', closeAdminPortal);
@@ -1343,6 +1857,21 @@
       });
     });
 
+    // Website Texts Sub-Tabs Switching
+    document.querySelectorAll('.admin-sub-tab-pill[data-text-tab]').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        document.querySelectorAll('.admin-sub-tab-pill[data-text-tab]').forEach(p => p.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        const targetTab = e.currentTarget.dataset.textTab;
+        document.querySelectorAll('.admin-text-subpanel').forEach(p => {
+          p.classList.toggle('active', p.id === `subpanel-text-${targetTab}`);
+        });
+      });
+    });
+
+    // Save All Website Texts Button
+    document.getElementById('btn-save-all-texts')?.addEventListener('click', saveTextsManager);
+
     // Leads Filter & Search
     document.querySelectorAll('.admin-filter-pill[data-lfilter]').forEach(pill => {
       pill.addEventListener('click', (e) => {
@@ -1358,32 +1887,31 @@
     });
     document.getElementById('btn-export-leads-csv')?.addEventListener('click', exportLeadsCSV);
     document.getElementById('btn-clear-leads')?.addEventListener('click', () => {
-      if (confirm("Are you sure you want to clear all leads from the list?")) {
-        saveStoredLeads([]);
-        renderLeadsTable();
-        renderAnalytics();
-        showAdminToast("Leads list cleared.");
-      }
+      saveStoredLeads([]);
+      renderLeadsTable();
+      renderAnalytics();
+      showAdminToast("Leads list cleared.");
     });
 
-    // Add Walk-in Lead Prompt
+    // Open Custom Add Modals (ZERO BROWSER PROMPTS!)
     document.getElementById('btn-add-walkin-lead')?.addEventListener('click', () => {
-      const name = prompt("Enter Guest Name:");
-      if (!name) return;
-      const phone = prompt("Enter Phone / WhatsApp Number:", "+91 ") || "Not provided";
-      const type = prompt("Enter Service Type (e.g. Room Booking / Food Express / Banquet / Walk-in):", "Room Booking") || "Walk-in";
-      const amount = Number(prompt("Enter Total Amount (₹):", "2299")) || 0;
-      const details = prompt("Enter Inquiry Details / Notes:", "Direct walk-in guest at front desk") || "Walk-in";
+      openCustomModal('modal-admin-add-lead');
+    });
 
-      recordLead({
-        type: type,
-        name: name,
-        phone: phone,
-        details: details,
-        amount: amount,
-        source: "Front Desk Walk-In"
-      });
-      showAdminToast("✅ Walk-in lead recorded into CRM!");
+    document.getElementById('btn-add-dish-prompt')?.addEventListener('click', () => {
+      openCustomModal('modal-admin-add-dish');
+    });
+
+    document.getElementById('btn-add-photo-prompt')?.addEventListener('click', () => {
+      openCustomModal('modal-admin-add-photo');
+    });
+
+    document.getElementById('btn-add-review-prompt')?.addEventListener('click', () => {
+      openCustomModal('modal-admin-add-review');
+    });
+
+    document.getElementById('btn-add-faq-prompt')?.addEventListener('click', () => {
+      openCustomModal('modal-admin-add-faq');
     });
 
     // Rooms Save
@@ -1402,50 +1930,12 @@
       menuSearchQuery = e.target.value.trim();
       renderMenuManager();
     });
-    document.getElementById('btn-add-dish-prompt')?.addEventListener('click', () => {
-      const name = prompt("Enter new dish name:");
-      if (!name) return;
-      const cat = prompt("Enter category (starters / main / breads / drinks):", "main") || "main";
-      const price = Number(prompt("Enter price in ₹:", "250")) || 250;
-      const tag = prompt("Enter tag/subtitle:", "Chef Special") || "Chef Special";
-
-      const cfg = getStoredConfig();
-      cfg.menu.unshift({
-        id: "m_custom_" + Date.now(),
-        name,
-        category: cat,
-        tag,
-        price,
-        inStock: true,
-        imgUrl: ""
-      });
-      saveStoredConfig(cfg, `➕ New Dish Added: <strong>${name}</strong>`);
-      renderMenuManager();
-    });
 
     // REC Save
     document.getElementById('btn-save-rec')?.addEventListener('click', saveRecManager);
 
     // Gallery Actions
     document.getElementById('btn-save-gallery')?.addEventListener('click', saveGalleryManager);
-    document.getElementById('btn-add-photo-prompt')?.addEventListener('click', () => {
-      const title = prompt("Enter Photo Title/Caption:");
-      if (!title) return;
-      const src = prompt("Enter Photo URL or path (e.g. assets/images/photo_1.jpg):", "assets/images/photo_1.jpg");
-      if (!src) return;
-      const cat = prompt("Enter Category (rooms / dining / events):", "rooms") || "rooms";
-
-      const cfg = getStoredConfig();
-      cfg.gallery.push({
-        id: "g_custom_" + Date.now(),
-        title,
-        category: cat,
-        src,
-        caption: title
-      });
-      saveStoredConfig(cfg, `➕ Added photo to gallery: <strong>${title}</strong>`);
-      renderGalleryManager();
-    });
 
     // Banquet Save
     document.getElementById('btn-save-banquet')?.addEventListener('click', saveBanquetManager);
@@ -1457,32 +1947,8 @@
       renderTouristManager();
     });
 
-    // Reviews & FAQs Actions
+    // Reviews & FAQs Save
     document.getElementById('btn-save-reviews-faq')?.addEventListener('click', saveReviewsFaqManager);
-    document.getElementById('btn-add-review-prompt')?.addEventListener('click', () => {
-      const author = prompt("Enter Guest Name & Location:", "Guest Name (City)");
-      if (!author) return;
-      const text = prompt("Enter Review Quote:");
-      if (!text) return;
-      const stars = prompt("Enter Star Rating:", "★★★★★ 5.0/5") || "★★★★★ 5.0/5";
-
-      const cfg = getStoredConfig();
-      cfg.reviews.push({ id: "rev_" + Date.now(), author, text, stars });
-      saveStoredConfig(cfg, `⭐ Added review by <strong>${author}</strong>`);
-      renderReviewsFaqManager();
-    });
-
-    document.getElementById('btn-add-faq-prompt')?.addEventListener('click', () => {
-      const q = prompt("Enter Question:");
-      if (!q) return;
-      const a = prompt("Enter Answer:");
-      if (!a) return;
-
-      const cfg = getStoredConfig();
-      cfg.faqs.push({ id: "faq_" + Date.now(), q, a });
-      saveStoredConfig(cfg, `❓ Added FAQ: <strong>${q}</strong>`);
-      renderReviewsFaqManager();
-    });
 
     // Settings Save
     document.getElementById('btn-save-settings')?.addEventListener('click', saveSettingsManager);
@@ -1500,7 +1966,9 @@
     saveConfig: saveStoredConfig,
     applyLiveUpdates: applyLiveUpdates,
     openPortal: openAdminPortal,
-    closePortal: closeAdminPortal
+    closePortal: closeAdminPortal,
+    openModal: openCustomModal,
+    closeModal: closeCustomModal
   };
 
   if (document.readyState === 'loading') {

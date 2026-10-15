@@ -1274,3 +1274,114 @@
     justify-content: center;
   }
 }
+
+/* 14. CUSTOM IN-PAGE MODALS (100% REPLACES BROWSER PROMPTS) */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  background: rgba(2, 6, 4, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: adminFadeIn 0.25s ease-out;
+}
+.admin-modal-overlay.active {
+  display: flex;
+}
+.admin-modal-card {
+  width: min(540px, 94vw);
+  background: linear-gradient(145deg, rgba(10, 22, 16, 0.98), rgba(4, 9, 6, 0.98));
+  border: 1.5px solid rgba(212, 175, 55, 0.45);
+  border-radius: 18px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(212, 175, 55, 0.15);
+  position: relative;
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.admin-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.15rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.admin-modal-close:hover {
+  color: #fff;
+}
+.admin-modal-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+.admin-modal-title {
+  font-family: var(--font-display, "Cinzel", serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem 0;
+}
+.admin-modal-sub {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.4;
+}
+.admin-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 15. SUB-TABS STRIP FOR WEBSITE COPY CMS */
+.admin-sub-tabs-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.35rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.admin-sub-tab-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: #cbd5e1;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.45rem 0.95rem;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.admin-sub-tab-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.admin-sub-tab-pill.active {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.32), rgba(212, 175, 55, 0.14));
+  border-color: var(--gold, #d4af37);
+  color: var(--gold-bright, #fef3c7);
+  font-weight: 700;
+}
+.admin-text-subpanel {
+  display: none;
+}
+.admin-text-subpanel.active {
+  display: block;
+}
+

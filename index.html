@@ -1551,6 +1551,213 @@
     </div>
   </div>
 
+  <!-- Custom In-Page Modals (100% Replaces Browser Prompts) -->
+  <!-- Modal 1: Add New Restaurant Dish -->
+  <div id="modal-admin-add-dish" class="admin-modal-overlay" aria-hidden="true">
+    <div class="admin-modal-card">
+      <button type="button" class="admin-modal-close" data-close-modal="modal-admin-add-dish">&times;</button>
+      <div class="admin-modal-icon">🍽️</div>
+      <h3 class="admin-modal-title">Add New Dish to Food Express</h3>
+      <p class="admin-modal-sub">Add a new specialty dish to your digital restaurant menu with live price &amp; category.</p>
+
+      <form id="form-admin-add-dish">
+        <div class="admin-form-grid-2">
+          <div class="admin-field">
+            <label>Dish Name *</label>
+            <input type="text" id="m-add-dish-name" placeholder="e.g. Shahi Paneer Korma" required />
+          </div>
+          <div class="admin-field">
+            <label>Category *</label>
+            <select id="m-add-dish-cat">
+              <option value="starters">Starters &amp; Tandoori</option>
+              <option value="main" selected>Main Course</option>
+              <option value="breads">Breads &amp; Rice</option>
+              <option value="drinks">Beverages &amp; Shakes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="admin-form-grid-2" style="margin-top:0.75rem;">
+          <div class="admin-field highlight-field">
+            <label>Price in ₹ *</label>
+            <div class="input-currency-wrap">
+              <span>₹</span>
+              <input type="number" id="m-add-dish-price" placeholder="280" required />
+            </div>
+          </div>
+          <div class="admin-field">
+            <label>Subtitle / Specialty Tag</label>
+            <input type="text" id="m-add-dish-tag" placeholder="e.g. Chef Special • Cream Gravy" />
+          </div>
+        </div>
+
+        <div class="admin-field" style="margin-top:0.75rem;">
+          <label>Photo URL / File Path (Optional)</label>
+          <input type="text" id="m-add-dish-img" placeholder="e.g. assets/images/photo_9.jpg" />
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="admin-btn-secondary" data-close-modal="modal-admin-add-dish">Cancel</button>
+          <button type="submit" class="admin-btn-primary">➕ Add Dish to Menu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Add Walk-In Guest / Direct Lead -->
+  <div id="modal-admin-add-lead" class="admin-modal-overlay" aria-hidden="true">
+    <div class="admin-modal-card">
+      <button type="button" class="admin-modal-close" data-close-modal="modal-admin-add-lead">&times;</button>
+      <div class="admin-modal-icon">🏨</div>
+      <h3 class="admin-modal-title">Record Walk-In / Phone Lead</h3>
+      <p class="admin-modal-sub">Log guest details into your central WhatsApp CRM for bookings, food orders or party inquiries.</p>
+
+      <form id="form-admin-add-lead">
+        <div class="admin-form-grid-2">
+          <div class="admin-field">
+            <label>Guest Full Name *</label>
+            <input type="text" id="m-add-lead-name" placeholder="e.g. Vikramaditya Singh" required />
+          </div>
+          <div class="admin-field">
+            <label>Phone / WhatsApp *</label>
+            <input type="tel" id="m-add-lead-phone" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+
+        <div class="admin-form-grid-2" style="margin-top:0.75rem;">
+          <div class="admin-field">
+            <label>Service Type</label>
+            <select id="m-add-lead-type">
+              <option value="Room Booking">Double Deluxe AC Room</option>
+              <option value="Executive Suite Booking">Executive Family AC Suite</option>
+              <option value="Food Express Order">Food Express Restaurant Order</option>
+              <option value="REC Campus Food Order">REC Sonbhadra Campus Order</option>
+              <option value="Table Reservation">Dining Table Reservation</option>
+              <option value="Banquet Hall Quote">Banquet Hall / Party Quote</option>
+              <option value="Tourist Sightseeing">Sonbhadra Sightseeing Cab</option>
+              <option value="Corporate / Front Desk">Corporate Walk-In / Desk</option>
+            </select>
+          </div>
+          <div class="admin-field highlight-field">
+            <label>Estimated Amount in ₹</label>
+            <div class="input-currency-wrap">
+              <span>₹</span>
+              <input type="number" id="m-add-lead-amount" placeholder="2299" />
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-field" style="margin-top:0.75rem;">
+          <label>Booking Notes / Special Request</label>
+          <textarea id="m-add-lead-details" rows="2" placeholder="e.g. 1 Room for 2 nights, check-in today 2 PM, vegetarian breakfast."></textarea>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="admin-btn-secondary" data-close-modal="modal-admin-add-lead">Cancel</button>
+          <button type="submit" class="admin-btn-primary">✅ Save to CRM</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Add Photo to Gallery -->
+  <div id="modal-admin-add-photo" class="admin-modal-overlay" aria-hidden="true">
+    <div class="admin-modal-card">
+      <button type="button" class="admin-modal-close" data-close-modal="modal-admin-add-photo">&times;</button>
+      <div class="admin-modal-icon">📸</div>
+      <h3 class="admin-modal-title">Add Photo to Website Gallery</h3>
+      <p class="admin-modal-sub">Upload or link new photos to the authentic visual tour on the website.</p>
+
+      <form id="form-admin-add-photo">
+        <div class="admin-field">
+          <label>Photo Caption / Title *</label>
+          <input type="text" id="m-add-photo-title" placeholder="e.g. Luxury Bathroom &amp; Amenities" required />
+        </div>
+        <div class="admin-form-grid-2" style="margin-top:0.75rem;">
+          <div class="admin-field">
+            <label>Category *</label>
+            <select id="m-add-photo-cat">
+              <option value="rooms">Rooms &amp; Lobby</option>
+              <option value="dining">Food Express Dining</option>
+              <option value="events">Banquet &amp; Heritage</option>
+            </select>
+          </div>
+          <div class="admin-field">
+            <label>Photo URL / Path *</label>
+            <input type="text" id="m-add-photo-src" placeholder="assets/images/photo_1.jpg" required />
+          </div>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="admin-btn-secondary" data-close-modal="modal-admin-add-photo">Cancel</button>
+          <button type="submit" class="admin-btn-primary">🖼️ Add to Gallery</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: Add Customer Review -->
+  <div id="modal-admin-add-review" class="admin-modal-overlay" aria-hidden="true">
+    <div class="admin-modal-card">
+      <button type="button" class="admin-modal-close" data-close-modal="modal-admin-add-review">&times;</button>
+      <div class="admin-modal-icon">⭐</div>
+      <h3 class="admin-modal-title">Add Verified Guest Review</h3>
+      <p class="admin-modal-sub">Add authentic traveler feedback to display on the verified reviews section.</p>
+
+      <form id="form-admin-add-review">
+        <div class="admin-form-grid-2">
+          <div class="admin-field">
+            <label>Guest Name &amp; City / Designation *</label>
+            <input type="text" id="m-add-rev-author" placeholder="e.g. Ramesh Chandra (NTPC Shaktinagar)" required />
+          </div>
+          <div class="admin-field">
+            <label>Star Rating *</label>
+            <select id="m-add-rev-stars">
+              <option value="★★★★★ 5.0/5">★★★★★ 5.0/5 (Excellent)</option>
+              <option value="★★★★★ 4.9/5">★★★★★ 4.9/5 (Very Good)</option>
+              <option value="★★★★★ 4.8/5">★★★★★ 4.8/5 (Great)</option>
+            </select>
+          </div>
+        </div>
+        <div class="admin-field" style="margin-top:0.75rem;">
+          <label>Guest Review Quote *</label>
+          <textarea id="m-add-rev-text" rows="3" placeholder="Write the guest's testimonial here..." required></textarea>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="admin-btn-secondary" data-close-modal="modal-admin-add-review">Cancel</button>
+          <button type="submit" class="admin-btn-primary">⭐ Save Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 5: Add FAQ -->
+  <div id="modal-admin-add-faq" class="admin-modal-overlay" aria-hidden="true">
+    <div class="admin-modal-card">
+      <button type="button" class="admin-modal-close" data-close-modal="modal-admin-add-faq">&times;</button>
+      <div class="admin-modal-icon">❓</div>
+      <h3 class="admin-modal-title">Add Frequently Asked Question (FAQ)</h3>
+      <p class="admin-modal-sub">Answer common queries about bookings, food delivery, parking, or check-in.</p>
+
+      <form id="form-admin-add-faq">
+        <div class="admin-field">
+          <label>Question *</label>
+          <input type="text" id="m-add-faq-q" placeholder="e.g. Do you allow late check-in?" required />
+        </div>
+        <div class="admin-field" style="margin-top:0.75rem;">
+          <label>Answer *</label>
+          <textarea id="m-add-faq-a" rows="3" placeholder="Write the detailed answer..." required></textarea>
+        </div>
+
+        <div class="admin-modal-footer">
+          <button type="button" class="admin-btn-secondary" data-close-modal="modal-admin-add-faq">Cancel</button>
+          <button type="submit" class="admin-btn-primary">❓ Save FAQ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- 2. Full-Screen Admin Console with Persistent Left Sidebar -->
   <div id="admin-portal" class="admin-portal" aria-hidden="true">
     <!-- Top Admin Bar -->
@@ -1599,6 +1806,11 @@
             <button type="button">
               <span class="nav-left"><span class="icon">💬</span> <span>WhatsApp CRM</span></span>
               <span id="badge-leads-count" class="admin-badge-count">3</span>
+            </button>
+          </li>
+          <li class="admin-nav-item" data-tab="texts">
+            <button type="button">
+              <span class="nav-left"><span class="icon">📝</span> <span>All Website Texts CMS</span></span>
             </button>
           </li>
           <li class="admin-nav-item" data-tab="rooms">
@@ -1767,6 +1979,288 @@
                 <!-- Populated dynamically -->
               </tbody>
             </table>
+          </div>
+        </section>
+
+        <!-- TAB: ALL WEBSITE HEADINGS & TEXTS CMS -->
+        <section id="panel-texts" class="admin-tab-panel">
+          <div class="admin-panel-head">
+            <div class="admin-panel-title">
+              <h3>📝 All Website Headings, Subheadings &amp; Texts CMS</h3>
+              <p>Full control over every word, heading, description, pillar &amp; policy across the entire website.</p>
+            </div>
+            <div class="admin-panel-actions">
+              <button type="button" id="btn-save-all-texts" class="admin-btn-primary">💾 Save All Website Texts</button>
+            </div>
+          </div>
+
+          <div class="admin-help-tip">
+            <span class="tip-icon">✨</span>
+            <div><strong>100% Content Control:</strong> Change any heading, paragraph, tagline, or policy below. When you click <em>Save All Website Texts</em>, your changes instantly go live across the entire website without any code reload!</div>
+          </div>
+
+          <!-- Sub-Tab Navigation for Sections -->
+          <div class="admin-sub-tabs-strip">
+            <button type="button" class="admin-sub-tab-pill active" data-text-tab="hero">🏠 Hero &amp; Header</button>
+            <button type="button" class="admin-sub-tab-pill" data-text-tab="about">🏛️ About Property</button>
+            <button type="button" class="admin-sub-tab-pill" data-text-tab="rooms">🛏️ Rooms Section</button>
+            <button type="button" class="admin-sub-tab-pill" data-text-tab="rest">🍽️ Food Express &amp; REC</button>
+            <button type="button" class="admin-sub-tab-pill" data-text-tab="banquet">🎉 Banquet &amp; Tourist</button>
+            <button type="button" class="admin-sub-tab-pill" data-text-tab="location">📍 Location &amp; Policies</button>
+          </div>
+
+          <!-- SUBPANEL 1: HERO & HEADER -->
+          <div id="subpanel-text-hero" class="admin-text-subpanel active">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Top Crest &amp; Hotel Title</h4>
+              <div class="admin-field" style="margin-bottom:0.75rem;">
+                <label>Top Overline Crest Tagline</label>
+                <input type="text" id="txt-hero-crest" />
+              </div>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Grand Hotel Name</label>
+                  <input type="text" id="txt-hero-title" />
+                </div>
+                <div class="admin-field">
+                  <label>Grand Subtitle Tag</label>
+                  <input type="text" id="txt-hero-sub" />
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">4 Rotating Experience Highlights</h4>
+              <div class="admin-form-grid-2" style="margin-bottom:0.85rem;">
+                <div class="admin-field">
+                  <label>Slide 1 Heading (Rooms)</label>
+                  <input type="text" id="txt-hero-s1-h" />
+                </div>
+                <div class="admin-field">
+                  <label>Slide 1 Description</label>
+                  <textarea id="txt-hero-s1-d" rows="2"></textarea>
+                </div>
+              </div>
+              <div class="admin-form-grid-2" style="margin-bottom:0.85rem;">
+                <div class="admin-field">
+                  <label>Slide 2 Heading (Food Express)</label>
+                  <input type="text" id="txt-hero-s2-h" />
+                </div>
+                <div class="admin-field">
+                  <label>Slide 2 Description</label>
+                  <textarea id="txt-hero-s2-d" rows="2"></textarea>
+                </div>
+              </div>
+              <div class="admin-form-grid-2" style="margin-bottom:0.85rem;">
+                <div class="admin-field">
+                  <label>Slide 3 Heading (27 Spots)</label>
+                  <input type="text" id="txt-hero-s3-h" />
+                </div>
+                <div class="admin-field">
+                  <label>Slide 3 Description</label>
+                  <textarea id="txt-hero-s3-d" rows="2"></textarea>
+                </div>
+              </div>
+              <div class="admin-form-grid-2" style="margin-bottom:0.85rem;">
+                <div class="admin-field">
+                  <label>Slide 4 Heading (Banquet)</label>
+                  <input type="text" id="txt-hero-s4-h" />
+                </div>
+                <div class="admin-field">
+                  <label>Slide 4 Description</label>
+                  <textarea id="txt-hero-s4-d" rows="2"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBPANEL 2: ABOUT PROPERTY -->
+          <div id="subpanel-text-about" class="admin-text-subpanel">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">About Section Header &amp; Paragraphs</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Eyebrow Tag</label>
+                  <input type="text" id="txt-about-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Main Section Heading</label>
+                  <input type="text" id="txt-about-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>First Paragraph (Location &amp; Overview)</label>
+                <textarea id="txt-about-p1" rows="3"></textarea>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Second Paragraph (Tourism, REC &amp; Corporate Hubs)</label>
+                <textarea id="txt-about-p2" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">4 Feature Pillars</h4>
+              <div class="admin-form-grid-2" style="margin-bottom:0.75rem;">
+                <div class="admin-field">
+                  <label>Pillar 1 Title</label>
+                  <input type="text" id="txt-pillar1-title" />
+                  <label style="margin-top:0.35rem;">Pillar 1 Description</label>
+                  <input type="text" id="txt-pillar1-desc" />
+                </div>
+                <div class="admin-field">
+                  <label>Pillar 2 Title</label>
+                  <input type="text" id="txt-pillar2-title" />
+                  <label style="margin-top:0.35rem;">Pillar 2 Description</label>
+                  <input type="text" id="txt-pillar2-desc" />
+                </div>
+              </div>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Pillar 3 Title</label>
+                  <input type="text" id="txt-pillar3-title" />
+                  <label style="margin-top:0.35rem;">Pillar 3 Description</label>
+                  <input type="text" id="txt-pillar3-desc" />
+                </div>
+                <div class="admin-field">
+                  <label>Pillar 4 Title</label>
+                  <input type="text" id="txt-pillar4-title" />
+                  <label style="margin-top:0.35rem;">Pillar 4 Description</label>
+                  <input type="text" id="txt-pillar4-desc" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBPANEL 3: ROOMS SECTION -->
+          <div id="subpanel-text-rooms" class="admin-text-subpanel">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Rooms Section Headings</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Eyebrow Tag</label>
+                  <input type="text" id="txt-rooms-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Section Heading</label>
+                  <input type="text" id="txt-rooms-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Section Lead Description</label>
+                <textarea id="txt-rooms-lead" rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBPANEL 4: RESTAURANT & REC -->
+          <div id="subpanel-text-rest" class="admin-text-subpanel">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Restaurant Section Headings</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Eyebrow Tag</label>
+                  <input type="text" id="txt-rest-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Section Heading</label>
+                  <input type="text" id="txt-rest-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Section Lead Description</label>
+                <textarea id="txt-rest-lead" rows="2"></textarea>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>REC Campus Order Box Title</label>
+                <input type="text" id="txt-rec-head" />
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBPANEL 5: BANQUET & TOURIST -->
+          <div id="subpanel-text-banquet" class="admin-text-subpanel">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Banquet Hall Section</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Banquet Eyebrow</label>
+                  <input type="text" id="txt-bq-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Banquet Heading</label>
+                  <input type="text" id="txt-bq-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Banquet Lead Description</label>
+                <textarea id="txt-bq-lead" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">27 Tourist Spots Section</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Tourist Eyebrow</label>
+                  <input type="text" id="txt-tour-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Tourist Heading</label>
+                  <input type="text" id="txt-tour-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Tourist Lead Description</label>
+                <textarea id="txt-tour-lead" rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBPANEL 6: LOCATION & POLICIES -->
+          <div id="subpanel-text-location" class="admin-text-subpanel">
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Location &amp; Connectivity</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Location Eyebrow</label>
+                  <input type="text" id="txt-loc-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Location Heading</label>
+                  <input type="text" id="txt-loc-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Official Address Summary</label>
+                <textarea id="txt-loc-addr" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="admin-edit-card">
+              <h4 style="color:#fff; margin-bottom:1rem;">Policies Section Headings</h4>
+              <div class="admin-form-grid-2">
+                <div class="admin-field">
+                  <label>Policies Eyebrow</label>
+                  <input type="text" id="txt-pol-eye" />
+                </div>
+                <div class="admin-field">
+                  <label>Policies Heading</label>
+                  <input type="text" id="txt-pol-head" />
+                </div>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Check-In &amp; ID Policy Text</label>
+                <textarea id="txt-pol-checkin" rows="2"></textarea>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Family &amp; Group Rules Text</label>
+                <textarea id="txt-pol-family" rows="2"></textarea>
+              </div>
+              <div class="admin-field" style="margin-top:0.75rem;">
+                <label>Billing &amp; GST Policy Text</label>
+                <textarea id="txt-pol-gst" rows="2"></textarea>
+              </div>
+            </div>
           </div>
         </section>
 
